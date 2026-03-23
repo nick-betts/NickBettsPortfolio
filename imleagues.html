@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMLeagues | Nick Betts</title>
+    <meta
+      name="description"
+      content="IMLeagues redesign case study by Nick Betts focused on improving the intramural sports website experience."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-mark" aria-hidden="true"></div>
+    <div class="page case-page">
+      <header class="topbar">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="home.html">Nick Betts</a>
+          <div class="nav-links">
+            <a class="is-active" href="home.html#work">Work</a>
+            <a href="about.html">About</a>
+            <a href="#">Resume</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="case-main">
+        <section class="case-hero">
+          <div>
+            <p class="case-meta">03 · Website Redesign</p>
+            <h1 class="case-title">IMLeagues</h1>
+            <p class="case-summary">
+              Redesigning the current IMLeagues website to improve intramural sports experience.
+            </p>
+          </div>
+          <p class="case-meta">Website UX · Information Architecture · Redesign</p>
+        </section>
+
+        <div class="case-media">
+          <svg viewBox="0 0 1440 820" role="img" aria-label="IMLeagues redesign preview">
+            <rect width="1440" height="820" fill="#111" />
+            <rect x="84" y="74" width="1272" height="672" rx="30" fill="#151515" />
+            <rect x="124" y="112" width="1192" height="98" rx="24" fill="#ece4d6" />
+            <rect x="124" y="244" width="580" height="432" rx="24" fill="#ded5c6" />
+            <rect x="736" y="244" width="580" height="200" rx="24" fill="#ece4d6" />
+            <rect x="736" y="476" width="580" height="200" rx="24" fill="#232323" />
+            <rect x="160" y="150" width="180" height="16" rx="8" fill="#1a1a1a" />
+            <rect x="160" y="184" width="130" height="10" rx="5" fill="#736c61" />
+            <rect x="166" y="294" width="190" height="16" rx="8" fill="#1a1a1a" />
+            <rect x="166" y="332" width="280" height="10" rx="5" fill="#7a7368" />
+            <rect x="770" y="286" width="160" height="16" rx="8" fill="#A8E6CF" />
+            <rect x="770" y="322" width="260" height="10" rx="5" fill="#746d62" />
+            <rect x="770" y="520" width="184" height="16" rx="8" fill="#ece4d6" />
+          </svg>
+        </div>
+
+        <div class="case-grid">
+          <section class="case-section">
+            <p class="case-kicker">Overview</p>
+          </section>
+          <section class="case-section case-body">
+            <p>
+              This redesign focused on improving the intramural sports experience
+              by making the website easier to browse, understand, and act within,
+              especially for students looking for schedules, registrations, and team information.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <p class="case-kicker">Problem</p>
+          </section>
+          <section class="case-section case-body">
+            <p>
+              Existing navigation patterns and page structures made the experience
+              feel more administrative than user-friendly. The challenge was to
+              reduce friction without losing the density of information users need.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <p class="case-kicker">Approach</p>
+          </section>
+          <section class="case-section case-body">
+            <ul>
+              <li>Reworked the hierarchy around the most common student tasks.</li>
+              <li>Made schedules, registration, and discovery easier to scan.</li>
+              <li>Used clearer grouping and stronger calls to action across the site.</li>
+            </ul>
+          </section>
+
+          <section class="case-section">
+            <p class="case-kicker">Outcome</p>
+          </section>
+          <section class="case-section case-body">
+            <p>
+              The redesign concept positions IMLeagues as a more approachable and
+              useful product, helping users spend less time decoding the interface
+              and more time participating.
+            </p>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer-left">
+          © 2026 Nick Betts ·
+          <a href="mailto:nickbetts317@gmail.com">nickbetts317@gmail.com</a> ·
+          <a href="https://www.linkedin.com/in/nickbetts1/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+        <p class="footer-right">Let's work together :)</p>
+      </footer>
+    </div>
+
+    <script>
+      const cursorMark = document.querySelector(".cursor-mark");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        window.addEventListener("mousemove", (event) => {
+          if (cursorMark) {
+            cursorMark.style.opacity = "1";
+            cursorMark.style.transform = `translate3d(${event.clientX - 9}px, ${event.clientY - 9}px, 0)`;
+          }
+        });
+        window.addEventListener("mouseleave", () => {
+          if (cursorMark) {
+            cursorMark.style.opacity = "0";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

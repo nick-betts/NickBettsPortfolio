@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wisq | Nick Betts</title>
+    <meta
+      name="description"
+      content="Wisq case study by Nick Betts, an AI meeting coach using GPT-4o for real-time virtual meeting support."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-mark" aria-hidden="true"></div>
+    <div class="page case-page">
+      <header class="topbar">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="home.html">Nick Betts</a>
+          <div class="nav-links">
+            <a class="is-active" href="home.html#work">Work</a>
+            <a href="about.html">About</a>
+            <a href="#">Resume</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="case-main">
+        <section class="case-hero">
+          <div>
+            <p class="case-meta">02 · AI Meeting Coach</p>
+            <h1 class="case-title">Wisq</h1>
+            <p class="case-summary">
+              Leveraging GPT-4o’s capabilities for real-time virtual meeting coaching.
+            </p>
+          </div>
+          <p class="case-meta">Conversation UX · AI Interaction · Interface Design</p>
+        </section>
+
+        <div class="case-media">
+          <svg viewBox="0 0 1440 820" role="img" aria-label="Wisq interface preview">
+            <rect width="1440" height="820" fill="#111" />
+            <rect x="88" y="76" width="1264" height="668" rx="30" fill="#171717" />
+            <rect x="130" y="120" width="330" height="580" rx="24" fill="#1f1f1f" />
+            <rect x="500" y="120" width="810" height="128" rx="24" fill="#ece4d6" />
+            <rect x="500" y="284" width="810" height="196" rx="24" fill="#ded5c6" />
+            <rect x="500" y="514" width="810" height="186" rx="24" fill="#222" />
+            <rect x="164" y="156" width="154" height="16" rx="8" fill="#A8E6CF" />
+            <rect x="164" y="196" width="114" height="10" rx="5" fill="#606060" />
+            <rect x="540" y="160" width="210" height="16" rx="8" fill="#1a1a1a" />
+            <rect x="540" y="200" width="300" height="10" rx="5" fill="#797267" />
+            <rect x="540" y="332" width="340" height="16" rx="8" fill="#1a1a1a" />
+            <rect x="540" y="372" width="520" height="10" rx="5" fill="#8b8478" />
+            <rect x="540" y="562" width="190" height="16" rx="8" fill="#A8E6CF" />
+          </svg>
+        </div>
+
+        <div class="case-grid">
+          <section class="case-section">
+            <p class="case-kicker">Overview</p>
+          </section>
+          <section class="case-section case-body">
+            <p>
+              Wisq explores how AI can support people inside meetings without
+              overwhelming the conversation itself. The product direction focused
+              on surfacing useful prompts, coaching moments, and contextual support
+              at the right time.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <p class="case-kicker">Problem</p>
+          </section>
+          <section class="case-section case-body">
+            <p>
+              Meeting tools often either disappear entirely or interrupt too much.
+              The challenge was designing assistance that feels present and useful
+              without becoming another distraction on screen.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <p class="case-kicker">Approach</p>
+          </section>
+          <section class="case-section case-body">
+            <ul>
+              <li>Used progressive disclosure so guidance appears when it matters.</li>
+              <li>Prioritized confidence, clarity, and timing over novelty.</li>
+              <li>Balanced live coaching with low-friction post-meeting review.</li>
+            </ul>
+          </section>
+
+          <section class="case-section">
+            <p class="case-kicker">Outcome</p>
+          </section>
+          <section class="case-section case-body">
+            <p>
+              The concept shows how GPT-4o can be translated into a calmer
+              product experience, where AI support strengthens communication
+              instead of competing with it.
+            </p>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer-left">
+          © 2026 Nick Betts ·
+          <a href="mailto:nickbetts317@gmail.com">nickbetts317@gmail.com</a> ·
+          <a href="https://www.linkedin.com/in/nickbetts1/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+        <p class="footer-right">Let's work together :)</p>
+      </footer>
+    </div>
+
+    <script>
+      const cursorMark = document.querySelector(".cursor-mark");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        window.addEventListener("mousemove", (event) => {
+          if (cursorMark) {
+            cursorMark.style.opacity = "1";
+            cursorMark.style.transform = `translate3d(${event.clientX - 9}px, ${event.clientY - 9}px, 0)`;
+          }
+        });
+        window.addEventListener("mouseleave", () => {
+          if (cursorMark) {
+            cursorMark.style.opacity = "0";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

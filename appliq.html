@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ApplIQ | Nick Betts</title>
+    <meta
+      name="description"
+      content="ApplIQ case study by Nick Betts, an AI-assisted resume tailoring tool focused on transparent, trustworthy decision support."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .case-page {
+        min-height: 100vh;
+      }
+
+      .case-main {
+        padding: 18px 0 0;
+      }
+
+      .appliq-page {
+        max-width: 1040px;
+        padding-bottom: 40px;
+      }
+
+      .hero-statement {
+        padding: 14px 0 44px;
+      }
+
+      .hero-title {
+        max-width: 900px;
+        margin: 0;
+        font-family: "Archivo", sans-serif;
+        font-size: clamp(3.2rem, 7.6vw, 5.7rem);
+        font-weight: 500;
+        line-height: 0.93;
+        letter-spacing: -0.06em;
+      }
+
+      .hero-copy {
+        max-width: 780px;
+        margin-top: 26px;
+        color: var(--text);
+        font-size: 0.96rem;
+        line-height: 1.92;
+      }
+
+      .hero-actions,
+      .page-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .hero-actions {
+        margin-top: 28px;
+      }
+
+      .page-actions {
+        margin-top: 18px;
+      }
+
+      .hero-copy p,
+      .section-copy p,
+      .decision-copy p,
+      .outcomes-copy p,
+      .closing-copy p {
+        margin: 0 0 16px;
+      }
+
+      .hero-visual,
+      .artifact-frame {
+        border: 1px solid var(--row-border);
+        background: #151515;
+        overflow: hidden;
+      }
+
+      .hero-visual {
+        margin-top: 30px;
+        max-width: 860px;
+      }
+
+      .hero-visual img,
+      .artifact-frame img,
+      .artifact-frame svg {
+        width: 100%;
+        display: block;
+      }
+
+      .hero-visual,
+      .artifact-block.is-medium {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-visual {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .case-section {
+        padding: 34px 0;
+        border-top: 1px solid var(--row-border);
+      }
+
+      .snapshot-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .snapshot-card,
+      .quote-card,
+      .mini-card {
+        border: 1px solid var(--row-border);
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.015);
+      }
+
+      .snapshot-card h2,
+      .section-label,
+      .decision-tag {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .snapshot-card p {
+        margin: 0;
+        color: var(--text);
+        font-size: 0.86rem;
+        line-height: 1.7;
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 28px;
+      }
+
+      .section-title,
+      .decision-title {
+        margin: 0 0 14px;
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+
+      .section-title {
+        font-size: clamp(1.7rem, 3vw, 2.1rem);
+      }
+
+      .decision-title {
+        font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+      }
+
+      .section-copy,
+      .decision-copy,
+      .outcomes-copy,
+      .closing-copy {
+        color: var(--text);
+        font-size: 0.94rem;
+        line-height: 1.9;
+      }
+
+      .section-copy ul,
+      .decision-copy ul {
+        margin: 0 0 14px;
+        padding-left: 18px;
+      }
+
+      .artifact-block {
+        margin-top: 22px;
+      }
+
+      .artifact-block:first-child {
+        margin-top: 0;
+      }
+
+      .artifact-block + .section-copy,
+      .artifact-grid + .section-copy,
+      .takeaway-list + .section-copy,
+      .focus-grid + .section-copy,
+      .before-after-grid + .section-copy,
+      .decision-stack + .section-copy,
+      .decision-artifacts + .section-copy,
+      .quote-grid + .section-copy {
+        margin-top: 22px;
+      }
+
+      .artifact-caption {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.78rem;
+        line-height: 1.6;
+      }
+
+      .quote-grid,
+      .artifact-grid,
+      .decision-artifacts {
+        display: grid;
+        gap: 18px;
+      }
+
+      .quote-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin: 22px 0;
+      }
+
+      .artifact-grid,
+      .decision-artifacts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .sketch-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .sketch-grid .sketch-wide {
+        grid-column: 1 / -1;
+      }
+
+      .quote-card p,
+      .mini-card p {
+        margin: 0;
+        color: var(--text);
+        line-height: 1.75;
+      }
+
+      .quote-card p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+      }
+
+      .quote-icon {
+        width: 38px;
+        height: 38px;
+        margin-bottom: 14px;
+        border: 1px solid var(--row-border);
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        color: var(--accent);
+      }
+
+      .quote-author {
+        color: var(--muted);
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .takeaway-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 22px;
+      }
+
+      .takeaway-card {
+        border: 1px solid var(--row-border);
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.015);
+        color: var(--text);
+        font-size: 0.84rem;
+        line-height: 1.7;
+      }
+
+      .focus-grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .focus-card {
+        border: 1px solid var(--row-border);
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.015);
+      }
+
+      .focus-card h3 {
+        margin: 0 0 10px;
+        font-family: "Archivo", sans-serif;
+        font-size: 1.15rem;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+      }
+
+      .focus-card p {
+        margin: 0;
+        color: var(--text);
+        font-size: 0.9rem;
+        line-height: 1.8;
+      }
+
+      .before-after-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .before-after-card {
+        border: 1px solid var(--row-border);
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.015);
+      }
+
+      .before-after-card h3 {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .before-after-card p {
+        margin: 0;
+        color: var(--text);
+        line-height: 1.8;
+      }
+
+      .media-frame video {
+        width: 100%;
+        display: block;
+        background: #111;
+      }
+
+      .image-panel {
+        padding: 18px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01)),
+          #121212;
+      }
+
+      .image-panel img {
+        border: 1px solid rgba(240, 235, 225, 0.08);
+        background: #0f0f0f;
+      }
+
+      .slideshow {
+        position: relative;
+      }
+
+      .slideshow-viewport {
+        position: relative;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+      }
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 220ms ease-out;
+        object-fit: contain;
+        background: #0f0f0f;
+      }
+
+      .slide.is-active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .slideshow-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 12px;
+      }
+
+      .slideshow-buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      .slideshow-button {
+        border: 1px solid var(--row-border);
+        background: rgba(255, 255, 255, 0.015);
+        color: var(--text);
+        padding: 8px 14px;
+        font: inherit;
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .slideshow-status {
+        color: var(--muted);
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .jump-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 10px 18px;
+        border: 1px solid var(--row-border);
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+      }
+
+      .jump-button:hover,
+      .jump-button:focus-visible {
+        background: rgba(168, 230, 207, 0.08);
+        color: var(--accent);
+        border-color: rgba(168, 230, 207, 0.24);
+      }
+
+      .insight-break {
+        margin: 8px 0;
+        padding: 42px 0;
+        border-top: 1px solid var(--row-border);
+        border-bottom: 1px solid var(--row-border);
+      }
+
+      .insight-break blockquote {
+        max-width: 860px;
+        margin: 0;
+        font-family: "Archivo", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -0.05em;
+      }
+
+      .insight-break.is-offset blockquote {
+        margin-left: 208px;
+      }
+
+      .decision-stack {
+        display: grid;
+        gap: 26px;
+      }
+
+      .decision-card {
+        border-top: 1px solid rgba(240, 235, 225, 0.06);
+        padding-top: 22px;
+      }
+
+      .decision-card:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .process-intro {
+        margin: 0 0 18px;
+        color: var(--text);
+        font-size: 0.94rem;
+        line-height: 1.9;
+      }
+
+      .mini-card h3 {
+        margin: 0 0 8px;
+        font-family: "Archivo", sans-serif;
+        font-size: 0.96rem;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+      }
+
+      @media (max-width: 900px) {
+        .snapshot-grid,
+        .section-grid,
+        .quote-grid,
+        .artifact-grid,
+        .decision-artifacts,
+        .takeaway-list,
+        .before-after-grid,
+        .sketch-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .insight-break blockquote {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cursor-mark" aria-hidden="true"></div>
+    <div class="page case-page">
+      <header class="topbar">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="home.html">Nick Betts</a>
+          <div class="nav-links">
+            <a class="is-active" href="home.html#work">Work</a>
+            <a href="about.html">About</a>
+            <a href="#">Resume</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="case-main">
+        <article class="appliq-page">
+          <section class="hero-statement">
+            <h1 class="hero-title">
+              Tailoring a resume should take minutes. It usually takes hours.
+            </h1>
+            <div class="hero-copy">
+              <p>
+                Whether you do it manually or use AI, the process is draining. On
+                your own, you end up making dozens of small decisions about every
+                application. What should stay, what should go, and how each line
+                should be written.
+              </p>
+              <p>
+                AI tools introduce a different problem. Many of them invent
+                metrics, exaggerate what you did, or rewrite your resume in a
+                voice that does not sound like you.
+              </p>
+              <p>
+                ApplIQ is an attempt to find the middle ground. It is a tool that
+                helps you quickly align your real experience with a specific
+                role, without inventing anything or taking control away from you.
+              </p>
+            </div>
+            <div class="hero-actions">
+              <a class="jump-button" href="#final-system">Jump to Final Designs</a>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="snapshot-grid">
+              <div class="snapshot-card">
+                <h2>Role</h2>
+                <p>UX Designer, Developer</p>
+              </div>
+              <div class="snapshot-card">
+                <h2>Scope</h2>
+                <p>Research → Product Design → Working Website</p>
+              </div>
+              <div class="snapshot-card">
+                <h2>Goal</h2>
+                <p>Reduce the cognitive load and increase the speed of tailoring resumes for different job applications</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Research</p>
+              <div>
+                <div class="section-copy">
+                  <p>
+                    Many job seekers tailor their resume for every role they apply
+                    to. That usually means rewriting bullet points, adding keywords,
+                    and deciding which parts of their experience to highlight.
+                  </p>
+                  <p>
+                    To understand where the actual friction was, I conducted
+                    research across three areas: a competitive UX audit of
+                    existing AI resume tools, interviews with job seekers across
+                    different career stages, and a journey map of the tailoring
+                    process.
+                  </p>
+                </div>
+
+                <div class="artifact-block">
+                  <div class="artifact-frame">
+                    <div class="image-panel">
+                      <img src="ApplIQ/audit.png" alt="Competitive UX audit board comparing AI resume tools." />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="quote-grid">
+                  <article class="quote-card">
+                    <div class="quote-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="3.5"></circle>
+                        <path d="M5 19c1.7-3.5 4.2-5 7-5s5.3 1.5 7 5"></path>
+                      </svg>
+                    </div>
+                    <p>"Deciding which pieces of my 15-year history are actually relevant to delete or keep."</p>
+                    <div class="quote-author">The Experienced Veteran</div>
+                  </article>
+                  <article class="quote-card">
+                    <div class="quote-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="3.5"></circle>
+                        <path d="M5 19c1.7-3.5 4.2-5 7-5s5.3 1.5 7 5"></path>
+                      </svg>
+                    </div>
+                    <p>"Sometimes I just send the standard one if I'm tired."</p>
+                    <div class="quote-author">The Early-Career Applicant</div>
+                  </article>
+                  <article class="quote-card">
+                    <div class="quote-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="3.5"></circle>
+                        <path d="M5 19c1.7-3.5 4.2-5 7-5s5.3 1.5 7 5"></path>
+                      </svg>
+                    </div>
+                    <p>"Having to explain why my 8 years of experience actually counts for an entry-level role."</p>
+                    <div class="quote-author">The Career Pivoter</div>
+                  </article>
+                </div>
+
+                <div class="artifact-block">
+                  <div class="artifact-frame">
+                    <div class="image-panel">
+                      <img src="ApplIQ/journey.png" alt="Resume tailoring journey map showing key steps and pain points." />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section-copy">
+                  <p><strong>Research Takeaways</strong></p>
+                </div>
+                <div class="takeaway-list">
+                  <div class="takeaway-card">AI trust breaks when it assumes or exaggerates.</div>
+                  <div class="takeaway-card">Users need reasoning, not just rewrites.</div>
+                  <div class="takeaway-card">Mental load is the true bottleneck.</div>
+                  <div class="takeaway-card">Authenticity is non-negotiable.</div>
+                  <div class="takeaway-card">Just one resume can take forever.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="insight-break is-offset">
+            <blockquote>
+              The real problem was not writing. It was repeatedly deciding how to represent the same experience, over and over, for every new role.
+            </blockquote>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Research Synthesis</p>
+              <div class="section-copy">
+                <p>The research pointed to a few core issues:</p>
+                <div class="focus-grid">
+                  <article class="focus-card">
+                    <h3>Decision fatigue was the real problem</h3>
+                    <p>The difficulty was not writing, but repeatedly deciding how to represent the same experience.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>Trust broke when AI overstepped</h3>
+                    <p>Exaggerated metrics or rewritten voice made outputs feel unusable, even if they sounded better.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>Lack of transparency increased effort</h3>
+                    <p>When users could not see what changed or why, they had to re-evaluate everything manually.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>No tool made this process quick</h3>
+                    <p>Whether users had to review each bullet point, or manually update their resume with new bullet points, the process took way too long.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Early Concepts</p>
+              <div>
+                <div class="section-copy">
+                  <p>
+                    Based on those findings, I explored ways to reduce
+                    decision-making and increase the speed of the whole tailoring
+                    process.
+                  </p>
+                  <p>Early ideas included:</p>
+                  <p>Keeping Resume Design — I wanted the tailored outputs to mimic the look and layout of each users unique resume to make comparison as easy as possible.</p>
+                  <p>Resume Before &amp; After — I wanted to display resumes side by side so users could see the changes made easily to determine quickly if they liked the changes made.</p>
+                  <p>Experience Inventory — I wanted users to be able to upload their resume and have their experience autofill into an experience inventory where they could then add even more experience for the AI to pull from when tailoring.</p>
+                  <p>The common thread across these concepts was making this process as quick and easy for users as possible.</p>
+                </div>
+                <div class="artifact-block">
+                  <div class="sketch-grid">
+                    <div class="artifact-frame">
+                      <div class="image-panel">
+                        <img src="ApplIQ/sketch1.png" alt="Early ApplIQ concept sketch showing an initial layout direction." />
+                      </div>
+                    </div>
+                    <div class="artifact-frame">
+                      <div class="image-panel">
+                        <img src="ApplIQ/sketch2.png" alt="Early ApplIQ concept sketch showing another layout and flow direction." />
+                      </div>
+                    </div>
+                    <div class="artifact-frame sketch-wide">
+                      <div class="image-panel">
+                        <img src="ApplIQ/sketch3.png" alt="Early ApplIQ concept sketch showing an additional concept direction." />
+                      </div>
+                    </div>
+                  </div>
+                  <p class="artifact-caption">Early sketches exploring different directions, layouts, and flows.</p>
+                </div>
+                <div class="section-copy">
+                  <p>At this stage, the focus was on the flow from uploading a resume to downloading a tailored one, how to surface AI suggestions without overwhelming the user, and how user decision-making should happen.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">From Concepts to Structure</p>
+              <div>
+                <div class="section-copy">
+                  <p>As the ideas became more concrete, a few patterns started to emerge.</p>
+                </div>
+                <div class="decision-stack">
+                  <article class="decision-card">
+                    <p class="decision-tag">Focus 1</p>
+                    <h2 class="decision-title">From rewriting to refining</h2>
+                    <div class="decision-copy">
+                      <p>Instead of generating completely new content, the system works on top of existing bullet points, without fabricating or exaggerating experience.</p>
+                    </div>
+                    <div class="before-after-grid">
+                      <div class="before-after-card">
+                        <h3>Before</h3>
+                        <p>"Managed customer relationships and handled support issues."</p>
+                      </div>
+                      <div class="before-after-card">
+                        <h3>After</h3>
+                        <p>"Managed customer support workflows and resolved issues across multiple client touchpoints."</p>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="decision-card">
+                    <p class="decision-tag">Focus 2</p>
+                    <h2 class="decision-title">From hidden changes to visible reasoning</h2>
+                    <div class="decision-copy">
+                      <p>Every suggested edit includes an explanation showing why it improves alignment with the job description.</p>
+                    </div>
+                  </article>
+                  <article class="decision-card">
+                    <p class="decision-tag">Focus 3</p>
+                    <h2 class="decision-title">From required effort to optional effort</h2>
+                    <div class="decision-copy">
+                      <p>Users should be able to decide how much effort they wanted to give for each resume tailoring. It should be easy to quickly review and download, but also simple to dig deeper into why changes were made, and edit, delete, or revert tailored bullets.</p>
+                    </div>
+                  </article>
+                </div>
+                <section class="insight-break">
+                  <blockquote>
+                    These focuses became the foundation for the first structured designs.
+                  </blockquote>
+                </section>
+                <div class="artifact-block">
+                  <div class="artifact-frame">
+                    <div class="image-panel">
+                      <img src="ApplIQ/Wireframes.png" alt="ApplIQ wireframes showing bullet-level editing, diff view, and layout directions." />
+                    </div>
+                  </div>
+                  <p class="artifact-caption">
+                    Wireframes showing bullet-level editing, diff view, and layout directions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Building It to Test the Design</p>
+              <div>
+                <div class="section-copy">
+                  <p>Prototypes are easy to make look good. Code has no patience for assumptions.</p>
+                  <p>To validate the system, I built a working version of ApplIQ rather than stopping at mockups.</p>
+                  <p>The first version was intentionally minimal:</p>
+                </div>
+                <div class="takeaway-list">
+                  <div class="takeaway-card">Users paste resume bullets.</div>
+                  <div class="takeaway-card">Users paste a job description.</div>
+                  <div class="takeaway-card">The system returns suggested edits with explanations.</div>
+                </div>
+                <div class="artifact-block">
+                  <div class="artifact-frame">
+                    <div class="image-panel">
+                      <img src="ApplIQ/v1.png" alt="Very early ApplIQ prototype with a simple UI for testing the core flow." />
+                    </div>
+                  </div>
+                  <p class="artifact-caption">
+                    v1 prototype — simple, functional, and intentionally rough.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Where the Design Changed</p>
+              <div class="section-copy">
+                <p>Building the product exposed issues that were not visible in design.</p>
+                <div class="focus-grid">
+                  <article class="focus-card">
+                    <h3>Resume parsing was inconsistent</h3>
+                    <p>Inputs were less structured than expected, which affected output quality.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>Prompting required tighter constraints</h3>
+                    <p>Without guardrails, the system drifted into exaggeration or vague improvements.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>Edge cases broke the flow</h3>
+                    <p>Certain bullet types or job descriptions did not behave as expected.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>The UI had to rebalance priorities</h3>
+                    <p>The resume content needed to stay readable, even with explanations visible.</p>
+                  </article>
+                </div>
+                <p>Each of these forced changes to both the interaction model and the interface.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Iteration</p>
+              <div>
+                <div class="section-copy">
+                  <p>The design evolved alongside the build.</p>
+                </div>
+                <div class="focus-grid">
+                  <article class="focus-card">
+                    <h3>Resume template redesign</h3>
+                    <p>Elevated from a default Word template to a polished, ATS-safe document with a consistent navy design language, proper hierarchy, and refined typography.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>Workspace interaction system</h3>
+                    <p>Replaced passive hover behavior with an intentional toolbar giving users explicit control over their bullets, plus a left accent bar to indicate AI changes without disrupting layout.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>More Info panel</h3>
+                    <p>Evolved from a basic stat overview into a meaningful dashboard showing AI reasoning, match summary, key terms, gaps, and quick tips to build user trust and confidence in the output.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>Full product structure</h3>
+                    <p>Expanded from a single tool into a cohesive product with a home page, auth flow, onboarding, profile editor, and consistent design language throughout.</p>
+                  </article>
+                </div>
+                <div class="artifact-block">
+                  <div class="slideshow" data-slideshow>
+                    <div class="artifact-frame image-panel">
+                      <div class="slideshow-viewport">
+                        <img class="slide is-active" src="ApplIQ/v2.png" alt="ApplIQ v2 iteration showing an earlier product state." />
+                        <img class="slide" src="ApplIQ/v3.png" alt="ApplIQ v3 iteration showing the product becoming more structured." />
+                        <img class="slide" src="ApplIQ/v4.png" alt="ApplIQ v4 iteration showing evolving layout and controls." />
+                        <img class="slide" src="ApplIQ/v5.png" alt="ApplIQ v5 iteration showing refined information hierarchy." />
+                        <img class="slide" src="ApplIQ/v6.png" alt="ApplIQ v6 iteration showing the near-final product direction." />
+                        <img class="slide" src="ApplIQ/v7.png" alt="ApplIQ v7 iteration showing a more polished and refined product state." />
+                      </div>
+                    </div>
+                    <div class="slideshow-controls">
+                      <div class="slideshow-buttons">
+                        <button class="slideshow-button" type="button" data-slide-action="prev">Prev</button>
+                        <button class="slideshow-button" type="button" data-slide-action="next">Next</button>
+                      </div>
+                      <div class="slideshow-status" data-slideshow-status>v2 of v7</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section" id="final-system">
+            <div class="section-grid">
+              <p class="section-label">Final System</p>
+              <div>
+                <div class="section-copy">
+                  <p>The following walkthrough demonstrates the full end-to-end experience — from pasting a job description to reviewing AI-tailored bullet changes and downloading a polished, role-specific resume. The entire flow is designed to take under a minute.</p>
+                </div>
+                <div class="artifact-block media-frame">
+                  <div class="artifact-frame">
+                    <video controls preload="metadata" playsinline>
+                      <source src="ApplIQ/Walkthrough.mp4" type="video/mp4" />
+                      Your browser does not support the walkthrough video.
+                    </video>
+                  </div>
+                  <p class="artifact-caption">
+                    Final product UI walkthrough.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Outcomes</p>
+              <div class="outcomes-copy">
+                <p>
+                  ApplIQ is currently in active development and being tested with
+                  a small group of friends and early users through dedicated test
+                  accounts. Feedback so far has been positive, particularly around
+                  the speed of the generation flow and the transparency of the
+                  bullet-level AI explanations.
+                </p>
+                <p>
+                  The project demonstrated my ability to take a product from a
+                  rough prototype through multiple rounds of design iteration,
+                  improving visual hierarchy, interaction design, and information
+                  architecture across the resume output, workspace, and overall
+                  product structure. Every decision was grounded in a clear
+                  product philosophy: the tailoring should be fast, honest, and
+                  feel controllable rather than like a black box.
+                </p>
+                <p>
+                  I am continuing to make improvements based on early feedback and
+                  am working toward launching the product publicly so anyone can
+                  use it. Feel free to ask me if you'd like an account to check
+                  it out yourself!
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Closing Insight</p>
+              <div class="closing-copy">
+                <p>
+                  The most important design lesson from this project was that AI
+                  features live or die on user trust. Speed matters, but only if
+                  users feel confident in what the AI produced.
+                </p>
+                <p>
+                  Every decision, from the bullet-level explanations to the
+                  revert controls to the accent bar indicators, was ultimately
+                  about making the AI's work visible and reversible so users
+                  could move fast without feeling like they were losing control.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="page-actions">
+              <a class="jump-button" href="#">Back To Top</a>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <p class="footer-left">
+          © 2026 Nick Betts ·
+          <a href="mailto:nickbetts317@gmail.com">nickbetts317@gmail.com</a> ·
+          <a href="https://www.linkedin.com/in/nickbetts1/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+        <p class="footer-right">Let's work together :)</p>
+      </footer>
+    </div>
+
+    <script>
+      const cursorMark = document.querySelector(".cursor-mark");
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        window.addEventListener("mousemove", (event) => {
+          if (cursorMark) {
+            cursorMark.style.opacity = "1";
+            cursorMark.style.transform = `translate3d(${event.clientX - 9}px, ${event.clientY - 9}px, 0)`;
+          }
+        });
+        window.addEventListener("mouseleave", () => {
+          if (cursorMark) {
+            cursorMark.style.opacity = "0";
+          }
+        });
+      }
+
+      document.querySelectorAll("[data-slideshow]").forEach((slideshow) => {
+        const slides = Array.from(slideshow.querySelectorAll(".slide"));
+        const status = slideshow.querySelector("[data-slideshow-status]");
+        let activeIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));
+
+        if (activeIndex === -1) {
+          activeIndex = 0;
+          if (slides[0]) {
+            slides[0].classList.add("is-active");
+          }
+        }
+
+        const render = () => {
+          slides.forEach((slide, index) => {
+            slide.classList.toggle("is-active", index === activeIndex);
+          });
+
+          if (status) {
+            status.textContent = `v${activeIndex + 2} of v7`;
+          }
+        };
+
+        render();
+
+        slideshow.querySelectorAll("[data-slide-action]").forEach((button) => {
+          button.addEventListener("click", () => {
+            if (!slides.length) {
+              return;
+            }
+
+            const direction = button.getAttribute("data-slide-action") === "next" ? 1 : -1;
+            activeIndex = (activeIndex + direction + slides.length) % slides.length;
+            render();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

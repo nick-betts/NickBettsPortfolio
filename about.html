@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Nick Betts</title>
+    <meta
+      name="description"
+      content="About Nick Betts, a product and UX designer focused on clear systems, thoughtful interfaces, and durable product experiences."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        min-height: 100vh;
+      }
+
+      .about-page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .about-main {
+        flex: 1;
+        padding: 18px 0 0;
+      }
+
+      .about-intro {
+        padding-top: 0;
+      }
+
+      .about-kicker {
+        margin: 0 0 18px;
+        color: var(--accent);
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .about-title {
+        margin: 0;
+        font-family: "Archivo", sans-serif;
+        font-size: clamp(2.6rem, 6.8vw, 4.2rem);
+        font-weight: 500;
+        line-height: 0.94;
+        letter-spacing: -0.05em;
+      }
+
+      .about-copy {
+        margin-top: 28px;
+        color: var(--text);
+        font-size: 0.92rem;
+        line-height: 1.85;
+      }
+
+      .about-copy p {
+        margin: 0 0 14px;
+      }
+
+      .about-copy-intro {
+        margin-top: 18px;
+      }
+
+      .about-photo {
+        float: right;
+        width: 360px;
+        aspect-ratio: 4 / 5;
+        margin: 0 0 24px 40px;
+        border: 1px solid var(--row-border);
+        overflow: hidden;
+        background:
+          linear-gradient(135deg, rgba(168, 230, 207, 0.08), transparent 48%),
+          #151515;
+        position: relative;
+        transition: border-color 220ms ease-out, transform 220ms ease-out, box-shadow 220ms ease-out;
+      }
+
+      .about-photo::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(14, 14, 14, 0.02), rgba(14, 14, 14, 0.14)),
+          linear-gradient(135deg, rgba(168, 230, 207, 0.1), transparent 58%);
+        opacity: 0.85;
+        pointer-events: none;
+        transition: opacity 220ms ease-out;
+      }
+
+      .about-photo::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border: 1px solid rgba(168, 230, 207, 0);
+        z-index: 1;
+        pointer-events: none;
+        transition: border-color 220ms ease-out, inset 220ms ease-out;
+      }
+
+      .about-photo .photo-hover-note {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 2;
+        margin: 0;
+        padding: 7px 10px;
+        background: rgba(14, 14, 14, 0.8);
+        border: 1px solid rgba(168, 230, 207, 0.28);
+        color: var(--accent);
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0;
+        transform: translateY(6px);
+        transition: opacity 220ms ease-out, transform 220ms ease-out;
+      }
+
+      .about-photo img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .about-photo:hover {
+        border-color: rgba(168, 230, 207, 0.38);
+        transform: translateY(-2px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+      }
+
+      .about-photo:hover::before {
+        inset: 14px;
+        border-color: rgba(168, 230, 207, 0.42);
+      }
+
+      .about-photo:hover::after {
+        opacity: 1;
+      }
+
+      .about-photo:hover .photo-hover-note {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 900px) {
+        .about-photo {
+          float: none;
+          width: min(100%, 320px);
+          margin: 0 0 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cursor-mark" aria-hidden="true"></div>
+    <div class="page about-page">
+      <header class="topbar">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="home.html">Nick Betts</a>
+          <div class="nav-links">
+            <a href="home.html#work">Work</a>
+            <a class="is-active" href="about.html">About</a>
+            <a href="#">Resume</a>
+          </div>
+        </nav>
+        <p class="orientation">
+          Implementation Specialist @ Walker · B.S. UX Design, Purdue University · Based in Indy
+        </p>
+      </header>
+
+      <main class="about-main">
+        <section class="about-intro">
+          <div>
+            <div class="about-photo">
+              <img src="nickbetts.jpg" alt="Portrait of Nick Betts" />
+              <p class="photo-hover-note">Hi :)</p>
+            </div>
+            <h1 class="about-title">I focus on turning complex systems and data into products people can actually use.</h1>
+            <p class="about-kicker" style="margin-top: 30px">About</p>
+            <div class="about-copy about-copy-intro">
+              <p>
+                I’m a UX designer and implementation specialist who enjoys turning
+                complex systems into tools people can actually use.
+              </p>
+              <p>
+                In my current role, I design and launch survey programs, build
+                dashboards, and help organizations turn large datasets into usable
+                insights using Qualtrics. My work sits at the intersection of UX,
+                data, and implementation — designing interfaces while also
+                configuring systems, cleaning data, and solving the practical
+                problems that affect how products work in the real world.
+              </p>
+              <p>
+                I studied UX Design at Purdue University, where I developed a
+                foundation in user research, interaction design, and prototyping.
+                That experience shaped how I approach design: understanding user
+                goals first, simplifying complex workflows, and building products
+                that feel intuitive.
+              </p>
+            </div>
+            <p class="about-kicker" style="margin-top: 34px">How I think about design</p>
+            <div class="about-copy" style="margin-top: 18px">
+              <p>I approach design as a problem-solving process.</p>
+              <p>
+                First I try to understand the system — what users need to
+                accomplish, what information they rely on, and where friction
+                exists. From there I focus on simplifying decisions, reducing
+                cognitive load, and designing interfaces that guide users
+                naturally toward the outcome they want.
+              </p>
+              <p>
+                Good UX isn’t just about aesthetics. It’s about making something
+                clear, efficient, and useful.
+              </p>
+            </div>
+            <p class="about-kicker" style="margin-top: 34px">Outside of work</p>
+            <div class="about-copy" style="margin-top: 18px">
+              <p>
+                Outside of work I enjoy building small side projects, especially
+                tools that combine design with emerging technology like AI. I’m
+                always experimenting with new ideas and figuring out how to turn
+                them into real products.
+              </p>
+              <p>
+                When I’m not designing or building something, I’m usually in the
+                gym or exploring new product ideas.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer-left">
+          © 2026 Nick Betts ·
+          <a href="mailto:nickbetts317@gmail.com">nickbetts317@gmail.com</a> ·
+          <a href="https://www.linkedin.com/in/nickbetts1/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+        <p class="footer-right">Let's work together :)</p>
+      </footer>
+    </div>
+
+    <script>
+      const cursorMark = document.querySelector(".cursor-mark");
+
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        window.addEventListener("mousemove", (event) => {
+          if (cursorMark) {
+            cursorMark.style.opacity = "1";
+            cursorMark.style.transform = `translate3d(${event.clientX - 9}px, ${event.clientY - 9}px, 0)`;
+          }
+        });
+
+        window.addEventListener("mouseleave", () => {
+          if (cursorMark) {
+            cursorMark.style.opacity = "0";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

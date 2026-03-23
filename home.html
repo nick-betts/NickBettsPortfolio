@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nick Betts | Portfolio</title>
+    <meta
+      name="description"
+      content="Nick Betts is a product and UX designer. Explore three case studies across healthcare, e-commerce, and operations."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-mark" aria-hidden="true"></div>
+    <div class="page">
+      <header class="topbar">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="#top">Nick Betts</a>
+          <div class="nav-links">
+            <a class="is-active" href="#work">Work</a>
+            <a href="about.html">About</a>
+            <a href="#">Resume</a>
+          </div>
+        </nav>
+        <p class="orientation">
+          Implementation Specialist @ Walker · B.S. UX Design, Purdue University · Based in Indy
+        </p>
+      </header>
+
+      <main id="top">
+        <section id="work" class="work-list" aria-label="Case studies">
+          <article
+            class="project-row"
+            tabindex="0"
+            role="link"
+            data-href="appliq.html"
+            data-rotation="-2deg"
+            data-thumb-title="Atlas Health dashboard preview"
+            data-thumb-svg="atlas"
+            data-thumb-meta="ApplIQ"
+            data-thumb-copy="An AI-powered platform that helps job seekers tailor resumes to specific roles with transparent, actionable feedback."
+          >
+            <span class="project-index">01</span>
+            <div class="project-main">
+              <h2 class="project-title">ApplIQ</h2>
+            </div>
+            <p class="project-category">AI Career Tool</p>
+            <a class="project-link" href="appliq.html" aria-label="View ApplIQ case study"><span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article
+            class="project-row"
+            tabindex="0"
+            role="link"
+            data-href="wisq.html"
+            data-rotation="1.5deg"
+            data-thumb-title="Signal Commerce checkout preview"
+            data-thumb-svg="signal"
+            data-thumb-meta="Wisq"
+            data-thumb-copy="Leveraging GPT-4o’s capabilities for real-time virtual meeting coaching."
+          >
+            <span class="project-index">02</span>
+            <div class="project-main">
+              <h2 class="project-title">Wisq</h2>
+            </div>
+            <p class="project-category">AI Meeting Coach</p>
+            <a class="project-link" href="wisq.html" aria-label="View Wisq case study"><span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article
+            class="project-row"
+            tabindex="0"
+            role="link"
+            data-href="imleagues.html"
+            data-rotation="-1deg"
+            data-thumb-title="Northstar Field Ops mobile workflow preview"
+            data-thumb-svg="northstar"
+            data-thumb-meta="IMLeagues"
+            data-thumb-copy="Redesigning the current IMLeagues website to improve intramural sports experience."
+          >
+            <span class="project-index">03</span>
+            <div class="project-main">
+              <h2 class="project-title">IMLeagues</h2>
+            </div>
+            <p class="project-category">Website Redesign</p>
+            <a class="project-link" href="imleagues.html" aria-label="View IMLeagues case study"><span aria-hidden="true">↗</span></a>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer-left">
+          © 2026 Nick Betts ·
+          <a href="mailto:nickbetts317@gmail.com">nickbetts317@gmail.com</a> ·
+          <a href="https://www.linkedin.com/in/nickbetts1/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </p>
+        <p class="footer-right">Let's work together :)</p>
+      </footer>
+    </div>
+
+    <template id="thumb-atlas">
+      <img src="appliq_thumbnail.png" alt="ApplIQ project thumbnail" />
+    </template>
+
+    <template id="thumb-signal">
+      <svg viewBox="0 0 900 620" role="img" aria-hidden="true">
+        <rect width="900" height="620" fill="#121212" rx="28" />
+        <rect x="70" y="86" width="760" height="450" rx="28" fill="#efe8db" />
+        <rect x="108" y="126" width="220" height="308" rx="20" fill="#ddd5c7" />
+        <rect x="358" y="126" width="420" height="66" rx="18" fill="#d7cfbe" />
+        <rect x="358" y="220" width="420" height="140" rx="18" fill="#e7dfd0" />
+        <rect x="358" y="386" width="280" height="92" rx="18" fill="#232323" />
+        <rect x="132" y="154" width="134" height="12" rx="6" fill="#A8E6CF" />
+        <rect x="132" y="190" width="96" height="10" rx="5" fill="#777" />
+        <rect x="385" y="148" width="180" height="12" rx="6" fill="#1a1a1a" />
+        <rect x="385" y="256" width="210" height="12" rx="6" fill="#1a1a1a" />
+      </svg>
+    </template>
+
+    <template id="thumb-northstar">
+      <svg viewBox="0 0 900 620" role="img" aria-hidden="true">
+        <rect width="900" height="620" fill="#121212" rx="28" />
+        <rect x="120" y="72" width="240" height="476" rx="40" fill="#171717" stroke="#2d2d2d" stroke-width="8" />
+        <rect x="390" y="120" width="370" height="104" rx="24" fill="#ede6d8" />
+        <rect x="390" y="256" width="370" height="104" rx="24" fill="#dfd7c7" />
+        <rect x="390" y="392" width="370" height="104" rx="24" fill="#232323" />
+        <rect x="154" y="122" width="172" height="36" rx="18" fill="#202020" />
+        <rect x="154" y="186" width="172" height="250" rx="24" fill="#f0eadf" />
+        <rect x="422" y="152" width="130" height="14" rx="7" fill="#1a1a1a" />
+        <rect x="422" y="183" width="220" height="10" rx="5" fill="#797267" />
+        <rect x="422" y="422" width="160" height="14" rx="7" fill="#A8E6CF" />
+      </svg>
+    </template>
+
+    <aside class="hover-thumb" aria-hidden="true">
+      <div class="hover-thumb-frame"></div>
+      <div class="hover-thumb-copy">
+        <p class="hover-thumb-meta"></p>
+        <p class="hover-thumb-text"></p>
+      </div>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
