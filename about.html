@@ -68,10 +68,8 @@
       }
 
       .about-photo {
-        float: right;
         width: 360px;
         aspect-ratio: 4 / 5;
-        margin: 0 0 24px 40px;
         border: 1px solid var(--row-border);
         overflow: hidden;
         background:
@@ -128,6 +126,37 @@
         object-fit: cover;
       }
 
+      .about-photo-right {
+        float: right;
+        margin: 0 0 24px 40px;
+      }
+
+      .about-photo-left {
+        float: left;
+        margin: 4px 40px 24px 0;
+      }
+
+      .about-photo-tall {
+        width: 320px;
+      }
+
+      .about-photo-wide {
+        width: 400px;
+        aspect-ratio: 5 / 4;
+      }
+
+      .about-photo-hero img {
+        object-position: center 18%;
+      }
+
+      .about-photo-secondary img {
+        object-position: center 28%;
+      }
+
+      .about-photo-tertiary img {
+        object-position: center 12%;
+      }
+
       .about-photo:hover {
         border-color: rgba(168, 230, 207, 0.38);
         transform: translateY(-2px);
@@ -163,10 +192,13 @@
       <header class="topbar">
         <nav class="nav" aria-label="Primary navigation">
           <a class="brand" href="home.html">Nick Betts</a>
-          <div class="nav-links">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-links" aria-label="Open navigation">
+            <span class="nav-toggle-lines"><span></span></span>
+          </button>
+          <div class="nav-links" id="primary-nav-links">
             <a href="home.html#work">Work</a>
             <a class="is-active" href="about.html">About</a>
-            <a href="#">Resume</a>
+            <a href="Nick_Betts_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           </div>
         </nav>
         <p class="orientation">
@@ -177,59 +209,59 @@
       <main class="about-main">
         <section class="about-intro">
           <div>
-            <div class="about-photo">
-              <img src="nickbetts.jpg" alt="Portrait of Nick Betts" />
-              <p class="photo-hover-note">Hi :)</p>
+            <div class="about-photo about-photo-right about-photo-hero">
+              <img src="nickbetts.jpg" alt="London, 2023" />
+              <p class="photo-hover-note">London, 2023</p>
             </div>
-            <h1 class="about-title">I focus on turning complex systems and data into products people can actually use.</h1>
-            <p class="about-kicker" style="margin-top: 30px">About</p>
+            <h1 class="about-title">Most of my work is about reducing friction people don’t realize they’re dealing with.</h1>
+            <p class="about-kicker" style="margin-top: 30px">Outside of work</p>
             <div class="about-copy about-copy-intro">
               <p>
-                I’m a UX designer and implementation specialist who enjoys turning
-                complex systems into tools people can actually use.
+                I figured this page should actually be about me. Most of this site is already focused on my work, so this is the part where you get a better sense of who I am outside of it.
               </p>
               <p>
-                In my current role, I design and launch survey programs, build
-                dashboards, and help organizations turn large datasets into usable
-                insights using Qualtrics. My work sits at the intersection of UX,
-                data, and implementation — designing interfaces while also
-                configuring systems, cleaning data, and solving the practical
-                problems that affect how products work in the real world.
+                I spend a lot of my time working out, playing Pokemon Go more than I probably should, watching Purdue basketball, the Broncos, and the Pacers, and I play pickup basketball and golf with friends whenever I can.
               </p>
               <p>
-                I studied UX Design at Purdue University, where I developed a
-                foundation in user research, interaction design, and prototyping.
-                That experience shaped how I approach design: understanding user
-                goals first, simplifying complex workflows, and building products
-                that feel intuitive.
+                I go to the movie theater a lot, so if you want to talk movies lmk. I'm also pretty into cooking, so I'm always trying new recipes. And for no real reason other than it feels important to mention, my favorite candy is Buncha Crunch. If you've never had it, you should try it.
               </p>
+            </div>
+            <div class="about-photo about-photo-left about-photo-wide about-photo-secondary">
+              <img src="nickbetts3.jpg" alt="West Lafayette, 2024" />
+              <p class="photo-hover-note">West Lafayette, 2024</p>
             </div>
             <p class="about-kicker" style="margin-top: 34px">How I think about design</p>
             <div class="about-copy" style="margin-top: 18px">
-              <p>I approach design as a problem-solving process.</p>
               <p>
-                First I try to understand the system — what users need to
-                accomplish, what information they rely on, and where friction
-                exists. From there I focus on simplifying decisions, reducing
-                cognitive load, and designing interfaces that guide users
-                naturally toward the outcome they want.
+                I treat design as a way to reduce decisions, not add more.
               </p>
               <p>
-                Good UX isn’t just about aesthetics. It’s about making something
-                clear, efficient, and useful.
+                Before I think about screens, I try to understand the system. What someone is actually trying to do, what information they’re relying on, and where things start to break down. Most problems aren’t visual, they’re structural.
+              </p>
+              <p>
+                From there, the goal is simple. Make the next step obvious. Cut anything that slows someone down. Use the interface to guide, not just display.
+              </p>
+              <p>
+                I’m less interested in making something look good than making it feel clear and easy to use. When something works, people don’t have to think about it. They just move through it.
               </p>
             </div>
-            <p class="about-kicker" style="margin-top: 34px">Outside of work</p>
+            <div class="about-photo about-photo-right about-photo-tall about-photo-tertiary">
+              <img src="nickbetts2.jpg" alt="Chicago, 2026" />
+              <p class="photo-hover-note">Chicago, 2026</p>
+            </div>
+            <p class="about-kicker" style="margin-top: 34px; clear: left">About</p>
             <div class="about-copy" style="margin-top: 18px">
               <p>
-                Outside of work I enjoy building small side projects, especially
-                tools that combine design with emerging technology like AI. I’m
-                always experimenting with new ideas and figuring out how to turn
-                them into real products.
+                I’m a UX designer and implementation specialist focused on turning complex systems into tools people can actually use.
               </p>
               <p>
-                When I’m not designing or building something, I’m usually in the
-                gym or exploring new product ideas.
+                In my current role, I design and launch survey programs, build dashboards, and work with large datasets in Qualtrics. A lot of my work sits between UX and implementation. I’m not just designing interfaces, I’m configuring systems, cleaning data, and figuring out what actually works once something goes live.
+              </p>
+              <p>
+                I’ve worked on projects ranging from a few hundred responses to datasets with over a million, with dashboards used by hundreds of stakeholders. That scale has pushed me to think less about ideal experiences and more about clarity, performance, and real-world use.
+              </p>
+              <p>
+                I studied UX Design at Purdue University, where I built a foundation in research, interaction design, and prototyping. More importantly, it shaped how I approach problems. Start with what people are trying to do, simplify where things get messy, and build something that feels obvious once it’s in front of you.
               </p>
             </div>
           </div>
@@ -247,6 +279,15 @@
     </div>
 
     <script>
+      const nav = document.querySelector(".nav");
+      const navToggle = document.querySelector(".nav-toggle");
+      if (nav && navToggle) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
+
       const cursorMark = document.querySelector(".cursor-mark");
 
       if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

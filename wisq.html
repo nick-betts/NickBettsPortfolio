@@ -6,15 +6,275 @@
     <title>Wisq | Nick Betts</title>
     <meta
       name="description"
-      content="Wisq case study by Nick Betts, an AI meeting coach using GPT-4o for real-time virtual meeting support."
+      content="Wisq case study by Nick Betts. This page is currently a work in progress."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .case-page {
+        min-height: 100vh;
+      }
+
+      .case-main {
+        padding: 18px 0 0;
+      }
+
+      .case-study-page {
+        max-width: 1040px;
+        padding-bottom: 40px;
+      }
+
+      .hero-statement {
+        padding: 14px 0 44px;
+      }
+
+      .hero-title {
+        max-width: 900px;
+        margin: 0;
+        font-family: "Archivo", sans-serif;
+        font-size: clamp(3.2rem, 7.6vw, 5.7rem);
+        font-weight: 500;
+        line-height: 0.93;
+        letter-spacing: -0.06em;
+      }
+
+      .hero-copy {
+        max-width: 780px;
+        margin-top: 26px;
+        color: var(--text);
+        font-size: 0.96rem;
+        line-height: 1.92;
+      }
+
+      .hero-actions,
+      .page-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .hero-actions {
+        margin-top: 28px;
+      }
+
+      .page-actions {
+        margin-top: 18px;
+      }
+
+      .hero-copy p,
+      .section-copy p,
+      .decision-copy p,
+      .outcomes-copy p,
+      .closing-copy p {
+        margin: 0 0 16px;
+      }
+
+      .artifact-frame {
+        border: 1px solid var(--row-border);
+        background: #151515;
+        overflow: hidden;
+      }
+
+      .artifact-frame img,
+      .artifact-frame svg {
+        width: 100%;
+        display: block;
+      }
+
+      .case-section {
+        padding: 34px 0;
+        border-top: 1px solid var(--row-border);
+      }
+
+      .snapshot-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .snapshot-card,
+      .quote-card,
+      .mini-card,
+      .focus-card,
+      .takeaway-card,
+      .before-after-card {
+        border: 1px solid var(--row-border);
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.015);
+      }
+
+      .snapshot-card h2,
+      .section-label,
+      .decision-tag,
+      .before-after-card h3 {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .snapshot-card p,
+      .takeaway-card,
+      .focus-card p,
+      .before-after-card p,
+      .quote-card p,
+      .mini-card p {
+        margin: 0;
+        color: var(--text);
+        line-height: 1.8;
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 28px;
+      }
+
+      .section-title,
+      .decision-title,
+      .focus-card h3 {
+        margin: 0 0 14px;
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.04em;
+      }
+
+      .section-title {
+        font-size: clamp(1.7rem, 3vw, 2.1rem);
+      }
+
+      .decision-title,
+      .focus-card h3 {
+        font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+      }
+
+      .section-copy,
+      .decision-copy,
+      .outcomes-copy,
+      .closing-copy {
+        color: var(--text);
+        font-size: 0.94rem;
+        line-height: 1.9;
+      }
+
+      .artifact-block {
+        margin-top: 22px;
+      }
+
+      .artifact-block + .section-copy,
+      .takeaway-list + .section-copy,
+      .focus-grid + .section-copy,
+      .decision-stack + .section-copy,
+      .quote-grid + .section-copy {
+        margin-top: 22px;
+      }
+
+      .artifact-caption {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 0.78rem;
+        line-height: 1.6;
+      }
+
+      .quote-grid,
+      .focus-grid,
+      .decision-stack,
+      .takeaway-list {
+        display: grid;
+        gap: 18px;
+      }
+
+      .quote-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .takeaway-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .before-after-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .quote-card p {
+        margin-bottom: 12px;
+      }
+
+      .quote-author {
+        color: var(--muted);
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .insight-break {
+        margin: 8px 0;
+        padding: 42px 0;
+        border-top: 1px solid var(--row-border);
+        border-bottom: 1px solid var(--row-border);
+      }
+
+      .insight-break blockquote {
+        max-width: 860px;
+        margin: 0;
+        font-family: "Archivo", sans-serif;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.08;
+        letter-spacing: -0.05em;
+      }
+
+      .decision-card {
+        border-top: 1px solid rgba(240, 235, 225, 0.06);
+        padding-top: 22px;
+      }
+
+      .decision-card:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .jump-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 10px 18px;
+        border: 1px solid var(--row-border);
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+        font-size: 0.76rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+      }
+
+      .jump-button:hover,
+      .jump-button:focus-visible {
+        background: rgba(168, 230, 207, 0.08);
+        color: var(--accent);
+        border-color: rgba(168, 230, 207, 0.24);
+      }
+
+      @media (max-width: 900px) {
+        .snapshot-grid,
+        .section-grid,
+        .quote-grid,
+        .takeaway-list,
+        .before-after-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="cursor-mark" aria-hidden="true"></div>
@@ -22,90 +282,253 @@
       <header class="topbar">
         <nav class="nav" aria-label="Primary navigation">
           <a class="brand" href="home.html">Nick Betts</a>
-          <div class="nav-links">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-links" aria-label="Open navigation">
+            <span class="nav-toggle-lines"><span></span></span>
+          </button>
+          <div class="nav-links" id="primary-nav-links">
             <a class="is-active" href="home.html#work">Work</a>
             <a href="about.html">About</a>
-            <a href="#">Resume</a>
+            <a href="Nick_Betts_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           </div>
         </nav>
       </header>
 
       <main class="case-main">
-        <section class="case-hero">
-          <div>
-            <p class="case-meta">02 · AI Meeting Coach</p>
-            <h1 class="case-title">Wisq</h1>
-            <p class="case-summary">
-              Leveraging GPT-4o’s capabilities for real-time virtual meeting coaching.
-            </p>
-          </div>
-          <p class="case-meta">Conversation UX · AI Interaction · Interface Design</p>
-        </section>
-
-        <div class="case-media">
-          <svg viewBox="0 0 1440 820" role="img" aria-label="Wisq interface preview">
-            <rect width="1440" height="820" fill="#111" />
-            <rect x="88" y="76" width="1264" height="668" rx="30" fill="#171717" />
-            <rect x="130" y="120" width="330" height="580" rx="24" fill="#1f1f1f" />
-            <rect x="500" y="120" width="810" height="128" rx="24" fill="#ece4d6" />
-            <rect x="500" y="284" width="810" height="196" rx="24" fill="#ded5c6" />
-            <rect x="500" y="514" width="810" height="186" rx="24" fill="#222" />
-            <rect x="164" y="156" width="154" height="16" rx="8" fill="#A8E6CF" />
-            <rect x="164" y="196" width="114" height="10" rx="5" fill="#606060" />
-            <rect x="540" y="160" width="210" height="16" rx="8" fill="#1a1a1a" />
-            <rect x="540" y="200" width="300" height="10" rx="5" fill="#797267" />
-            <rect x="540" y="332" width="340" height="16" rx="8" fill="#1a1a1a" />
-            <rect x="540" y="372" width="520" height="10" rx="5" fill="#8b8478" />
-            <rect x="540" y="562" width="190" height="16" rx="8" fill="#A8E6CF" />
-          </svg>
-        </div>
-
-        <div class="case-grid">
-          <section class="case-section">
-            <p class="case-kicker">Overview</p>
-          </section>
-          <section class="case-section case-body">
-            <p>
-              Wisq explores how AI can support people inside meetings without
-              overwhelming the conversation itself. The product direction focused
-              on surfacing useful prompts, coaching moments, and contextual support
-              at the right time.
-            </p>
+        <article class="case-study-page">
+          <section class="hero-statement">
+            <h1 class="hero-title">Wisq is currently a work in progress.</h1>
+            <div class="hero-copy">
+              <p>This case study is being rebuilt to match the structure and depth of ApplIQ. For now, the page is using placeholder text so the layout and pacing can be designed before the final content is written.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra, nisl eu porta cursus, est nulla efficitur mauris, vitae egestas nunc neque vitae mauris.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, neque id condimentum tempus, velit odio dignissim eros, vel malesuada nulla mi ac ipsum.</p>
+            </div>
+            <div class="hero-actions">
+              <a class="jump-button" href="#final-system">Jump to Final Designs</a>
+            </div>
           </section>
 
           <section class="case-section">
-            <p class="case-kicker">Problem</p>
-          </section>
-          <section class="case-section case-body">
-            <p>
-              Meeting tools often either disappear entirely or interrupt too much.
-              The challenge was designing assistance that feels present and useful
-              without becoming another distraction on screen.
-            </p>
-          </section>
-
-          <section class="case-section">
-            <p class="case-kicker">Approach</p>
-          </section>
-          <section class="case-section case-body">
-            <ul>
-              <li>Used progressive disclosure so guidance appears when it matters.</li>
-              <li>Prioritized confidence, clarity, and timing over novelty.</li>
-              <li>Balanced live coaching with low-friction post-meeting review.</li>
-            </ul>
+            <div class="snapshot-grid">
+              <div class="snapshot-card">
+                <h2>Role</h2>
+                <p>UX Designer, Product Thinker</p>
+              </div>
+              <div class="snapshot-card">
+                <h2>Scope</h2>
+                <p>Research → Product Design → WIP Case Study</p>
+              </div>
+              <div class="snapshot-card">
+                <h2>Status</h2>
+                <p>Work in progress with placeholder content</p>
+              </div>
+            </div>
           </section>
 
           <section class="case-section">
-            <p class="case-kicker">Outcome</p>
+            <div class="section-grid">
+              <p class="section-label">Research</p>
+              <div>
+                <div class="section-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod, augue at lacinia volutpat, est est pretium lacus, in mattis felis odio nec sapien.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed erat at erat faucibus tristique. Integer a condimentum lorem, sed posuere nibh.</p>
+                </div>
+                <div class="artifact-block">
+                  <div class="artifact-frame">
+                    <svg viewBox="0 0 1200 420" role="img" aria-label="Wisq placeholder research artifact">
+                      <rect width="1200" height="420" fill="#131313" />
+                      <rect x="56" y="56" width="1088" height="308" rx="26" fill="#181818" stroke="rgba(240,235,225,0.08)" />
+                      <rect x="104" y="110" width="220" height="132" rx="18" fill="#202020" />
+                      <rect x="356" y="110" width="220" height="132" rx="18" fill="#202020" />
+                      <rect x="608" y="110" width="220" height="132" rx="18" fill="#202020" />
+                      <rect x="860" y="110" width="220" height="132" rx="18" fill="#202020" />
+                    </svg>
+                  </div>
+                  <p class="artifact-caption">Placeholder research artifact for Wisq.</p>
+                </div>
+                <div class="quote-grid">
+                  <article class="quote-card">
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <div class="quote-author">Placeholder Interview Quote</div>
+                  </article>
+                  <article class="quote-card">
+                    <p>"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                    <div class="quote-author">Placeholder Interview Quote</div>
+                  </article>
+                  <article class="quote-card">
+                    <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco."</p>
+                    <div class="quote-author">Placeholder Interview Quote</div>
+                  </article>
+                </div>
+                <div class="section-copy">
+                  <p><strong>Research Takeaways</strong></p>
+                </div>
+                <div class="takeaway-list">
+                  <div class="takeaway-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                  <div class="takeaway-card">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
+                  <div class="takeaway-card">Vestibulum id ligula porta felis euismod semper.</div>
+                </div>
+              </div>
+            </div>
           </section>
-          <section class="case-section case-body">
-            <p>
-              The concept shows how GPT-4o can be translated into a calmer
-              product experience, where AI support strengthens communication
-              instead of competing with it.
-            </p>
+
+          <section class="insight-break">
+            <blockquote>
+              This page is intentionally using placeholder content while the full Wisq case study is being written.
+            </blockquote>
           </section>
-        </div>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Research Synthesis</p>
+              <div class="focus-grid">
+                <article class="focus-card">
+                  <h3>Placeholder insight one</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus.</p>
+                </article>
+                <article class="focus-card">
+                  <h3>Placeholder insight two</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.</p>
+                </article>
+                <article class="focus-card">
+                  <h3>Placeholder insight three</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.</p>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Early Concepts</p>
+              <div>
+                <div class="section-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.</p>
+                  <p>Placeholder concept one — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Placeholder concept two — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Placeholder concept three — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="artifact-block">
+                  <div class="artifact-frame">
+                    <svg viewBox="0 0 1200 480" role="img" aria-label="Wisq placeholder concept sketches">
+                      <rect width="1200" height="480" fill="#131313" />
+                      <path d="M100 78l222 44-24 154-222-42zM390 92l224 26-20 172-224-28zM688 86l190 42-26 160-190-40zM936 96l168 34-22 150-168-32z" fill="none" stroke="#A8E6CF" stroke-width="3" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <p class="artifact-caption">Placeholder concept sketch area.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">From Concepts to Structure</p>
+              <div>
+                <div class="section-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.</p>
+                </div>
+                <div class="decision-stack">
+                  <article class="decision-card">
+                    <p class="decision-tag">Focus 1</p>
+                    <h2 class="decision-title">Placeholder focus area</h2>
+                    <div class="decision-copy">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
+                    </div>
+                    <div class="before-after-grid">
+                      <div class="before-after-card">
+                        <h3>Before</h3>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                      </div>
+                      <div class="before-after-card">
+                        <h3>After</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="decision-card">
+                    <p class="decision-tag">Focus 2</p>
+                    <h2 class="decision-title">Placeholder focus area</h2>
+                    <div class="decision-copy">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Building It to Test the Design</p>
+              <div>
+                <div class="section-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.</p>
+                </div>
+                <div class="artifact-block">
+                  <div class="artifact-frame">
+                    <svg viewBox="0 0 1200 480" role="img" aria-label="Wisq placeholder prototype">
+                      <rect width="1200" height="480" fill="#131313" />
+                      <rect x="70" y="58" width="1060" height="364" rx="28" fill="#1a1a1a" />
+                      <rect x="110" y="102" width="260" height="274" rx="20" fill="#202020" />
+                      <rect x="410" y="102" width="660" height="98" rx="20" fill="#ece4d6" />
+                      <rect x="410" y="224" width="660" height="152" rx="20" fill="#222" />
+                    </svg>
+                  </div>
+                  <p class="artifact-caption">Placeholder prototype area.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section" id="final-system">
+            <div class="section-grid">
+              <p class="section-label">Final System</p>
+              <div>
+                <div class="section-copy">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This final section will be replaced with the real walkthrough and polished artifacts once the case study is complete.</p>
+                </div>
+                <div class="artifact-block">
+                  <div class="artifact-frame">
+                    <svg viewBox="0 0 1200 480" role="img" aria-label="Wisq placeholder final walkthrough">
+                      <rect width="1200" height="480" fill="#131313" />
+                      <rect x="70" y="54" width="1060" height="372" rx="28" fill="#181818" />
+                      <rect x="116" y="104" width="234" height="16" rx="8" fill="#A8E6CF" />
+                      <rect x="116" y="144" width="330" height="10" rx="5" fill="#666" />
+                      <rect x="116" y="210" width="968" height="160" rx="24" fill="#202020" />
+                    </svg>
+                  </div>
+                  <p class="artifact-caption">Placeholder final-system visual.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Outcomes</p>
+              <div class="outcomes-copy">
+                <p>Work in progress. The real Wisq outcomes, learnings, and iteration details will be added here once the case study is complete.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="section-grid">
+              <p class="section-label">Closing Insight</p>
+              <div class="closing-copy">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.</p>
+                <p>This page is a work in progress and will be updated with real content, visuals, and outcomes soon.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="case-section">
+            <div class="page-actions">
+              <a class="jump-button" href="#">Back To Top</a>
+            </div>
+          </section>
+        </article>
       </main>
 
       <footer class="footer">
@@ -119,6 +542,15 @@
     </div>
 
     <script>
+      const nav = document.querySelector(".nav");
+      const navToggle = document.querySelector(".nav-toggle");
+      if (nav && navToggle) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
+
       const cursorMark = document.querySelector(".cursor-mark");
       if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         window.addEventListener("mousemove", (event) => {

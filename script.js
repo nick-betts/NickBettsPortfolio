@@ -19,6 +19,15 @@ let currentRotation = "-1deg";
 let activeRow = null;
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const nav = document.querySelector(".nav");
+const navToggle = document.querySelector(".nav-toggle");
+
+if (nav && navToggle) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
 
 const updateCursor = () => {
   if (!cursorMark || reduceMotion) return;

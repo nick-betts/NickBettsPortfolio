@@ -22,14 +22,17 @@
       <header class="topbar">
         <nav class="nav" aria-label="Primary navigation">
           <a class="brand" href="#top">Nick Betts</a>
-          <div class="nav-links">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-links" aria-label="Open navigation">
+            <span class="nav-toggle-lines"><span></span></span>
+          </button>
+          <div class="nav-links" id="primary-nav-links">
             <a class="is-active" href="#work">Work</a>
             <a href="about.html">About</a>
-            <a href="#">Resume</a>
+            <a href="Nick_Betts_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           </div>
         </nav>
         <p class="orientation">
-          Implementation Specialist @ Walker · B.S. UX Design, Purdue University · Based in Indy
+          Implementation Specialist @ Walker | B.S. UX Design, Purdue University | Based in Indy
         </p>
       </header>
 
@@ -46,7 +49,14 @@
             data-thumb-meta="ApplIQ"
             data-thumb-copy="An AI-powered platform that helps job seekers tailor resumes to specific roles with transparent, actionable feedback."
           >
-            <span class="project-index">01</span>
+            <span class="project-index" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 3.5h7l4 4V20.5H7z"></path>
+                <path d="M14 3.5v4h4"></path>
+                <path d="M10 12h5"></path>
+                <path d="M10 15.5h5"></path>
+              </svg>
+            </span>
             <div class="project-main">
               <h2 class="project-title">ApplIQ</h2>
             </div>
@@ -65,7 +75,16 @@
             data-thumb-meta="Wisq"
             data-thumb-copy="Leveraging GPT-4o’s capabilities for real-time virtual meeting coaching."
           >
-            <span class="project-index">02</span>
+            <span class="project-index" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3.5" y="5" width="17" height="11" rx="2.5"></rect>
+                <path d="M8 20.5h8"></path>
+                <path d="M12 16v4.5"></path>
+                <path d="M9 9.5v2.5"></path>
+                <path d="M12 8v5"></path>
+                <path d="M15 10.5v1.5"></path>
+              </svg>
+            </span>
             <div class="project-main">
               <h2 class="project-title">Wisq</h2>
             </div>
@@ -84,7 +103,15 @@
             data-thumb-meta="IMLeagues"
             data-thumb-copy="Redesigning the current IMLeagues website to improve intramural sports experience."
           >
-            <span class="project-index">03</span>
+            <span class="project-index" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <line x1="12" y1="3" x2="12" y2="21"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <path d="M7 4C9 7 9 17 7 20"></path>
+                <path d="M17 4C15 7 15 17 17 20"></path>
+              </svg>
+            </span>
             <div class="project-main">
               <h2 class="project-title">IMLeagues</h2>
             </div>

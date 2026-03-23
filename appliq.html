@@ -500,10 +500,13 @@
       <header class="topbar">
         <nav class="nav" aria-label="Primary navigation">
           <a class="brand" href="home.html">Nick Betts</a>
-          <div class="nav-links">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-links" aria-label="Open navigation">
+            <span class="nav-toggle-lines"><span></span></span>
+          </button>
+          <div class="nav-links" id="primary-nav-links">
             <a class="is-active" href="home.html#work">Work</a>
             <a href="about.html">About</a>
-            <a href="#">Resume</a>
+            <a href="Nick_Betts_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           </div>
         </nav>
       </header>
@@ -967,6 +970,15 @@
     </div>
 
     <script>
+      const nav = document.querySelector(".nav");
+      const navToggle = document.querySelector(".nav-toggle");
+      if (nav && navToggle) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
+
       const cursorMark = document.querySelector(".cursor-mark");
       if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
         window.addEventListener("mousemove", (event) => {
