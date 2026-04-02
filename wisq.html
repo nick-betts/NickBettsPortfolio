@@ -6,7 +6,7 @@
     <title>Wisq | Nick Betts</title>
     <meta
       name="description"
-      content="Wisq case study by Nick Betts. This page is currently a work in progress."
+      content="Wisq Voice & Tone case study by Nick Betts, focused on improving AI-generated text through clearer defaults and customizable tone preferences."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -84,6 +84,18 @@
       .artifact-frame svg {
         width: 100%;
         display: block;
+      }
+
+      .image-panel {
+        padding: 18px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01)),
+          #121212;
+      }
+
+      .image-panel img {
+        border: 1px solid rgba(240, 235, 225, 0.08);
+        background: #0f0f0f;
       }
 
       .case-section {
@@ -184,6 +196,7 @@
       }
 
       .quote-grid,
+      .artifact-grid,
       .focus-grid,
       .decision-stack,
       .takeaway-list {
@@ -199,6 +212,14 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
+      .artifact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .artifact-grid.is-large {
+        grid-template-columns: 1fr;
+      }
+
       .before-after-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -211,6 +232,62 @@
       }
 
       .quote-author {
+        color: var(--muted);
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .slideshow {
+        position: relative;
+      }
+
+      .slideshow-viewport {
+        position: relative;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+      }
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 220ms ease-out;
+        object-fit: contain;
+        background: #0f0f0f;
+      }
+
+      .slide.is-active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .slideshow-controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-top: 12px;
+      }
+
+      .slideshow-buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      .slideshow-button {
+        border: 1px solid var(--row-border);
+        background: rgba(255, 255, 255, 0.015);
+        color: var(--text);
+        padding: 8px 14px;
+        font: inherit;
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .slideshow-status {
         color: var(--muted);
         font-size: 0.74rem;
         letter-spacing: 0.08em;
@@ -268,6 +345,7 @@
       @media (max-width: 900px) {
         .snapshot-grid,
         .section-grid,
+        .artifact-grid,
         .quote-grid,
         .takeaway-list,
         .before-after-grid {
@@ -281,13 +359,13 @@
     <div class="page case-page">
       <header class="topbar">
         <nav class="nav" aria-label="Primary navigation">
-          <a class="brand" href="home.html">Nick Betts</a>
+          <a class="brand" href="/">Nick Betts</a>
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-links" aria-label="Open navigation">
             <span class="nav-toggle-lines"><span></span></span>
           </button>
           <div class="nav-links" id="primary-nav-links">
-            <a class="is-active" href="home.html#work">Work</a>
-            <a href="about.html">About</a>
+            <a class="is-active" href="/#work">Work</a>
+            <a href="/about">About</a>
             <a href="Nick_Betts_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           </div>
         </nav>
@@ -296,11 +374,11 @@
       <main class="case-main">
         <article class="case-study-page">
           <section class="hero-statement">
-            <h1 class="hero-title">Wisq is currently a work in progress.</h1>
+            <h1 class="hero-title">Giving AI-generated text the right tone for the situation.</h1>
             <div class="hero-copy">
-              <p>This case study is being rebuilt to match the structure and depth of ApplIQ. For now, the page is using placeholder text so the layout and pacing can be designed before the final content is written.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra, nisl eu porta cursus, est nulla efficitur mauris, vitae egestas nunc neque vitae mauris.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, neque id condimentum tempus, velit odio dignissim eros, vel malesuada nulla mi ac ipsum.</p>
+              <p>When Wisq generated text for users, it typically needed editing before it felt usable. The output worked technically, but it defaulted to a single neutral voice, which did not fit every situation.</p>
+              <p>A message from a manager to a direct report should read differently than one from a consultant to a client or a colleague to a coworker. The problem was not broken output. It was a missing layer of context.</p>
+              <p>Without a way to tell Wisq what kind of communication was happening, every piece of generated copy started from the same place. This project was about closing that gap by improving the default output and giving users a way to define the tone that fit their situation.</p>
             </div>
             <div class="hero-actions">
               <a class="jump-button" href="#final-system">Jump to Final Designs</a>
@@ -311,15 +389,15 @@
             <div class="snapshot-grid">
               <div class="snapshot-card">
                 <h2>Role</h2>
-                <p>UX Designer, Product Thinker</p>
+                <p>UX Designer</p>
               </div>
               <div class="snapshot-card">
                 <h2>Scope</h2>
-                <p>Research → Product Design → WIP Case Study</p>
+                <p>Research → Design → Shipped to Production</p>
               </div>
               <div class="snapshot-card">
-                <h2>Status</h2>
-                <p>Work in progress with placeholder content</p>
+                <h2>Goal</h2>
+                <p>Reduce friction in the text generation experience by improving default output tone and giving users a way to customize it for different professional scenarios.</p>
               </div>
             </div>
           </section>
@@ -329,92 +407,51 @@
               <p class="section-label">Research</p>
               <div>
                 <div class="section-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris euismod, augue at lacinia volutpat, est est pretium lacus, in mattis felis odio nec sapien.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed erat at erat faucibus tristique. Integer a condimentum lorem, sed posuere nibh.</p>
+                  <p>Before designing anything, I needed to understand what "tone" actually meant in practice, both for users and for the AI generating the output.</p>
+                  <p>I pulled from existing user notes and external research, then mapped everything in Miro, grouping similar tone descriptors together through affinity diagramming to find patterns in what users were actually asking for.</p>
                 </div>
                 <div class="artifact-block">
                   <div class="artifact-frame">
-                    <svg viewBox="0 0 1200 420" role="img" aria-label="Wisq placeholder research artifact">
-                      <rect width="1200" height="420" fill="#131313" />
-                      <rect x="56" y="56" width="1088" height="308" rx="26" fill="#181818" stroke="rgba(240,235,225,0.08)" />
-                      <rect x="104" y="110" width="220" height="132" rx="18" fill="#202020" />
-                      <rect x="356" y="110" width="220" height="132" rx="18" fill="#202020" />
-                      <rect x="608" y="110" width="220" height="132" rx="18" fill="#202020" />
-                      <rect x="860" y="110" width="220" height="132" rx="18" fill="#202020" />
-                    </svg>
+                    <img src="affinity.png" alt="Miro board showing tone research and affinity groupings for the Wisq Voice and Tone feature." />
                   </div>
-                  <p class="artifact-caption">Placeholder research artifact for Wisq.</p>
-                </div>
-                <div class="quote-grid">
-                  <article class="quote-card">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-                    <div class="quote-author">Placeholder Interview Quote</div>
-                  </article>
-                  <article class="quote-card">
-                    <p>"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-                    <div class="quote-author">Placeholder Interview Quote</div>
-                  </article>
-                  <article class="quote-card">
-                    <p>"Ut enim ad minim veniam, quis nostrud exercitation ullamco."</p>
-                    <div class="quote-author">Placeholder Interview Quote</div>
-                  </article>
+                  <p class="artifact-caption">Miro board showing tone research and affinity groupings.</p>
                 </div>
                 <div class="section-copy">
-                  <p><strong>Research Takeaways</strong></p>
+                  <p>The key tension that kept coming up was that the words humans use to describe tone do not translate cleanly into LLM prompts. "Friendly" or "professional" means something different to every person, and a vague prompt produces inconsistent outputs from the model.</p>
+                  <p>That meant users should not have to write their own prompts. That work needed to happen behind the scenes.</p>
+                  <p>I worked closely with our AI prompt engineer throughout to make sure each tone we defined actually came out the way it was intended when generated.</p>
                 </div>
-                <div class="takeaway-list">
-                  <div class="takeaway-card">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                  <div class="takeaway-card">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
-                  <div class="takeaway-card">Vestibulum id ligula porta felis euismod semper.</div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="insight-break">
-            <blockquote>
-              This page is intentionally using placeholder content while the full Wisq case study is being written.
-            </blockquote>
-          </section>
-
-          <section class="case-section">
-            <div class="section-grid">
-              <p class="section-label">Research Synthesis</p>
-              <div class="focus-grid">
-                <article class="focus-card">
-                  <h3>Placeholder insight one</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus.</p>
-                </article>
-                <article class="focus-card">
-                  <h3>Placeholder insight two</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.</p>
-                </article>
-                <article class="focus-card">
-                  <h3>Placeholder insight three</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.</p>
-                </article>
               </div>
             </div>
           </section>
 
           <section class="case-section">
             <div class="section-grid">
-              <p class="section-label">Early Concepts</p>
+              <p class="section-label">Research Takeaways</p>
               <div>
                 <div class="section-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper.</p>
-                  <p>Placeholder concept one — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <p>Placeholder concept two — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  <p>Placeholder concept three — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <p>Three tones emerged from the research as the most useful, most requested, and most distinct from each other.</p>
+                  <p>Each was pressure-tested with the prompt engineer and reviewed with stakeholders to confirm the label and the underlying prompt produced consistent, predictable results.</p>
+                </div>
+                <div class="focus-grid">
+                  <article class="focus-card">
+                    <h3>Guidance in Action</h3>
+                    <p>A clear, concise tone for informing and instructing. Built for scenarios like a manager communicating with a direct report.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>Casual Connections</h3>
+                    <p>A friendly, approachable tone for fostering conversation and rapport. Built for peer-to-peer communication between coworkers.</p>
+                  </article>
+                  <article class="focus-card">
+                    <h3>Inspire &amp; Elevate</h3>
+                    <p>A motivational tone for constructive feedback and encouragement. Built for consultant-to-client or coaching-style communication.</p>
+                  </article>
                 </div>
                 <div class="artifact-block">
                   <div class="artifact-frame">
-                    <svg viewBox="0 0 1200 480" role="img" aria-label="Wisq placeholder concept sketches">
-                      <rect width="1200" height="480" fill="#131313" />
-                      <path d="M100 78l222 44-24 154-222-42zM390 92l224 26-20 172-224-28zM688 86l190 42-26 160-190-40zM936 96l168 34-22 150-168-32z" fill="none" stroke="#A8E6CF" stroke-width="3" stroke-linejoin="round" />
-                    </svg>
+                    <img src="tones.png" alt="Synthesized tone definitions and prompt testing for the Wisq Voice and Tone feature." />
                   </div>
-                  <p class="artifact-caption">Placeholder concept sketch area.</p>
+                  <p class="artifact-caption">Synthesized tone definitions and prompt testing.</p>
                 </div>
               </div>
             </div>
@@ -422,59 +459,36 @@
 
           <section class="case-section">
             <div class="section-grid">
-              <p class="section-label">From Concepts to Structure</p>
+              <p class="section-label">Design</p>
               <div>
                 <div class="section-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.</p>
+                  <p>Wisq had an established design system and component library, so the work was not about building from scratch. It was about finding the right way to fit tone selection and text controls into existing patterns.</p>
+                  <p>The main question in chat was how to present generated text alongside the options to copy, edit, or adjust tone without overwhelming the interface. Several directions were explored, including an overlay approach for tone selection, but that was set aside in favor of something more inline and less disruptive to the flow.</p>
+                  <p>The settings tab was more straightforward: a new section within the existing preferences structure where users could view and update their tone at any time.</p>
+                  <p>For existing users encountering the feature for the first time, a tooltip on first use pointed them to the new setting without interrupting their workflow.</p>
                 </div>
-                <div class="decision-stack">
-                  <article class="decision-card">
-                    <p class="decision-tag">Focus 1</p>
-                    <h2 class="decision-title">Placeholder focus area</h2>
-                    <div class="decision-copy">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis.</p>
-                    </div>
-                    <div class="before-after-grid">
-                      <div class="before-after-card">
-                        <h3>Before</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                      </div>
-                      <div class="before-after-card">
-                        <h3>After</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="artifact-block">
+                  <div class="slideshow" data-slideshow data-slideshow-prefix="Slide">
+                    <div class="artifact-frame image-panel">
+                      <div class="slideshow-viewport">
+                        <img class="slide is-active" src="designs/Buttons.png" alt="Wisq design iteration showing button and text control explorations." />
+                        <img class="slide" src="designs/Card.png" alt="Wisq design iteration exploring a card-based layout." />
+                        <img class="slide" src="designs/Default.png" alt="Wisq design iteration showing a default chat state." />
+                        <img class="slide" src="designs/First Use.png" alt="Wisq design iteration for the first-use tooltip experience." />
+                        <img class="slide" src="designs/Guide.png" alt="Wisq design iteration exploring tone controls within Guide." />
+                        <img class="slide" src="designs/Hover State.png" alt="Wisq design iteration showing hover-state behavior." />
+                        <img class="slide" src="designs/In-Chat Banner.png" alt="Wisq design iteration showing an in-chat banner treatment for tone controls." />
                       </div>
                     </div>
-                  </article>
-                  <article class="decision-card">
-                    <p class="decision-tag">Focus 2</p>
-                    <h2 class="decision-title">Placeholder focus area</h2>
-                    <div class="decision-copy">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur.</p>
+                    <div class="slideshow-controls">
+                      <div class="slideshow-buttons">
+                        <button class="slideshow-button" type="button" data-slide-action="prev">Prev</button>
+                        <button class="slideshow-button" type="button" data-slide-action="next">Next</button>
+                      </div>
+                      <div class="slideshow-status" data-slideshow-status>Slide 1 of 7</div>
                     </div>
-                  </article>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="case-section">
-            <div class="section-grid">
-              <p class="section-label">Building It to Test the Design</p>
-              <div>
-                <div class="section-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.</p>
-                </div>
-                <div class="artifact-block">
-                  <div class="artifact-frame">
-                    <svg viewBox="0 0 1200 480" role="img" aria-label="Wisq placeholder prototype">
-                      <rect width="1200" height="480" fill="#131313" />
-                      <rect x="70" y="58" width="1060" height="364" rx="28" fill="#1a1a1a" />
-                      <rect x="110" y="102" width="260" height="274" rx="20" fill="#202020" />
-                      <rect x="410" y="102" width="660" height="98" rx="20" fill="#ece4d6" />
-                      <rect x="410" y="224" width="660" height="152" rx="20" fill="#222" />
-                    </svg>
                   </div>
-                  <p class="artifact-caption">Placeholder prototype area.</p>
+                  <p class="artifact-caption">Design iterations across chat.</p>
                 </div>
               </div>
             </div>
@@ -482,33 +496,29 @@
 
           <section class="case-section" id="final-system">
             <div class="section-grid">
-              <p class="section-label">Final System</p>
+              <p class="section-label">Final Designs</p>
               <div>
                 <div class="section-copy">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. This final section will be replaced with the real walkthrough and polished artifacts once the case study is complete.</p>
+                  <p>The final experience covers two surfaces. In settings, users can view and change their tone preference at any time. In chat, tone selection is present without being intrusive, accessible when users need it, out of the way when they do not.</p>
+                  <p>The designs were handed off to engineering and shipped to production for real customers before my internship concluded.</p>
                 </div>
                 <div class="artifact-block">
-                  <div class="artifact-frame">
-                    <svg viewBox="0 0 1200 480" role="img" aria-label="Wisq placeholder final walkthrough">
-                      <rect width="1200" height="480" fill="#131313" />
-                      <rect x="70" y="54" width="1060" height="372" rx="28" fill="#181818" />
-                      <rect x="116" y="104" width="234" height="16" rx="8" fill="#A8E6CF" />
-                      <rect x="116" y="144" width="330" height="10" rx="5" fill="#666" />
-                      <rect x="116" y="210" width="968" height="160" rx="24" fill="#202020" />
-                    </svg>
+                  <div class="artifact-grid is-large">
+                    <div class="artifact-frame">
+                      <img src="final/default.png" alt="Wisq final default chat design." />
+                    </div>
+                    <div class="artifact-frame">
+                      <img src="final/hoverstate.png" alt="Wisq final hover state design for tone controls." />
+                    </div>
+                    <div class="artifact-frame">
+                      <img src="final/firsttime.png" alt="Wisq final first-use tooltip design." />
+                    </div>
+                    <div class="artifact-frame">
+                      <img src="final/Preferences.png" alt="Wisq final preferences screen for tone selection." />
+                    </div>
                   </div>
-                  <p class="artifact-caption">Placeholder final-system visual.</p>
+                  <p class="artifact-caption">Final chat and settings designs.</p>
                 </div>
-              </div>
-            </div>
-          </section>
-
-          <section class="case-section">
-            <div class="section-grid">
-              <p class="section-label">Outcomes</p>
-              <div class="outcomes-copy">
-                <p>Work in progress. The real Wisq outcomes, learnings, and iteration details will be added here once the case study is complete.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
               </div>
             </div>
           </section>
@@ -517,8 +527,8 @@
             <div class="section-grid">
               <p class="section-label">Closing Insight</p>
               <div class="closing-copy">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus mollis interdum.</p>
-                <p>This page is a work in progress and will be updated with real content, visuals, and outcomes soon.</p>
+                <p>The most important thing this project reinforced was that giving users control does not mean giving them a blank canvas.</p>
+                <p>The real design work happened in the research: translating messy human language about tone into consistent, reliable AI outputs. Once that foundation was solid, the interface just needed to make the choice feel simple.</p>
               </div>
             </div>
           </section>
@@ -565,6 +575,44 @@
           }
         });
       }
+
+      document.querySelectorAll("[data-slideshow]").forEach((slideshow) => {
+        const slides = Array.from(slideshow.querySelectorAll(".slide"));
+        const status = slideshow.querySelector("[data-slideshow-status]");
+        const statusPrefix = slideshow.getAttribute("data-slideshow-prefix") || "Slide";
+        let activeIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));
+
+        if (activeIndex === -1) {
+          activeIndex = 0;
+          if (slides[0]) {
+            slides[0].classList.add("is-active");
+          }
+        }
+
+        const render = () => {
+          slides.forEach((slide, index) => {
+            slide.classList.toggle("is-active", index === activeIndex);
+          });
+
+          if (status) {
+            status.textContent = `${statusPrefix} ${activeIndex + 1} of ${slides.length}`;
+          }
+        };
+
+        render();
+
+        slideshow.querySelectorAll("[data-slide-action]").forEach((button) => {
+          button.addEventListener("click", () => {
+            if (!slides.length) {
+              return;
+            }
+
+            const direction = button.getAttribute("data-slide-action") === "next" ? 1 : -1;
+            activeIndex = (activeIndex + direction + slides.length) % slides.length;
+            render();
+          });
+        });
+      });
     </script>
   </body>
 </html>

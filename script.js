@@ -8,6 +8,7 @@ const rows = document.querySelectorAll(".project-row");
 const thumbTemplates = {
   atlas: document.querySelector("#thumb-atlas"),
   signal: document.querySelector("#thumb-signal"),
+  wisq: document.querySelector("#thumb-wisq"),
   northstar: document.querySelector("#thumb-northstar")
 };
 
