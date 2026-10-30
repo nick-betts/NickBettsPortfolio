@@ -1,0 +1,6 @@
+# Home page
+/  /home.html  200
+
+# IMLeagues was replaced by Pocket Gallery
+/imleagues       /  301!
+/imleagues.html  /  301!

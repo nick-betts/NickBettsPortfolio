@@ -3,74 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nick Betts | Portfolio</title>
+    <title>Nick Betts</title>
     <meta
       name="description"
-      content="Nick Betts is a product and UX designer. Explore three case studies across healthcare, e-commerce, and operations."
+      content="Nick Betts is a Consultant at Walker and a Computer Graphics Technology grad from Purdue University. See projects including Pocket Gallery, Wisq, and ApplIQ."
     />
+    <meta name="theme-color" content="#0e0e0e" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://nbetts.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nick Betts" />
+    <meta property="og:title" content="Nick Betts" />
+    <meta property="og:description" content="Nick Betts is a Consultant at Walker and a Computer Graphics Technology grad from Purdue University. See projects including Pocket Gallery, Wisq, and ApplIQ." />
+    <meta property="og:url" content="https://nbetts.com/" />
+    <meta property="og:image" content="https://nbetts.com/images/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nick Betts" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <noscript><style>.project-row, .project-title { opacity: 1; transform: none; }</style></noscript>
   </head>
   <body>
     <div class="cursor-mark" aria-hidden="true"></div>
     <div class="page">
       <header class="topbar">
         <nav class="nav" aria-label="Primary navigation">
-          <a class="brand" href="/">Nick Betts</a>
+          <a class="brand" href="/">Home</a>
           <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-links" aria-label="Open navigation">
             <span class="nav-toggle-lines"><span></span></span>
           </button>
           <div class="nav-links" id="primary-nav-links">
-            <a class="is-active" href="/#work">Work</a>
             <a href="/about">About</a>
             <a href="Nick_Betts_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           </div>
         </nav>
         <p class="orientation">
-          Implementation Specialist @ Walker | B.S. UX Design, Purdue University | Based in Indy
+          Hi, I’m Nick Betts. I’m currently a Consultant at Walker, a Computer Graphics Technology grad from Purdue University, and I’m currently based in sunny St. Pete, Florida.☀️
         </p>
       </header>
 
       <main id="top">
-        <section id="work" class="work-list" aria-label="Case studies">
+        <h1 class="visually-hidden">Nick Betts</h1>
+        <section id="work" class="work-list" aria-labelledby="projects-heading">
+          <h2 class="section-heading" id="projects-heading">Projects</h2>
           <article
             class="project-row"
-            tabindex="0"
-            role="link"
-            data-href="/appliq"
-            data-rotation="-2deg"
-            data-thumb-title="Atlas Health dashboard preview"
-            data-thumb-svg="atlas"
-            data-thumb-meta="ApplIQ"
-            data-thumb-copy="An AI-powered platform that helps job seekers tailor resumes to specific roles with transparent, actionable feedback."
+            data-href="/pocket-gallery"
+            data-rotation="-1deg"
+            data-thumb-svg="pocket"
+            data-thumb-meta="Pocket Gallery"
+            data-thumb-copy="An iOS app and Home Screen widget with a new piece of art each day, chosen to suit the season, the date, and the weather outside."
           >
             <span class="project-index" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M7 3.5h7l4 4V20.5H7z"></path>
-                <path d="M14 3.5v4h4"></path>
-                <path d="M10 12h5"></path>
-                <path d="M10 15.5h5"></path>
+                <rect x="4" y="4" width="16" height="16" rx="1.5"></rect>
+                <circle cx="9" cy="9.5" r="1.5"></circle>
+                <path d="M4 17l5-4.5 3.5 3 3-2.5 4.5 4"></path>
               </svg>
             </span>
             <div class="project-main">
-              <h2 class="project-title">ApplIQ</h2>
+              <h2 class="project-title">Pocket Gallery</h2>
             </div>
-            <p class="project-category">AI Career Tool</p>
-            <a class="project-link" href="/appliq" aria-label="View ApplIQ case study"><span aria-hidden="true">↗</span></a>
+            <p class="project-category">iOS App</p>
+            <a class="project-link" href="/pocket-gallery" aria-label="View Pocket Gallery case study"><span aria-hidden="true">↗</span></a>
           </article>
 
           <article
             class="project-row"
-            tabindex="0"
-            role="link"
             data-href="/wisq"
             data-rotation="1.5deg"
-            data-thumb-title="Wisq voice and tone preview"
             data-thumb-svg="wisq"
             data-thumb-meta="Wisq"
             data-thumb-copy="Leveraging GPT-4o’s capabilities for real-time virtual meeting coaching."
@@ -94,30 +102,65 @@
 
           <article
             class="project-row"
-            tabindex="0"
-            role="link"
-            data-href="/imleagues"
-            data-rotation="-1deg"
-            data-thumb-title="Northstar Field Ops mobile workflow preview"
-            data-thumb-svg="northstar"
-            data-thumb-meta="IMLeagues"
-            data-thumb-copy="Redesigning the current IMLeagues website to improve intramural sports experience."
+            data-href="/appliq"
+            data-rotation="-2deg"
+            data-thumb-svg="atlas"
+            data-thumb-meta="ApplIQ"
+            data-thumb-copy="An AI-powered platform that helps job seekers tailor resumes to specific roles with transparent, actionable feedback."
           >
             <span class="project-index" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9"></circle>
-                <line x1="12" y1="3" x2="12" y2="21"></line>
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <path d="M7 4C9 7 9 17 7 20"></path>
-                <path d="M17 4C15 7 15 17 17 20"></path>
+                <path d="M7 3.5h7l4 4V20.5H7z"></path>
+                <path d="M14 3.5v4h4"></path>
+                <path d="M10 12h5"></path>
+                <path d="M10 15.5h5"></path>
               </svg>
             </span>
             <div class="project-main">
-              <h2 class="project-title">IMLeagues</h2>
+              <h2 class="project-title">ApplIQ</h2>
             </div>
-            <p class="project-category">Website Redesign</p>
-            <a class="project-link" href="/imleagues" aria-label="View IMLeagues case study"><span aria-hidden="true">↗</span></a>
+            <p class="project-category">AI Career Tool</p>
+            <a class="project-link" href="/appliq" aria-label="View ApplIQ case study"><span aria-hidden="true">↗</span></a>
           </article>
+        </section>
+
+        <section class="more-section" aria-labelledby="more-heading">
+          <h2 class="section-heading" id="more-heading">More</h2>
+          <a class="more-row" href="/currently">
+            <span class="project-index" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="7.5" width="17" height="12" rx="2"></rect><path d="M9 7.5V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2.5"></path><path d="M3.5 12.5h17"></path></svg>
+            </span>
+            <span class="more-title">Currently</span>
+            <span class="project-link" aria-hidden="true">↗</span>
+          </a>
+          <a class="more-row" href="/movies">
+            <span class="project-index" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="11" rx="1"></rect><path d="M4 9l15-4 1 3.5"></path><path d="M8.5 8l1.5-3.5M13.5 6.7L15 3.2"></path></svg>
+            </span>
+            <span class="more-title">Movies</span>
+            <span class="project-link" aria-hidden="true">↗</span>
+          </a>
+          <a class="more-row" href="/music">
+            <span class="project-index" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l10-2v12"></path><circle cx="6.5" cy="18" r="2.5"></circle><circle cx="16.5" cy="16" r="2.5"></circle></svg>
+            </span>
+            <span class="more-title">Music</span>
+            <span class="project-link" aria-hidden="true">↗</span>
+          </a>
+          <a class="more-row" href="/sports">
+            <span class="project-index" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><line x1="12" y1="3" x2="12" y2="21"></line><line x1="3" y1="12" x2="21" y2="12"></line><path d="M7 4C9 7 9 17 7 20"></path><path d="M17 4C15 7 15 17 17 20"></path></svg>
+            </span>
+            <span class="more-title">Sports</span>
+            <span class="project-link" aria-hidden="true">↗</span>
+          </a>
+          <a class="more-row" href="/gallery">
+            <span class="project-index" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1.5"></rect><circle cx="9" cy="9.5" r="1.5"></circle><path d="M4 17l5-4.5 3.5 3 3-2.5 4.5 4"></path></svg>
+            </span>
+            <span class="more-title">Gallery</span>
+            <span class="project-link" aria-hidden="true">↗</span>
+          </a>
         </section>
       </main>
 
@@ -127,45 +170,28 @@
           <a href="mailto:nickbetts317@gmail.com">nickbetts317@gmail.com</a> ·
           <a href="https://www.linkedin.com/in/nickbetts1/" target="_blank" rel="noreferrer">LinkedIn</a>
         </p>
-        <p class="footer-right">Let's work together :)</p>
       </footer>
     </div>
 
     <template id="thumb-atlas">
-      <img src="appliq_thumbnail.png" alt="ApplIQ project thumbnail" />
-    </template>
-
-    <template id="thumb-signal">
-      <svg viewBox="0 0 900 620" role="img" aria-hidden="true">
-        <rect width="900" height="620" fill="#121212" rx="28" />
-        <rect x="70" y="86" width="760" height="450" rx="28" fill="#efe8db" />
-        <rect x="108" y="126" width="220" height="308" rx="20" fill="#ddd5c7" />
-        <rect x="358" y="126" width="420" height="66" rx="18" fill="#d7cfbe" />
-        <rect x="358" y="220" width="420" height="140" rx="18" fill="#e7dfd0" />
-        <rect x="358" y="386" width="280" height="92" rx="18" fill="#232323" />
-        <rect x="132" y="154" width="134" height="12" rx="6" fill="#A8E6CF" />
-        <rect x="132" y="190" width="96" height="10" rx="5" fill="#777" />
-        <rect x="385" y="148" width="180" height="12" rx="6" fill="#1a1a1a" />
-        <rect x="385" y="256" width="210" height="12" rx="6" fill="#1a1a1a" />
-      </svg>
+      <img src="images/appliq/thumbnail.webp" alt="ApplIQ project thumbnail" width="1536" height="895" decoding="async" />
     </template>
 
     <template id="thumb-wisq">
-      <img src="wisqthumbnail.png" alt="Wisq project thumbnail" />
+      <img src="images/wisq/thumbnail.webp" alt="Wisq project thumbnail" width="1536" height="895" decoding="async" loading="lazy" />
     </template>
 
-    <template id="thumb-northstar">
+    <template id="thumb-pocket">
       <svg viewBox="0 0 900 620" role="img" aria-hidden="true">
         <rect width="900" height="620" fill="#121212" rx="28" />
-        <rect x="120" y="72" width="240" height="476" rx="40" fill="#171717" stroke="#2d2d2d" stroke-width="8" />
-        <rect x="390" y="120" width="370" height="104" rx="24" fill="#ede6d8" />
-        <rect x="390" y="256" width="370" height="104" rx="24" fill="#dfd7c7" />
-        <rect x="390" y="392" width="370" height="104" rx="24" fill="#232323" />
-        <rect x="154" y="122" width="172" height="36" rx="18" fill="#202020" />
-        <rect x="154" y="186" width="172" height="250" rx="24" fill="#f0eadf" />
-        <rect x="422" y="152" width="130" height="14" rx="7" fill="#1a1a1a" />
-        <rect x="422" y="183" width="220" height="10" rx="5" fill="#797267" />
-        <rect x="422" y="422" width="160" height="14" rx="7" fill="#A8E6CF" />
+        <rect x="310" y="50" width="280" height="520" rx="44" fill="#171717" stroke="#2d2d2d" stroke-width="8" />
+        <rect x="342" y="112" width="216" height="270" rx="6" fill="#efe8db" />
+        <rect x="362" y="132" width="176" height="230" fill="#232323" />
+        <circle cx="490" cy="196" r="28" fill="#A8E6CF" />
+        <path d="M362 362v-68l58-52 44 42 34-26 40 38v66z" fill="#ddd5c7" />
+        <rect x="342" y="414" width="140" height="14" rx="7" fill="#efe8db" />
+        <rect x="342" y="446" width="216" height="10" rx="5" fill="#797267" />
+        <rect x="342" y="470" width="170" height="10" rx="5" fill="#797267" />
       </svg>
     </template>
 
@@ -177,6 +203,6 @@
       </div>
     </aside>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
