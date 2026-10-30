@@ -556,6 +556,11 @@ button:focus-visible {
   margin-bottom: 0;
 }
 
+.letterboxd-link {
+  margin: 40px 0 0;
+  font-size: 0.96rem;
+}
+
 .team-list {
   margin: 0;
   padding: 0;

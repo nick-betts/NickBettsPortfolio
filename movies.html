@@ -6,7 +6,7 @@
     <title>Movies | Nick Betts</title>
     <meta
       name="description"
-      content="Movies Nick Betts has been watching."
+      content="Movies Nick Betts has been watching, with ratings and reviews."
     />
     <meta name="theme-color" content="#0e0e0e" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Nick Betts" />
     <meta property="og:title" content="Movies | Nick Betts" />
-    <meta property="og:description" content="Movies Nick Betts has been watching." />
+    <meta property="og:description" content="Movies Nick Betts has been watching, with ratings and reviews." />
     <meta property="og:url" content="https://nbetts.com/movies" />
     <meta property="og:image" content="https://nbetts.com/images/og.png" />
     <meta property="og:image:width" content="1200" />
@@ -47,26 +47,27 @@
 
       <main class="subpage subpage-movies">
         <h1 class="subpage-title">Movies</h1>
+        <!-- Everything between these markers is rebuilt from Letterboxd by scripts/update-movies.mjs. Log movies there, or add entries by hand in data/movies.json. -->
+        <!-- letterboxd:start -->
         <section class="log">
           <h2 class="subpage-label">Most recent watch</h2>
-          <!--
-            New entry: copy this block to the top of the list.
-            Rating: set the number in all three spots (half stars work, like 3.5).
-            <article class="log-entry log-entry-movie">
-              <img class="log-cover" src="images/movies/your-file.jpg" alt="Movie title poster" />
-              <div class="log-heading">
-                <h2 class="log-title">Movie title</h2>
-                <p class="log-by">Director name, year</p>
-                <p class="rating" role="img" aria-label="Rated 3.5 out of 5 stars" style="--rating: 3.5"><span class="stars" aria-hidden="true">★★★★★</span> 3.5/5</p>
-                <p class="log-date">Watched: <time datetime="2026-10-27">October 27, 2026</time></p>
-              </div>
-              <div class="log-writeup">
-                <p>Your writeup.</p>
-              </div>
-            </article>
-          -->
           <article class="log-entry log-entry-movie">
-            <img class="log-cover" src="images/movies/clayface.webp" alt="Clayface movie poster" width="367" height="544" decoding="async" />
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/8/5/4/8/3/1/854831-the-invite-2026-0-600-0-900-crop.jpg?v=ee72905e48" alt="The Invite poster" width="600" height="900" decoding="async" />
+            <div class="log-heading">
+              <h2 class="log-title">The Invite</h2>
+              <p class="log-by">2026</p>
+              <p class="rating" role="img" aria-label="Rated 4 out of 5 stars" style="--rating: 4"><span class="stars" aria-hidden="true">★★★★★</span> 4/5</p>
+              <p class="log-date">Watched: <time datetime="2026-10-26">October 26, 2026</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>Ts banged</p>
+            </div>
+          </article>
+        </section>
+        <section class="log">
+          <h2 class="subpage-label">Earlier</h2>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="images/movies/clayface.webp" alt="Clayface poster" width="600" height="900" decoding="async" loading="lazy" />
             <div class="log-heading">
               <h2 class="log-title">Clayface</h2>
               <p class="log-by">James Watkins, 2026</p>
@@ -77,36 +78,165 @@
               <p>It was good.</p>
             </div>
           </article>
-        </section>
-        <!-- Sample entries so you can see a longer list: delete this whole section when you add real ones. -->
-        <section class="log">
-          <h2 class="subpage-label">Earlier</h2>
           <article class="log-entry log-entry-movie">
-            <img class="log-cover" src="images/placeholders/poster.svg" alt="Placeholder for a sample poster" width="800" height="1200" decoding="async" loading="lazy" />
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/1/3/0/2/7/1/7/1302717-untitled-resident-evil-reboot-0-600-0-900-crop.jpg?v=a688bf1bc7" alt="Resident Evil poster" width="600" height="900" decoding="async" loading="lazy" />
             <div class="log-heading">
-              <h2 class="log-title">Sample movie two</h2>
-              <p class="log-by">Director name, year</p>
-              <p class="rating" role="img" aria-label="Rated 4.5 out of 5 stars" style="--rating: 4.5"><span class="stars" aria-hidden="true">★★★★★</span> 4.5/5</p>
-              <p class="log-date">Watched: <time datetime="2026-10-12">October 12, 2026</time></p>
+              <h2 class="log-title">Resident Evil</h2>
+              <p class="log-by">2026</p>
+              <p class="rating" role="img" aria-label="Rated 4 out of 5 stars" style="--rating: 4"><span class="stars" aria-hidden="true">★★★★★</span> 4/5</p>
+              <p class="log-date">Watched: <time datetime="2026-10-14">October 14, 2026</time></p>
             </div>
             <div class="log-writeup">
-              <p>This is a sample writeup to show how a longer entry sits beside the image. It runs a few sentences so you can see how the text wraps and how much space each entry takes up.</p>
-              <p>A second paragraph shows how multiple paragraphs stack in the same spot.</p>
+              <p>Don’t know anything about resident evil but this was so fun and actual good scares. Walking back from the theater, lizards rustling in the bushes fucked with me. And jumpscared by a homeless guy wow eventful walk back</p>
             </div>
           </article>
           <article class="log-entry log-entry-movie">
-            <img class="log-cover" src="images/placeholders/poster.svg" alt="Placeholder for a sample poster" width="800" height="1200" decoding="async" loading="lazy" />
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/4/6/7/1/4/46714-ultraviolet-0-600-0-900-crop.jpg?v=7a502c8055" alt="Ultraviolet poster" width="600" height="900" decoding="async" loading="lazy" />
             <div class="log-heading">
-              <h2 class="log-title">Sample movie three</h2>
-              <p class="log-by">Director name, year</p>
+              <h2 class="log-title">Ultraviolet</h2>
+              <p class="log-by">2006</p>
+              <p class="rating" role="img" aria-label="Rated 1 out of 5 stars" style="--rating: 1"><span class="stars" aria-hidden="true">★★★★★</span> 1/5</p>
+              <p class="log-date">Watched: <time datetime="2026-10-07">October 7, 2026</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>Some cool sets, that’s about it. Matrix x kill bill</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/1/1/3/2/6/8/8/1132688-digger-2026-0-600-0-900-crop.jpg?v=81ec883a95" alt="Digger poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">Digger</h2>
+              <p class="log-by">2026</p>
+              <p class="rating" role="img" aria-label="Rated 2.5 out of 5 stars" style="--rating: 2.5"><span class="stars" aria-hidden="true">★★★★★</span> 2.5/5</p>
+              <p class="log-date">Watched: <time datetime="2026-10-05">October 5, 2026</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>I think this can’t be anything other than 50/50 for me. Lots of cool and interesting things going on but that’s just half the battle isn’t it</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/1/3/8/9/7/1/4/1389714-buddy-2026-0-600-0-900-crop.jpg?v=6a078eb95a" alt="Buddy poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">Buddy</h2>
+              <p class="log-by">2026</p>
+              <p class="rating" role="img" aria-label="Rated 3 out of 5 stars" style="--rating: 3"><span class="stars" aria-hidden="true">★★★★★</span> 3/5</p>
+              <p class="log-date">Watched: <time datetime="2026-09-03">September 3, 2026</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>Uniquely bizarre</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/1/1/7/3/1/9/5/1173195-thrash-2026-0-600-0-900-crop.jpg?v=d17155cd56" alt="Thrash poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">Thrash</h2>
+              <p class="log-by">2026</p>
+              <p class="rating" role="img" aria-label="Rated 1.5 out of 5 stars" style="--rating: 1.5"><span class="stars" aria-hidden="true">★★★★★</span> 1.5/5</p>
+              <p class="log-date">Watched: <time datetime="2026-08-14">August 14, 2026</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>Christ lol</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/sm/upload/pq/mi/kb/ck/7JtMVM58MnzxWeyubzLpXBiVnDC-0-600-0-900-crop.jpg?v=c5f2675b28" alt="Spider-Man 2 poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">Spider-Man 2</h2>
+              <p class="log-by">2004</p>
+              <p class="rating" role="img" aria-label="Rated 5 out of 5 stars" style="--rating: 5"><span class="stars" aria-hidden="true">★★★★★</span> 5/5</p>
+              <p class="log-date">Watched: <time datetime="2026-08-03">August 3, 2026</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>Updating to 5 bc this is rly that</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/sm/upload/wi/5v/kd/wf/mmtVpRhu6UvHTF4Oz3sojJFDPL9-0-600-0-900-crop.jpg?v=5c518af279" alt="Tusk poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">Tusk</h2>
+              <p class="log-by">2014</p>
               <p class="rating" role="img" aria-label="Rated 2 out of 5 stars" style="--rating: 2"><span class="stars" aria-hidden="true">★★★★★</span> 2/5</p>
-              <p class="log-date">Watched: <time datetime="2026-09-28">September 28, 2026</time></p>
+              <p class="log-date">Watched: <time datetime="2026-08-02">August 2, 2026</time></p>
             </div>
             <div class="log-writeup">
-              <p>A shorter sample writeup.</p>
+              <p>Why does this exist</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/8/7/2/8/7/1/872871-spider-man-brand-new-day-0-600-0-900-crop.jpg?v=ebe6beb4fc" alt="Spider-Man: Brand New Day poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">Spider-Man: Brand New Day</h2>
+              <p class="log-by">2026</p>
+              <p class="rating" role="img" aria-label="Rated 4.5 out of 5 stars" style="--rating: 4.5"><span class="stars" aria-hidden="true">★★★★★</span> 4.5/5</p>
+              <p class="log-date">Watched: <time datetime="2026-07-30">July 30, 2026</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>I love spiderman 😀😁</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/1/1/5/9/2/5/1/1159251-disclosure-day-0-600-0-900-crop.jpg?v=9ae810e4bb" alt="Disclosure Day poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">Disclosure Day</h2>
+              <p class="log-by">2026</p>
+              <p class="rating" role="img" aria-label="Rated 3.5 out of 5 stars" style="--rating: 3.5"><span class="stars" aria-hidden="true">★★★★★</span> 3.5/5</p>
+              <p class="log-date">Watched: <time datetime="2026-06-18">June 18, 2026</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>Optimistic</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/8/2/2/0/9/3/822093-anatomy-of-a-fall-0-600-0-900-crop.jpg?v=4efab8aedc" alt="Anatomy of a Fall poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">Anatomy of a Fall</h2>
+              <p class="log-by">2023</p>
+              <p class="rating" role="img" aria-label="Rated 4 out of 5 stars" style="--rating: 4"><span class="stars" aria-hidden="true">★★★★★</span> 4/5</p>
+              <p class="log-date">Watched: <time datetime="2026-05-14">May 14, 2026</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>Late game clutch from the little guy</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/5/1/1/3/8/51138-the-talented-mr-ripley-0-600-0-900-crop.jpg?v=70e0a57506" alt="The Talented Mr. Ripley poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">The Talented Mr. Ripley</h2>
+              <p class="log-by">1999</p>
+              <p class="rating" role="img" aria-label="Rated 4 out of 5 stars" style="--rating: 4"><span class="stars" aria-hidden="true">★★★★★</span> 4/5</p>
+              <p class="log-date">Watched: <time datetime="2026-01-26">January 26, 2026</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>Bro just stop</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/sm/upload/kv/7n/p8/tv/fMC8JBWx2VjsJ53JopAcFjqmlYv-0-600-0-900-crop.jpg?v=3d69c00608" alt="Mulholland Drive poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">Mulholland Drive</h2>
+              <p class="log-by">2001</p>
+              <p class="rating" role="img" aria-label="Rated 4.5 out of 5 stars" style="--rating: 4.5"><span class="stars" aria-hidden="true">★★★★★</span> 4.5/5</p>
+              <p class="log-date">Watched: <time datetime="2025-12-30">December 30, 2025</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>Had to go rate this higher because I keep thinking about it days after watching</p>
+            </div>
+          </article>
+          <article class="log-entry log-entry-movie">
+            <img class="log-cover" src="https://a.ltrbxd.com/resized/film-poster/9/4/0/6/5/8/940658-eden-2024-0-600-0-900-crop.jpg?v=c88a4a3cb9" alt="Eden poster" width="600" height="900" decoding="async" loading="lazy" />
+            <div class="log-heading">
+              <h2 class="log-title">Eden</h2>
+              <p class="log-by">2024</p>
+              <p class="rating" role="img" aria-label="Rated 2.5 out of 5 stars" style="--rating: 2.5"><span class="stars" aria-hidden="true">★★★★★</span> 2.5/5</p>
+              <p class="log-date">Watched: <time datetime="2025-08-21">August 21, 2025</time></p>
+            </div>
+            <div class="log-writeup">
+              <p>Kinda boring and accents distracting me</p>
             </div>
           </article>
         </section>
+        <p class="letterboxd-link"><a class="text-link" href="https://letterboxd.com/n1ckrich/" rel="me noopener">More on Letterboxd</a></p>
+        <!-- letterboxd:end -->
       </main>
 
       <footer class="footer">
