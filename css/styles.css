@@ -730,7 +730,7 @@ button:focus-visible {
 
 /* Tall phone screenshots get a tall frame so the whole screen shows */
 .hover-thumb-frame:has(.thumb-portrait) {
-  width: 170px;
+  width: 110px;
   aspect-ratio: 1206 / 2622;
 }
 
