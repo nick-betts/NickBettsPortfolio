@@ -684,6 +684,11 @@ button:focus-visible {
   border: 1px solid var(--row-border);
 }
 
+/* For dark artwork with a transparent background */
+.gallery-grid img.on-light {
+  background: var(--text);
+}
+
 .hover-thumb {
   position: fixed;
   left: 0;
@@ -721,6 +726,12 @@ button:focus-visible {
   height: 100%;
   display: block;
   object-fit: cover;
+}
+
+/* Tall phone screenshots get a tall frame so the whole screen shows */
+.hover-thumb-frame:has(.thumb-portrait) {
+  width: 170px;
+  aspect-ratio: 1206 / 2622;
 }
 
 .hover-thumb-copy {
