@@ -554,11 +554,6 @@ button:focus-visible {
   margin-bottom: 0;
 }
 
-.letterboxd-link {
-  margin: 40px 0 0;
-  font-size: 0.96rem;
-}
-
 .subnav,
 .rating-jump {
   display: flex;

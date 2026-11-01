@@ -1,12 +1,11 @@
 // Pulls recent diary entries from Letterboxd and rebuilds the Movies pages:
 // reviewed films go to data/movies.json (movies.html, movies-2.html, ...) and
-// everything else to data/ratings.json (ratings.html).
+// everything else to data/ratings.json. ratings.html lists both.
 // Run by .github/workflows/update-movies.yml.
 // Set FEED_FILE to read a saved feed instead of fetching it.
 import { existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 
 const FEED_URL = "https://letterboxd.com/n1ckrich/rss/";
-const PROFILE_URL = "https://letterboxd.com/n1ckrich/";
 const POSTER_HOST = "https://a.ltrbxd.com/";
 const REVIEWS_FILE = "data/movies.json";
 const RATINGS_FILE = "data/ratings.json";
@@ -139,6 +138,17 @@ function mergeRatings(saved, feed, reviews) {
   return [...films.values()].sort(byTitle);
 }
 
+// The ratings page lists every film, so reviewed ones join in (newest review wins)
+function withReviewedFilms(reviews, ratings) {
+  const films = new Map();
+  for (const entry of reviews) {
+    const key = filmKey(entry);
+    if (!films.has(key)) films.set(key, { title: entry.title, year: entry.year ?? entry.by, rating: entry.rating });
+  }
+  for (const film of ratings) films.set(filmKey(film), film);
+  return [...films.values()].sort(byTitle);
+}
+
 function formatDate(iso) {
   return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-US", {
     year: "numeric",
@@ -210,8 +220,6 @@ function renderPagination(number, total) {
   );
 }
 
-const letterboxdLink = `        <p class="letterboxd-link"><a class="text-link" href="${PROFILE_URL}" rel="me noopener">More on Letterboxd</a></p>\n`;
-
 function starsLabel(rating) {
   return rating === null ? "Not rated" : `${rating} star${rating === 1 ? "" : "s"}`;
 }
@@ -266,7 +274,8 @@ function fill(shell, list, { title, description, path }) {
 function buildPages(reviews, ratings) {
   const shell = readFileSync(SHELL_FILE, "utf8");
   const total = Math.max(1, Math.ceil(reviews.length / PER_PAGE));
-  const subnavReviews = renderSubnav("reviews", reviews.length, ratings.length);
+  const allFilms = withReviewedFilms(reviews, ratings);
+  const subnavReviews = renderSubnav("reviews", reviews.length, allFilms.length);
 
   for (let number = 1; number <= total; number += 1) {
     const entries = reviews.slice((number - 1) * PER_PAGE, number * PER_PAGE);
@@ -274,7 +283,7 @@ function buildPages(reviews, ratings) {
       number === 1
         ? renderSection("Most recent watch", entries.slice(0, 1), 0) + renderSection("Earlier", entries.slice(1), 1)
         : renderSection("Earlier", entries, 0);
-    const html = fill(shell, subnavReviews + sections + renderPagination(number, total) + letterboxdLink, {
+    const html = fill(shell, subnavReviews + sections + renderPagination(number, total), {
       title: number === 1 ? "Movies | Nick Betts" : `Movies, page ${number} | Nick Betts`,
       description: "Movies Nick Betts has been watching, with ratings and reviews.",
       path: pagePath(number),
@@ -290,9 +299,9 @@ function buildPages(reviews, ratings) {
 
   writeFileSync(
     "ratings.html",
-    fill(shell, renderSubnav("ratings", reviews.length, ratings.length) + renderRatings(ratings) + letterboxdLink, {
+    fill(shell, renderSubnav("ratings", reviews.length, allFilms.length) + renderRatings(allFilms), {
       title: "Movie ratings | Nick Betts",
-      description: "Every other movie Nick Betts has logged on Letterboxd, with ratings.",
+      description: "Every movie Nick Betts has logged on Letterboxd, with ratings.",
       path: "/ratings",
     })
   );
