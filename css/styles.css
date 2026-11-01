@@ -777,6 +777,10 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
+.footer-right {
+  white-space: nowrap;
+}
+
 .footer a {
   color: var(--muted);
   transition: color var(--transition);
