@@ -47,8 +47,12 @@
 
       <main class="subpage subpage-movies">
         <h1 class="subpage-title">Movies</h1>
-        <!-- Everything between these markers is rebuilt from Letterboxd by scripts/update-movies.mjs. Log movies there, or add entries by hand in data/movies.json. -->
+        <!-- Everything between these markers is rebuilt from Letterboxd by scripts/update-movies.mjs. Log movies on Letterboxd, or add reviews by hand in data/movies.json. -->
         <!-- letterboxd:start -->
+        <nav class="subnav" aria-label="Movies">
+          <a class="is-active" aria-current="page" href="/movies">Reviews (16)</a>
+          <a href="/ratings">Ratings (650)</a>
+        </nav>
         <section class="log">
           <h2 class="subpage-label">Most recent watch</h2>
           <article class="log-entry log-entry-movie">

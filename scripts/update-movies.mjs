@@ -1,15 +1,22 @@
-// Pulls recent diary entries from Letterboxd into data/movies.json and rebuilds
-// the list in movies.html. Run by .github/workflows/update-movies.yml.
+// Pulls recent diary entries from Letterboxd and rebuilds the Movies pages:
+// reviewed films go to data/movies.json (movies.html, movies-2.html, ...) and
+// everything else to data/ratings.json (ratings.html).
+// Run by .github/workflows/update-movies.yml.
 // Set FEED_FILE to read a saved feed instead of fetching it.
-import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 
 const FEED_URL = "https://letterboxd.com/n1ckrich/rss/";
 const PROFILE_URL = "https://letterboxd.com/n1ckrich/";
 const POSTER_HOST = "https://a.ltrbxd.com/";
-const DATA_FILE = "data/movies.json";
-const PAGE_FILE = "movies.html";
+const REVIEWS_FILE = "data/movies.json";
+const RATINGS_FILE = "data/ratings.json";
+const SHELL_FILE = "movies.html";
+const SITEMAP_FILE = "sitemap.xml";
+const SITE_URL = "https://nbetts.com";
 const START = "<!-- letterboxd:start -->";
 const END = "<!-- letterboxd:end -->";
+const PER_PAGE = 20;
+const STAR_GROUPS = [5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, 0.5, null];
 
 const ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " " };
 
@@ -71,22 +78,65 @@ function parseFeed(xml) {
   return entries;
 }
 
-function merge(saved, feed) {
+const filmKey = (entry) => `${entry.title}|${entry.year ?? entry.by}`.toLowerCase();
+
+function oldestDate(feed) {
+  return feed.reduce((min, entry) => (entry.watched < min ? entry.watched : min), "9999");
+}
+
+function mergeReviews(saved, feed) {
   const inFeed = new Set(feed.map((entry) => entry.id));
-  const films = new Set(feed.map((entry) => `${entry.title}|${entry.by}`));
-  const oldest = feed.reduce((min, entry) => (entry.watched < min ? entry.watched : min), "9999");
+  const reviewed = feed.filter((entry) => entry.review.length);
+  const films = new Set(reviewed.map(filmKey));
+  const oldest = oldestDate(feed);
 
   // Entries older than the feed reaches are kept. Newer ones missing from it were deleted.
   const kept = saved.filter((entry) => {
     if (inFeed.has(entry.id)) return false;
-    if (entry.source === "manual") return !films.has(`${entry.title}|${entry.year}`);
+    if (entry.source === "manual") return !films.has(filmKey(entry));
     return entry.watched < oldest;
   });
 
   const number = (entry) => Number(entry.id.match(/\d+$/)?.[0] ?? 0);
-  return [...kept, ...feed].sort(
+  return [...kept, ...reviewed].sort(
     (a, b) => b.watched.localeCompare(a.watched) || number(b) - number(a)
   );
+}
+
+function sortTitle(title) {
+  return title.replace(/^(the|a|an)\s+/i, "");
+}
+
+function byTitle(a, b) {
+  return (
+    sortTitle(a.title).localeCompare(sortTitle(b.title), "en", { sensitivity: "base" }) ||
+    String(a.year).localeCompare(String(b.year))
+  );
+}
+
+function mergeRatings(saved, feed, reviews) {
+  const inFeed = new Set(feed.map((entry) => entry.id));
+  const oldest = oldestDate(feed);
+  const films = new Map();
+
+  for (const entry of saved) {
+    // A logged film that left the feed's date range but is gone from it was deleted
+    if (entry.id && !inFeed.has(entry.id) && entry.date >= oldest) continue;
+    films.set(filmKey(entry), entry);
+  }
+  for (const entry of feed) {
+    if (entry.review.length) continue;
+    const key = filmKey(entry);
+    films.set(key, {
+      id: entry.id,
+      title: entry.title,
+      year: entry.by,
+      rating: entry.rating ?? films.get(key)?.rating ?? null,
+      date: entry.watched,
+    });
+  }
+  for (const entry of reviews) films.delete(filmKey(entry));
+  return [...films.values()].sort(byTitle);
 }
 
 function formatDate(iso) {
@@ -132,15 +182,131 @@ function renderSection(label, entries, offset) {
   return `        <section class="log">\n          <h2 class="subpage-label">${label}</h2>\n${body}\n        </section>\n`;
 }
 
-function renderPage(page, entries) {
-  const start = page.indexOf(START);
-  const end = page.indexOf(END);
-  if (start < 0 || end < start) throw new Error(`Missing ${START} markers in ${PAGE_FILE}`);
-  const list =
-    renderSection("Most recent watch", entries.slice(0, 1), 0) +
-    renderSection("Earlier", entries.slice(1), 1) +
-    `        <p class="letterboxd-link"><a class="text-link" href="${PROFILE_URL}" rel="me noopener">More on Letterboxd</a></p>\n`;
-  return `${page.slice(0, start)}${START}\n${list}        ${page.slice(end)}`;
+function renderSubnav(active, reviewCount, ratingCount) {
+  const link = (name, href, label, count) =>
+    `<a${active === name ? ' class="is-active" aria-current="page"' : ""} href="${href}">${label} (${count})</a>`;
+  return (
+    '        <nav class="subnav" aria-label="Movies">\n' +
+    `          ${link("reviews", "/movies", "Reviews", reviewCount)}\n` +
+    `          ${link("ratings", "/ratings", "Ratings", ratingCount)}\n` +
+    "        </nav>\n"
+  );
+}
+
+function pagePath(number) {
+  return number === 1 ? "/movies" : `/movies-${number}`;
+}
+
+function renderPagination(number, total) {
+  if (total < 2) return "";
+  const previous =
+    number > 1 ? `<a class="text-link" href="${pagePath(number - 1)}">Previous</a>` : "<span></span>";
+  const next =
+    number < total ? `<a class="text-link" href="${pagePath(number + 1)}">Next</a>` : "<span></span>";
+  return (
+    '        <nav class="pagination" aria-label="Reviews pages">\n' +
+    `          ${previous}\n          <span>Page ${number} of ${total}</span>\n          ${next}\n` +
+    "        </nav>\n"
+  );
+}
+
+const letterboxdLink = `        <p class="letterboxd-link"><a class="text-link" href="${PROFILE_URL}" rel="me noopener">More on Letterboxd</a></p>\n`;
+
+function starsLabel(rating) {
+  return rating === null ? "Not rated" : `${rating} star${rating === 1 ? "" : "s"}`;
+}
+
+function groupId(rating) {
+  return rating === null ? "not-rated" : `stars-${String(rating).replace(".", "-")}`;
+}
+
+function renderRatings(ratings) {
+  const groups = STAR_GROUPS.map((rating) => ({
+    rating,
+    films: ratings.filter((film) => (film.rating ?? null) === rating),
+  })).filter((group) => group.films.length);
+
+  const jump = groups
+    .map(({ rating }) => `          <a href="#${groupId(rating)}">${rating === null ? "Not rated" : rating}</a>`)
+    .join("\n");
+  const sections = groups
+    .map(({ rating, films }) => {
+      const rows = films
+        .map((film) => {
+          const stars =
+            rating === null
+              ? ""
+              : `<span class="rating" role="img" aria-label="Rated ${rating} out of 5 stars" style="--rating: ${rating}"><span class="stars" aria-hidden="true">★★★★★</span></span>`;
+          return `            <li class="rating-row"><span class="rating-title">${escapeHtml(film.title)} <span class="rating-year">${escapeHtml(String(film.year))}</span></span>${stars}</li>`;
+        })
+        .join("\n");
+      return (
+        `        <section class="rating-group" id="${groupId(rating)}">\n` +
+        `          <h2 class="subpage-label">${starsLabel(rating)} (${films.length})</h2>\n` +
+        `          <ul class="rating-list">\n${rows}\n          </ul>\n        </section>\n`
+      );
+    })
+    .join("");
+  return `        <nav class="rating-jump" aria-label="Jump to a rating">\n${jump}\n        </nav>\n${sections}`;
+}
+
+function fill(shell, list, { title, description, path }) {
+  const start = shell.indexOf(START);
+  const end = shell.indexOf(END);
+  if (start < 0 || end < start) throw new Error(`Missing ${START} markers in ${SHELL_FILE}`);
+  return `${shell.slice(0, start)}${START}\n${list}        ${shell.slice(end)}`
+    .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
+    .replace(/(name="description"\s+content=")[^"]*"/, `$1${description}"`)
+    .replace(/(rel="canonical" href=")[^"]*"/, `$1${SITE_URL}${path}"`)
+    .replace(/(property="og:title" content=")[^"]*"/, `$1${title}"`)
+    .replace(/(property="og:description" content=")[^"]*"/, `$1${description}"`)
+    .replace(/(property="og:url" content=")[^"]*"/, `$1${SITE_URL}${path}"`);
+}
+
+function buildPages(reviews, ratings) {
+  const shell = readFileSync(SHELL_FILE, "utf8");
+  const total = Math.max(1, Math.ceil(reviews.length / PER_PAGE));
+  const subnavReviews = renderSubnav("reviews", reviews.length, ratings.length);
+
+  for (let number = 1; number <= total; number += 1) {
+    const entries = reviews.slice((number - 1) * PER_PAGE, number * PER_PAGE);
+    const sections =
+      number === 1
+        ? renderSection("Most recent watch", entries.slice(0, 1), 0) + renderSection("Earlier", entries.slice(1), 1)
+        : renderSection("Earlier", entries, 0);
+    const html = fill(shell, subnavReviews + sections + renderPagination(number, total) + letterboxdLink, {
+      title: number === 1 ? "Movies | Nick Betts" : `Movies, page ${number} | Nick Betts`,
+      description: "Movies Nick Betts has been watching, with ratings and reviews.",
+      path: pagePath(number),
+    });
+    writeFileSync(number === 1 ? SHELL_FILE : `movies-${number}.html`, html);
+  }
+
+  // Remove pages left over from when there were more reviews
+  for (const file of readdirSync(".")) {
+    const match = file.match(/^movies-(\d+)\.html$/);
+    if (match && Number(match[1]) > total) rmSync(file);
+  }
+
+  writeFileSync(
+    "ratings.html",
+    fill(shell, renderSubnav("ratings", reviews.length, ratings.length) + renderRatings(ratings) + letterboxdLink, {
+      title: "Movie ratings | Nick Betts",
+      description: "Every other movie Nick Betts has logged on Letterboxd, with ratings.",
+      path: "/ratings",
+    })
+  );
+
+  const sitemap = readFileSync(SITEMAP_FILE, "utf8").replace(/ *<url><loc>[^<]*\/(?:movies-\d+|ratings)<\/loc><\/url>\n/g, "");
+  const extra = ["/ratings"];
+  for (let number = 2; number <= total; number += 1) extra.push(pagePath(number));
+  const anchor = `  <url><loc>${SITE_URL}/movies</loc></url>\n`;
+  if (!sitemap.includes(anchor)) throw new Error("Movies page missing from the sitemap");
+  writeFileSync(
+    SITEMAP_FILE,
+    sitemap.replace(anchor, anchor + extra.map((path) => `  <url><loc>${SITE_URL}${path}</loc></url>\n`).join(""))
+  );
+  return total;
 }
 
 async function loadFeed() {
@@ -153,12 +319,15 @@ async function loadFeed() {
   return response.text();
 }
 
+const readJson = (file) => (existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : []);
+
 const feed = parseFeed(await loadFeed());
-// A failed or changed feed should never empty the page
+// A failed or changed feed should never empty the pages
 if (!feed.length) throw new Error("No film entries found in the feed");
 
-const saved = existsSync(DATA_FILE) ? JSON.parse(readFileSync(DATA_FILE, "utf8")) : [];
-const entries = merge(saved, feed);
-writeFileSync(DATA_FILE, `${JSON.stringify(entries, null, 2)}\n`);
-writeFileSync(PAGE_FILE, renderPage(readFileSync(PAGE_FILE, "utf8"), entries));
-console.log(`${feed.length} entries in feed, ${entries.length} on the page`);
+const reviews = mergeReviews(readJson(REVIEWS_FILE), feed);
+const ratings = mergeRatings(readJson(RATINGS_FILE), feed, reviews);
+writeFileSync(REVIEWS_FILE, `${JSON.stringify(reviews, null, 2)}\n`);
+writeFileSync(RATINGS_FILE, `${JSON.stringify(ratings, null, 2)}\n`);
+const pages = buildPages(reviews, ratings);
+console.log(`${feed.length} entries in feed, ${reviews.length} reviews on ${pages} page(s), ${ratings.length} ratings`);

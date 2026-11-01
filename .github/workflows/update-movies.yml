@@ -27,7 +27,7 @@ jobs:
 
       - name: Publish changes
         run: |
-          git add data/movies.json movies.html
+          git add -A data movies*.html ratings.html sitemap.xml
           if git diff --cached --quiet; then
             echo "No new movies"
             exit 0

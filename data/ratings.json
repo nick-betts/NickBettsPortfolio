@@ -1,0 +1,3252 @@
+[
+  {
+    "title": "(500) Days of Summer",
+    "year": "2009",
+    "rating": 3.5
+  },
+  {
+    "title": "13 Going on 30",
+    "year": "2004",
+    "rating": 3
+  },
+  {
+    "title": "1917",
+    "year": "2019",
+    "rating": 3.5
+  },
+  {
+    "title": "2001: A Space Odyssey",
+    "year": "1968",
+    "rating": 3
+  },
+  {
+    "title": "21 Jump Street",
+    "year": "2012",
+    "rating": 4
+  },
+  {
+    "title": "22 Jump Street",
+    "year": "2014",
+    "rating": 3
+  },
+  {
+    "title": "28 Days Later",
+    "year": "2002",
+    "rating": 3.5
+  },
+  {
+    "title": "The 40 Year Old Virgin",
+    "year": "2005",
+    "rating": 3.5
+  },
+  {
+    "title": "8 Mile",
+    "year": "2002",
+    "rating": 3.5
+  },
+  {
+    "title": "The Accountant",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "Ace Ventura: Pet Detective",
+    "year": "1994",
+    "rating": 3.5
+  },
+  {
+    "title": "The Adventures of Tintin",
+    "year": "2011",
+    "rating": null
+  },
+  {
+    "title": "After Hours",
+    "year": "1985",
+    "rating": 5
+  },
+  {
+    "title": "Airplane!",
+    "year": "1980",
+    "rating": 4
+  },
+  {
+    "title": "All the President's Men",
+    "year": "1976",
+    "rating": 4
+  },
+  {
+    "title": "All Too Well: The Short Film",
+    "year": "2021",
+    "rating": null
+  },
+  {
+    "title": "Alvin and the Chipmunks",
+    "year": "2007",
+    "rating": null
+  },
+  {
+    "title": "The Amazing Spider-Man",
+    "year": "2012",
+    "rating": 3
+  },
+  {
+    "title": "The Amazing Spider-Man 2",
+    "year": "2014",
+    "rating": 2
+  },
+  {
+    "title": "American Beauty",
+    "year": "1999",
+    "rating": 4
+  },
+  {
+    "title": "American History X",
+    "year": "1998",
+    "rating": 4
+  },
+  {
+    "title": "American Hustle",
+    "year": "2013",
+    "rating": 3.5
+  },
+  {
+    "title": "American Psycho",
+    "year": "2000",
+    "rating": 5
+  },
+  {
+    "title": "Anchorman: The Legend of Ron Burgundy",
+    "year": "2004",
+    "rating": 4
+  },
+  {
+    "title": "Annihilation",
+    "year": "2018",
+    "rating": 3.5
+  },
+  {
+    "title": "Anora",
+    "year": "2024",
+    "rating": 3.5
+  },
+  {
+    "title": "Another Round",
+    "year": "2020",
+    "rating": 4
+  },
+  {
+    "title": "Ant-Man",
+    "year": "2015",
+    "rating": 3.5
+  },
+  {
+    "title": "Ant-Man and the Wasp",
+    "year": "2018",
+    "rating": 2
+  },
+  {
+    "title": "Ant-Man and the Wasp: Quantumania",
+    "year": "2023",
+    "rating": 1.5
+  },
+  {
+    "title": "Anyone But You",
+    "year": "2023",
+    "rating": 3
+  },
+  {
+    "title": "Aquaman",
+    "year": "2018",
+    "rating": 2.5
+  },
+  {
+    "title": "Arrival",
+    "year": "2016",
+    "rating": 4
+  },
+  {
+    "title": "Asteroid City",
+    "year": "2023",
+    "rating": 1
+  },
+  {
+    "title": "Austin Powers: International Man of Mystery",
+    "year": "1997",
+    "rating": 4
+  },
+  {
+    "title": "Avatar",
+    "year": "2009",
+    "rating": 3
+  },
+  {
+    "title": "Avatar: Fire and Ash",
+    "year": "2025",
+    "rating": 3.5
+  },
+  {
+    "title": "Avatar: The Way of Water",
+    "year": "2022",
+    "rating": 3.5
+  },
+  {
+    "title": "The Avengers",
+    "year": "2012",
+    "rating": 3.5
+  },
+  {
+    "title": "Avengers: Age of Ultron",
+    "year": "2015",
+    "rating": 3
+  },
+  {
+    "title": "Avengers: Endgame",
+    "year": "2019",
+    "rating": 4
+  },
+  {
+    "title": "Avengers: Infinity War",
+    "year": "2018",
+    "rating": 4
+  },
+  {
+    "title": "Baby Driver",
+    "year": "2017",
+    "rating": 4
+  },
+  {
+    "title": "Back to the Future",
+    "year": "1985",
+    "rating": 3.5
+  },
+  {
+    "title": "Back to the Future Part II",
+    "year": "1989",
+    "rating": 4
+  },
+  {
+    "title": "Back to the Future Part III",
+    "year": "1990",
+    "rating": 3
+  },
+  {
+    "title": "Backrooms",
+    "year": "2026",
+    "rating": 3.5
+  },
+  {
+    "title": "The Ballad of Buster Scruggs",
+    "year": "2018",
+    "rating": 3
+  },
+  {
+    "title": "Bambi",
+    "year": "1942",
+    "rating": null
+  },
+  {
+    "title": "The Banshees of Inisherin",
+    "year": "2022",
+    "rating": 4
+  },
+  {
+    "title": "Barbarian",
+    "year": "2022",
+    "rating": 3.5
+  },
+  {
+    "title": "Barbie",
+    "year": "2023",
+    "rating": 4
+  },
+  {
+    "title": "Batman",
+    "year": "1989",
+    "rating": 4
+  },
+  {
+    "title": "The Batman",
+    "year": "2022",
+    "rating": 4
+  },
+  {
+    "title": "Batman & Robin",
+    "year": "1997",
+    "rating": 1.5
+  },
+  {
+    "title": "Batman Begins",
+    "year": "2005",
+    "rating": 3.5
+  },
+  {
+    "title": "Batman Forever",
+    "year": "1995",
+    "rating": 2
+  },
+  {
+    "title": "Batman Returns",
+    "year": "1992",
+    "rating": 3
+  },
+  {
+    "title": "Batman v Superman: Dawn of Justice",
+    "year": "2016",
+    "rating": 1
+  },
+  {
+    "title": "Bee Movie",
+    "year": "2007",
+    "rating": 2.5
+  },
+  {
+    "title": "Beetlejuice",
+    "year": "1988",
+    "rating": 3.5
+  },
+  {
+    "title": "Big Hero 6",
+    "year": "2014",
+    "rating": 3.5
+  },
+  {
+    "title": "The Big Lebowski",
+    "year": "1998",
+    "rating": 4.5
+  },
+  {
+    "title": "The Big Short",
+    "year": "2015",
+    "rating": 4
+  },
+  {
+    "title": "Black Adam",
+    "year": "2022",
+    "rating": 1
+  },
+  {
+    "title": "Black Mirror: Bandersnatch",
+    "year": "2018",
+    "rating": null
+  },
+  {
+    "title": "Black Panther",
+    "year": "2018",
+    "rating": 4
+  },
+  {
+    "title": "Black Panther: Wakanda Forever",
+    "year": "2022",
+    "rating": 2.5
+  },
+  {
+    "title": "The Black Phone",
+    "year": "2021",
+    "rating": 3
+  },
+  {
+    "title": "Black Swan",
+    "year": "2010",
+    "rating": 3.5
+  },
+  {
+    "title": "Black Widow",
+    "year": "2021",
+    "rating": 2
+  },
+  {
+    "title": "BlackBerry",
+    "year": "2023",
+    "rating": 3.5
+  },
+  {
+    "title": "BlacKkKlansman",
+    "year": "2018",
+    "rating": 4
+  },
+  {
+    "title": "Blade",
+    "year": "1998",
+    "rating": 3
+  },
+  {
+    "title": "Blade Runner",
+    "year": "1982",
+    "rating": 3
+  },
+  {
+    "title": "Blade Runner 2049",
+    "year": "2017",
+    "rating": 4
+  },
+  {
+    "title": "The Blind Side",
+    "year": "2009",
+    "rating": 3
+  },
+  {
+    "title": "Blink Twice",
+    "year": "2024",
+    "rating": 2
+  },
+  {
+    "title": "Blood Simple",
+    "year": "1984",
+    "rating": 3
+  },
+  {
+    "title": "Blue Beetle",
+    "year": "2023",
+    "rating": 3
+  },
+  {
+    "title": "Blue Velvet",
+    "year": "1986",
+    "rating": 4
+  },
+  {
+    "title": "Bolt",
+    "year": "2008",
+    "rating": null
+  },
+  {
+    "title": "Booksmart",
+    "year": "2019",
+    "rating": 3.5
+  },
+  {
+    "title": "Booty Call",
+    "year": "1997",
+    "rating": 3
+  },
+  {
+    "title": "Borat Subsequent Moviefilm: Delivery of Prodigious Bribe to American Regime for Make Benefit Once Glorious Nation of Kazakhstan",
+    "year": "2020",
+    "rating": 3
+  },
+  {
+    "title": "Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan",
+    "year": "2006",
+    "rating": 4
+  },
+  {
+    "title": "The Bourne Identity",
+    "year": "2002",
+    "rating": 4
+  },
+  {
+    "title": "The Bourne Ultimatum",
+    "year": "2007",
+    "rating": 3.5
+  },
+  {
+    "title": "Boyz n the Hood",
+    "year": "1991",
+    "rating": 4
+  },
+  {
+    "title": "Brave",
+    "year": "2012",
+    "rating": 3
+  },
+  {
+    "title": "Bridge to Terabithia",
+    "year": "2007",
+    "rating": null
+  },
+  {
+    "title": "Bring Her Back",
+    "year": "2025",
+    "rating": 3
+  },
+  {
+    "title": "Brother Bear",
+    "year": "2003",
+    "rating": null
+  },
+  {
+    "title": "Bruce Almighty",
+    "year": "2003",
+    "rating": 2
+  },
+  {
+    "title": "A Bug's Life",
+    "year": "1998",
+    "rating": 3.5
+  },
+  {
+    "title": "Bugonia",
+    "year": "2025",
+    "rating": 4
+  },
+  {
+    "title": "Bullet Train",
+    "year": "2022",
+    "rating": 3.5
+  },
+  {
+    "title": "Burn After Reading",
+    "year": "2008",
+    "rating": 2.5
+  },
+  {
+    "title": "The Cabin in the Woods",
+    "year": "2011",
+    "rating": 3
+  },
+  {
+    "title": "Call Me by Your Name",
+    "year": "2017",
+    "rating": 4
+  },
+  {
+    "title": "Candyman",
+    "year": "1992",
+    "rating": 3.5
+  },
+  {
+    "title": "Cape Fear",
+    "year": "1991",
+    "rating": 3.5
+  },
+  {
+    "title": "Captain America: Brave New World",
+    "year": "2025",
+    "rating": 2
+  },
+  {
+    "title": "Captain America: Civil War",
+    "year": "2016",
+    "rating": 4
+  },
+  {
+    "title": "Captain America: The First Avenger",
+    "year": "2011",
+    "rating": 3
+  },
+  {
+    "title": "Captain America: The Winter Soldier",
+    "year": "2014",
+    "rating": 4
+  },
+  {
+    "title": "Captain Marvel",
+    "year": "2019",
+    "rating": 2.5
+  },
+  {
+    "title": "Carry-On",
+    "year": "2024",
+    "rating": 2
+  },
+  {
+    "title": "Cars",
+    "year": "2006",
+    "rating": 3.5
+  },
+  {
+    "title": "Cars 2",
+    "year": "2011",
+    "rating": 2
+  },
+  {
+    "title": "Casino",
+    "year": "1995",
+    "rating": 3
+  },
+  {
+    "title": "Casino Royale",
+    "year": "2006",
+    "rating": 3.5
+  },
+  {
+    "title": "The Cat in the Hat",
+    "year": "2003",
+    "rating": null
+  },
+  {
+    "title": "Catch Me If You Can",
+    "year": "2002",
+    "rating": 4
+  },
+  {
+    "title": "Challengers",
+    "year": "2024",
+    "rating": 4.5
+  },
+  {
+    "title": "Charlie and the Chocolate Factory",
+    "year": "2005",
+    "rating": 3.5
+  },
+  {
+    "title": "Chernobyl",
+    "year": "2019",
+    "rating": null
+  },
+  {
+    "title": "Chicken Little",
+    "year": "2005",
+    "rating": null
+  },
+  {
+    "title": "Child's Play",
+    "year": "1988",
+    "rating": 3
+  },
+  {
+    "title": "Children of Men",
+    "year": "2006",
+    "rating": 4
+  },
+  {
+    "title": "Children of the Corn",
+    "year": "1984",
+    "rating": 2
+  },
+  {
+    "title": "Chronicle",
+    "year": "2012",
+    "rating": 3
+  },
+  {
+    "title": "Civil War",
+    "year": "2024",
+    "rating": 3
+  },
+  {
+    "title": "Clerks",
+    "year": "1994",
+    "rating": 3.5
+  },
+  {
+    "title": "A Clockwork Orange",
+    "year": "1971",
+    "rating": 4
+  },
+  {
+    "title": "Cloudy with a Chance of Meatballs",
+    "year": "2009",
+    "rating": 3.5
+  },
+  {
+    "title": "Clue",
+    "year": "1985",
+    "rating": null
+  },
+  {
+    "title": "Coco",
+    "year": "2017",
+    "rating": 4
+  },
+  {
+    "title": "Collateral",
+    "year": "2004",
+    "rating": 3.5
+  },
+  {
+    "title": "Conclave",
+    "year": "2024",
+    "rating": 3.5
+  },
+  {
+    "title": "Copycat",
+    "year": "1995",
+    "rating": 2.5
+  },
+  {
+    "title": "Crazy Rich Asians",
+    "year": "2018",
+    "rating": 3.5
+  },
+  {
+    "title": "Creed",
+    "year": "2015",
+    "rating": 4
+  },
+  {
+    "title": "The Croods",
+    "year": "2013",
+    "rating": null
+  },
+  {
+    "title": "Cure",
+    "year": "1997",
+    "rating": 4
+  },
+  {
+    "title": "Da 5 Bloods",
+    "year": "2020",
+    "rating": 3.5
+  },
+  {
+    "title": "Dallas Buyers Club",
+    "year": "2013",
+    "rating": 3.5
+  },
+  {
+    "title": "The Dark Knight",
+    "year": "2008",
+    "rating": 5
+  },
+  {
+    "title": "The Dark Knight Rises",
+    "year": "2012",
+    "rating": 4
+  },
+  {
+    "title": "Deadpool",
+    "year": "2016",
+    "rating": 4
+  },
+  {
+    "title": "Deadpool & Wolverine",
+    "year": "2024",
+    "rating": 3
+  },
+  {
+    "title": "Deadpool 2",
+    "year": "2018",
+    "rating": 3
+  },
+  {
+    "title": "Death on the Nile",
+    "year": "1978",
+    "rating": 3.5
+  },
+  {
+    "title": "Death on the Nile",
+    "year": "2022",
+    "rating": null
+  },
+  {
+    "title": "The Departed",
+    "year": "2006",
+    "rating": 4
+  },
+  {
+    "title": "Despicable Me",
+    "year": "2010",
+    "rating": 3
+  },
+  {
+    "title": "Despicable Me 2",
+    "year": "2013",
+    "rating": 2
+  },
+  {
+    "title": "Devil in a Blue Dress",
+    "year": "1995",
+    "rating": 3.5
+  },
+  {
+    "title": "Die Hard",
+    "year": "1988",
+    "rating": 4
+  },
+  {
+    "title": "The Disaster Artist",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "Divergent",
+    "year": "2014",
+    "rating": 2
+  },
+  {
+    "title": "Django Unchained",
+    "year": "2012",
+    "rating": null
+  },
+  {
+    "title": "Doctor Strange",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "year": "2022",
+    "rating": 2
+  },
+  {
+    "title": "DodgeBall: A True Underdog Story",
+    "year": "2004",
+    "rating": 4.5
+  },
+  {
+    "title": "Don't Look Up",
+    "year": "2021",
+    "rating": 2
+  },
+  {
+    "title": "Donnie Darko",
+    "year": "2001",
+    "rating": 3.5
+  },
+  {
+    "title": "The Drama",
+    "year": "2026",
+    "rating": 4.5
+  },
+  {
+    "title": "Drive",
+    "year": "2011",
+    "rating": 3.5
+  },
+  {
+    "title": "Drop",
+    "year": "2025",
+    "rating": 3
+  },
+  {
+    "title": "Dumb and Dumber",
+    "year": "1994",
+    "rating": 3
+  },
+  {
+    "title": "Dumbo",
+    "year": "1941",
+    "rating": null
+  },
+  {
+    "title": "Dune",
+    "year": "2021",
+    "rating": 4
+  },
+  {
+    "title": "Dune: Part Two",
+    "year": "2024",
+    "rating": 4.5
+  },
+  {
+    "title": "E.T. the Extra-Terrestrial",
+    "year": "1982",
+    "rating": null
+  },
+  {
+    "title": "Easy A",
+    "year": "2010",
+    "rating": 2.5
+  },
+  {
+    "title": "El Camino: A Breaking Bad Movie",
+    "year": "2019",
+    "rating": 3.5
+  },
+  {
+    "title": "Elf",
+    "year": "2003",
+    "rating": 4
+  },
+  {
+    "title": "The Empire Strikes Back",
+    "year": "1980",
+    "rating": 4
+  },
+  {
+    "title": "Enemy",
+    "year": "2013",
+    "rating": 3
+  },
+  {
+    "title": "Eraserhead",
+    "year": "1977",
+    "rating": 3
+  },
+  {
+    "title": "Erin Brockovich",
+    "year": "2000",
+    "rating": 3.5
+  },
+  {
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "year": "2004",
+    "rating": 3
+  },
+  {
+    "title": "Eternals",
+    "year": "2021",
+    "rating": 2
+  },
+  {
+    "title": "Eternity",
+    "year": "2025",
+    "rating": 3.5
+  },
+  {
+    "title": "Everything Everywhere All at Once",
+    "year": "2022",
+    "rating": 3.5
+  },
+  {
+    "title": "Evil Dead II",
+    "year": "1987",
+    "rating": 3
+  },
+  {
+    "title": "Evil Dead Rise",
+    "year": "2023",
+    "rating": 1.5
+  },
+  {
+    "title": "Evil Under the Sun",
+    "year": "1982",
+    "rating": 3
+  },
+  {
+    "title": "Ex Machina",
+    "year": "2015",
+    "rating": 3.5
+  },
+  {
+    "title": "The Exorcist",
+    "year": "1973",
+    "rating": 4
+  },
+  {
+    "title": "Eyes Wide Shut",
+    "year": "1999",
+    "rating": 4
+  },
+  {
+    "title": "F1",
+    "year": "2025",
+    "rating": 3.5
+  },
+  {
+    "title": "The Falcon and the Winter Soldier",
+    "year": "2021",
+    "rating": null
+  },
+  {
+    "title": "The Fantastic 4: First Steps",
+    "year": "2025",
+    "rating": 3.5
+  },
+  {
+    "title": "Fantastic Four",
+    "year": "2005",
+    "rating": 2.5
+  },
+  {
+    "title": "Fantastic Four",
+    "year": "2015",
+    "rating": 0.5
+  },
+  {
+    "title": "Fantastic Four: Rise of the Silver Surfer",
+    "year": "2007",
+    "rating": 1.5
+  },
+  {
+    "title": "Fantastic Planet",
+    "year": "1973",
+    "rating": 4
+  },
+  {
+    "title": "Fargo",
+    "year": "1996",
+    "rating": 5
+  },
+  {
+    "title": "Fear and Loathing in Las Vegas",
+    "year": "1998",
+    "rating": null
+  },
+  {
+    "title": "Fear Street: 1666",
+    "year": "2021",
+    "rating": 2.5
+  },
+  {
+    "title": "Fear Street: 1978",
+    "year": "2021",
+    "rating": 2
+  },
+  {
+    "title": "Fear Street: 1994",
+    "year": "2021",
+    "rating": 2.5
+  },
+  {
+    "title": "Ferris Bueller's Day Off",
+    "year": "1986",
+    "rating": 4.5
+  },
+  {
+    "title": "Fight Club",
+    "year": "1999",
+    "rating": 3
+  },
+  {
+    "title": "Final Destination",
+    "year": "2000",
+    "rating": 3.5
+  },
+  {
+    "title": "Final Destination Bloodlines",
+    "year": "2025",
+    "rating": 3
+  },
+  {
+    "title": "Finding Dory",
+    "year": "2016",
+    "rating": 3
+  },
+  {
+    "title": "Finding Nemo",
+    "year": "2003",
+    "rating": 4
+  },
+  {
+    "title": "The Firm",
+    "year": "1993",
+    "rating": 3.5
+  },
+  {
+    "title": "The Flash",
+    "year": "2023",
+    "rating": 2
+  },
+  {
+    "title": "The Florida Project",
+    "year": "2017",
+    "rating": 4
+  },
+  {
+    "title": "Flushed Away",
+    "year": "2006",
+    "rating": null
+  },
+  {
+    "title": "Forgetting Sarah Marshall",
+    "year": "2008",
+    "rating": 3.5
+  },
+  {
+    "title": "Forrest Gump",
+    "year": "1994",
+    "rating": 4
+  },
+  {
+    "title": "The Founder",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "Frankenstein",
+    "year": "2025",
+    "rating": 4
+  },
+  {
+    "title": "Free Guy",
+    "year": "2021",
+    "rating": 3
+  },
+  {
+    "title": "Friends with Benefits",
+    "year": "2011",
+    "rating": 2
+  },
+  {
+    "title": "Friendship",
+    "year": "2024",
+    "rating": 2.5
+  },
+  {
+    "title": "Frozen",
+    "year": "2013",
+    "rating": 3.5
+  },
+  {
+    "title": "Frozen II",
+    "year": "2019",
+    "rating": 2.5
+  },
+  {
+    "title": "Funny Games",
+    "year": "1997",
+    "rating": 4
+  },
+  {
+    "title": "The Game",
+    "year": "1997",
+    "rating": 3
+  },
+  {
+    "title": "Game Night",
+    "year": "2018",
+    "rating": 4
+  },
+  {
+    "title": "Get Out",
+    "year": "2017",
+    "rating": 4.5
+  },
+  {
+    "title": "Ghostbusters",
+    "year": "1984",
+    "rating": 3
+  },
+  {
+    "title": "The Girl with the Dragon Tattoo",
+    "year": "2011",
+    "rating": 4
+  },
+  {
+    "title": "Glass Onion",
+    "year": "2022",
+    "rating": 3.5
+  },
+  {
+    "title": "Gone Girl",
+    "year": "2014",
+    "rating": 3
+  },
+  {
+    "title": "The Good Dinosaur",
+    "year": "2015",
+    "rating": 3
+  },
+  {
+    "title": "Good Time",
+    "year": "2017",
+    "rating": 4
+  },
+  {
+    "title": "Good Will Hunting",
+    "year": "1997",
+    "rating": 4.5
+  },
+  {
+    "title": "GoodFellas",
+    "year": "1990",
+    "rating": 4.5
+  },
+  {
+    "title": "The Goonies",
+    "year": "1985",
+    "rating": null
+  },
+  {
+    "title": "The Grand Budapest Hotel",
+    "year": "2014",
+    "rating": 4
+  },
+  {
+    "title": "Greed",
+    "year": "2019",
+    "rating": 0.5
+  },
+  {
+    "title": "The Green Knight",
+    "year": "2021",
+    "rating": 3
+  },
+  {
+    "title": "Green Lantern",
+    "year": "2011",
+    "rating": 1.5
+  },
+  {
+    "title": "Green Lantern: Beware My Power",
+    "year": "2022",
+    "rating": 2
+  },
+  {
+    "title": "The Green Mile",
+    "year": "1999",
+    "rating": 4
+  },
+  {
+    "title": "Green Room",
+    "year": "2015",
+    "rating": 4
+  },
+  {
+    "title": "Guardians of the Galaxy",
+    "year": "2014",
+    "rating": 4.5
+  },
+  {
+    "title": "Guardians of the Galaxy Vol. 2",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "Guardians of the Galaxy Vol. 3",
+    "year": "2023",
+    "rating": 3
+  },
+  {
+    "title": "Hacksaw Ridge",
+    "year": "2016",
+    "rating": 3
+  },
+  {
+    "title": "Hairspray",
+    "year": "2007",
+    "rating": 3
+  },
+  {
+    "title": "Halloween",
+    "year": "1978",
+    "rating": 4
+  },
+  {
+    "title": "Halloween",
+    "year": "2018",
+    "rating": 3
+  },
+  {
+    "title": "The Hangover",
+    "year": "2009",
+    "rating": 3.5
+  },
+  {
+    "title": "Happy Feet",
+    "year": "2006",
+    "rating": null
+  },
+  {
+    "title": "Happy Gilmore",
+    "year": "1996",
+    "rating": 4
+  },
+  {
+    "title": "Happy Gilmore 2",
+    "year": "2025",
+    "rating": 3
+  },
+  {
+    "title": "Harry Potter and the Chamber of Secrets",
+    "year": "2002",
+    "rating": 3
+  },
+  {
+    "title": "Harry Potter and the Deathly Hallows: Part 1",
+    "year": "2010",
+    "rating": 3.5
+  },
+  {
+    "title": "Harry Potter and the Deathly Hallows: Part 2",
+    "year": "2011",
+    "rating": 4.5
+  },
+  {
+    "title": "Harry Potter and the Goblet of Fire",
+    "year": "2005",
+    "rating": 3.5
+  },
+  {
+    "title": "Harry Potter and the Half-Blood Prince",
+    "year": "2009",
+    "rating": 3.5
+  },
+  {
+    "title": "Harry Potter and the Order of the Phoenix",
+    "year": "2007",
+    "rating": 4
+  },
+  {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "year": "2001",
+    "rating": 3.5
+  },
+  {
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "year": "2004",
+    "rating": 4.5
+  },
+  {
+    "title": "The Hateful Eight",
+    "year": "2015",
+    "rating": 4
+  },
+  {
+    "title": "A Haunting in Venice",
+    "year": "2023",
+    "rating": 3
+  },
+  {
+    "title": "Hawkeye",
+    "year": "2021",
+    "rating": null
+  },
+  {
+    "title": "Heat",
+    "year": "1995",
+    "rating": 3
+  },
+  {
+    "title": "Hell or High Water",
+    "year": "2016",
+    "rating": 4
+  },
+  {
+    "title": "Hellboy",
+    "year": "2004",
+    "rating": 3
+  },
+  {
+    "title": "Her",
+    "year": "2013",
+    "rating": 3
+  },
+  {
+    "title": "Hercules",
+    "year": "1997",
+    "rating": null
+  },
+  {
+    "title": "Hereditary",
+    "year": "2018",
+    "rating": 3
+  },
+  {
+    "title": "Heretic",
+    "year": "2024",
+    "rating": 3.5
+  },
+  {
+    "title": "Hidden Figures",
+    "year": "2016",
+    "rating": 4
+  },
+  {
+    "title": "High School Musical",
+    "year": "2006",
+    "rating": null
+  },
+  {
+    "title": "The Hobbit: An Unexpected Journey",
+    "year": "2012",
+    "rating": 2
+  },
+  {
+    "title": "The Hobbit: The Desolation of Smaug",
+    "year": "2013",
+    "rating": 1
+  },
+  {
+    "title": "The Holdovers",
+    "year": "2023",
+    "rating": 4.5
+  },
+  {
+    "title": "Holes",
+    "year": "2003",
+    "rating": null
+  },
+  {
+    "title": "Holland",
+    "year": "2025",
+    "rating": 2
+  },
+  {
+    "title": "Home Alone",
+    "year": "1990",
+    "rating": 4
+  },
+  {
+    "title": "Home Alone 2: Lost in New York",
+    "year": "1992",
+    "rating": 3.5
+  },
+  {
+    "title": "Hot Fuzz",
+    "year": "2007",
+    "rating": 3.5
+  },
+  {
+    "title": "Hot Rod",
+    "year": "2007",
+    "rating": 4.5
+  },
+  {
+    "title": "Hotel Transylvania",
+    "year": "2012",
+    "rating": null
+  },
+  {
+    "title": "How the Grinch Stole Christmas",
+    "year": "2000",
+    "rating": 3
+  },
+  {
+    "title": "How to Train Your Dragon",
+    "year": "2010",
+    "rating": 3
+  },
+  {
+    "title": "How to Train Your Dragon 2",
+    "year": "2014",
+    "rating": null
+  },
+  {
+    "title": "Hugo",
+    "year": "2011",
+    "rating": null
+  },
+  {
+    "title": "The Hunger Games",
+    "year": "2012",
+    "rating": 3.5
+  },
+  {
+    "title": "The Hunger Games: Catching Fire",
+    "year": "2013",
+    "rating": 4
+  },
+  {
+    "title": "The Hunger Games: Mockingjay – Part 1",
+    "year": "2014",
+    "rating": 3.5
+  },
+  {
+    "title": "The Hunger Games: Mockingjay – Part 2",
+    "year": "2015",
+    "rating": 3.5
+  },
+  {
+    "title": "The Hunger Games: The Ballad of Songbirds & Snakes",
+    "year": "2023",
+    "rating": 3
+  },
+  {
+    "title": "Hunt for the Wilderpeople",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "Hustle",
+    "year": "2022",
+    "rating": 3.5
+  },
+  {
+    "title": "Ice Age",
+    "year": "2002",
+    "rating": null
+  },
+  {
+    "title": "Ice Age: The Meltdown",
+    "year": "2006",
+    "rating": null
+  },
+  {
+    "title": "The Imitation Game",
+    "year": "2014",
+    "rating": 3.5
+  },
+  {
+    "title": "Inception",
+    "year": "2010",
+    "rating": 4
+  },
+  {
+    "title": "The Incredible Hulk",
+    "year": "2008",
+    "rating": 1.5
+  },
+  {
+    "title": "The Incredibles",
+    "year": "2004",
+    "rating": 4
+  },
+  {
+    "title": "Incredibles 2",
+    "year": "2018",
+    "rating": 3
+  },
+  {
+    "title": "Indiana Jones and the Kingdom of the Crystal Skull",
+    "year": "2008",
+    "rating": 1
+  },
+  {
+    "title": "Indiana Jones and the Last Crusade",
+    "year": "1989",
+    "rating": 3
+  },
+  {
+    "title": "Indiana Jones and the Temple of Doom",
+    "year": "1984",
+    "rating": 4
+  },
+  {
+    "title": "Inglourious Basterds",
+    "year": "2009",
+    "rating": 4.5
+  },
+  {
+    "title": "Ingrid Goes West",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "Injustice",
+    "year": "2021",
+    "rating": 3
+  },
+  {
+    "title": "Inside Man",
+    "year": "2006",
+    "rating": 3.5
+  },
+  {
+    "title": "Inside Out",
+    "year": "2015",
+    "rating": 4.5
+  },
+  {
+    "title": "Inside Out 2",
+    "year": "2024",
+    "rating": 3.5
+  },
+  {
+    "title": "Interstellar",
+    "year": "2014",
+    "rating": 5
+  },
+  {
+    "title": "The Interview",
+    "year": "2014",
+    "rating": 3.5
+  },
+  {
+    "title": "Iron Man",
+    "year": "2008",
+    "rating": 4
+  },
+  {
+    "title": "Iron Man 2",
+    "year": "2010",
+    "rating": 2.5
+  },
+  {
+    "title": "Iron Man 3",
+    "year": "2013",
+    "rating": 3
+  },
+  {
+    "title": "It",
+    "year": "2017",
+    "rating": 4
+  },
+  {
+    "title": "It Comes at Night",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "It Follows",
+    "year": "2014",
+    "rating": 3.5
+  },
+  {
+    "title": "It Was Just an Accident",
+    "year": "2025",
+    "rating": 4
+  },
+  {
+    "title": "Jackass Forever",
+    "year": "2022",
+    "rating": null
+  },
+  {
+    "title": "Jacob's Ladder",
+    "year": "1990",
+    "rating": 3.5
+  },
+  {
+    "title": "John Wick",
+    "year": "2014",
+    "rating": 4
+  },
+  {
+    "title": "Jojo Rabbit",
+    "year": "2019",
+    "rating": 4
+  },
+  {
+    "title": "Joker",
+    "year": "2019",
+    "rating": 4
+  },
+  {
+    "title": "Joker: Folie à Deux",
+    "year": "2024",
+    "rating": 1
+  },
+  {
+    "title": "Jumanji",
+    "year": "1995",
+    "rating": 4
+  },
+  {
+    "title": "Jumanji: Welcome to the Jungle",
+    "year": "2017",
+    "rating": 3
+  },
+  {
+    "title": "The Jungle Book",
+    "year": "1967",
+    "rating": null
+  },
+  {
+    "title": "Juno",
+    "year": "2007",
+    "rating": 3.5
+  },
+  {
+    "title": "Jurassic Park",
+    "year": "1993",
+    "rating": 3.5
+  },
+  {
+    "title": "Jurassic World",
+    "year": "2015",
+    "rating": 3
+  },
+  {
+    "title": "Jurassic World: Fallen Kingdom",
+    "year": "2018",
+    "rating": 2.5
+  },
+  {
+    "title": "Juror #2",
+    "year": "2024",
+    "rating": 3
+  },
+  {
+    "title": "Justice League",
+    "year": "2017",
+    "rating": 1
+  },
+  {
+    "title": "The Karate Kid",
+    "year": "1984",
+    "rating": null
+  },
+  {
+    "title": "The Karate Kid",
+    "year": "2010",
+    "rating": null
+  },
+  {
+    "title": "Kick-Ass",
+    "year": "2010",
+    "rating": 3
+  },
+  {
+    "title": "Kill Bill: Vol. 1",
+    "year": "2003",
+    "rating": 3
+  },
+  {
+    "title": "The Killer",
+    "year": "2023",
+    "rating": 3.5
+  },
+  {
+    "title": "Killers of the Flower Moon",
+    "year": "2023",
+    "rating": 3.5
+  },
+  {
+    "title": "The Killing of a Sacred Deer",
+    "year": "2017",
+    "rating": 4
+  },
+  {
+    "title": "The King of Comedy",
+    "year": "1982",
+    "rating": 3.5
+  },
+  {
+    "title": "Kingsman: The Secret Service",
+    "year": "2014",
+    "rating": 4
+  },
+  {
+    "title": "The Kissing Booth",
+    "year": "2018",
+    "rating": 1
+  },
+  {
+    "title": "Knives Out",
+    "year": "2019",
+    "rating": 4.5
+  },
+  {
+    "title": "Kung Fu Panda",
+    "year": "2008",
+    "rating": 3.5
+  },
+  {
+    "title": "Kung Fu Panda 2",
+    "year": "2011",
+    "rating": 3.5
+  },
+  {
+    "title": "Kung Fu Panda 3",
+    "year": "2016",
+    "rating": 2.5
+  },
+  {
+    "title": "L.A. Confidential",
+    "year": "1997",
+    "rating": 3.5
+  },
+  {
+    "title": "La La Land",
+    "year": "2016",
+    "rating": 5
+  },
+  {
+    "title": "Lady Bird",
+    "year": "2017",
+    "rating": 4.5
+  },
+  {
+    "title": "Le Samouraï",
+    "year": "1967",
+    "rating": 4
+  },
+  {
+    "title": "The Lego Batman Movie",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "The Lego Movie",
+    "year": "2014",
+    "rating": 3
+  },
+  {
+    "title": "Lemony Snicket's A Series of Unfortunate Events",
+    "year": "2004",
+    "rating": null
+  },
+  {
+    "title": "Léon: The Professional",
+    "year": "1994",
+    "rating": 3.5
+  },
+  {
+    "title": "Liar Liar",
+    "year": "1997",
+    "rating": 3
+  },
+  {
+    "title": "Licorice Pizza",
+    "year": "2021",
+    "rating": 3
+  },
+  {
+    "title": "The Lighthouse",
+    "year": "2019",
+    "rating": 2
+  },
+  {
+    "title": "Lilo & Stitch",
+    "year": "2002",
+    "rating": null
+  },
+  {
+    "title": "Lilo & Stitch",
+    "year": "2025",
+    "rating": 2
+  },
+  {
+    "title": "Limitless",
+    "year": "2011",
+    "rating": 3
+  },
+  {
+    "title": "Lion",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "The Lion King",
+    "year": "1994",
+    "rating": null
+  },
+  {
+    "title": "Little Miss Sunshine",
+    "year": "2006",
+    "rating": 4
+  },
+  {
+    "title": "The Lobster",
+    "year": "2015",
+    "rating": 4
+  },
+  {
+    "title": "Logan",
+    "year": "2017",
+    "rating": 4
+  },
+  {
+    "title": "Logan Lucky",
+    "year": "2017",
+    "rating": 3
+  },
+  {
+    "title": "Loki",
+    "year": "2021",
+    "rating": null
+  },
+  {
+    "title": "The Long Walk",
+    "year": "2025",
+    "rating": 3.5
+  },
+  {
+    "title": "Longlegs",
+    "year": "2024",
+    "rating": 2.5
+  },
+  {
+    "title": "Looper",
+    "year": "2012",
+    "rating": 3.5
+  },
+  {
+    "title": "The Lorax",
+    "year": "2012",
+    "rating": null
+  },
+  {
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": "2001",
+    "rating": 2
+  },
+  {
+    "title": "The Lord of the Rings: The Return of the King",
+    "year": "2003",
+    "rating": 2
+  },
+  {
+    "title": "The Lord of the Rings: The Two Towers",
+    "year": "2002",
+    "rating": 2
+  },
+  {
+    "title": "Lost in Translation",
+    "year": "2003",
+    "rating": 4
+  },
+  {
+    "title": "Love Lies Bleeding",
+    "year": "2024",
+    "rating": 3
+  },
+  {
+    "title": "Luca",
+    "year": "2021",
+    "rating": 3.5
+  },
+  {
+    "title": "Mad Max: Fury Road",
+    "year": "2015",
+    "rating": 1
+  },
+  {
+    "title": "Madagascar",
+    "year": "2005",
+    "rating": null
+  },
+  {
+    "title": "Madagascar: Escape 2 Africa",
+    "year": "2008",
+    "rating": null
+  },
+  {
+    "title": "Malignant",
+    "year": "2021",
+    "rating": 3
+  },
+  {
+    "title": "Man of Steel",
+    "year": "2013",
+    "rating": 2.5
+  },
+  {
+    "title": "Manchester by the Sea",
+    "year": "2016",
+    "rating": 4.5
+  },
+  {
+    "title": "Marriage Story",
+    "year": "2019",
+    "rating": 3.5
+  },
+  {
+    "title": "The Martian",
+    "year": "2015",
+    "rating": 4
+  },
+  {
+    "title": "Marty Supreme",
+    "year": "2025",
+    "rating": 4
+  },
+  {
+    "title": "The Marvels",
+    "year": "2023",
+    "rating": 2
+  },
+  {
+    "title": "The Mask",
+    "year": "1994",
+    "rating": null
+  },
+  {
+    "title": "The Matrix",
+    "year": "1999",
+    "rating": 4
+  },
+  {
+    "title": "MaXXXine",
+    "year": "2024",
+    "rating": 3.5
+  },
+  {
+    "title": "May December",
+    "year": "2023",
+    "rating": 3.5
+  },
+  {
+    "title": "Me Before You",
+    "year": "2016",
+    "rating": 2.5
+  },
+  {
+    "title": "Mean Girls",
+    "year": "2004",
+    "rating": 5
+  },
+  {
+    "title": "Meet the Robinsons",
+    "year": "2007",
+    "rating": null
+  },
+  {
+    "title": "Megamind",
+    "year": "2010",
+    "rating": 3
+  },
+  {
+    "title": "Memento",
+    "year": "2000",
+    "rating": 3.5
+  },
+  {
+    "title": "Memories of Murder",
+    "year": "2003",
+    "rating": 4.5
+  },
+  {
+    "title": "Men in Black",
+    "year": "1997",
+    "rating": 3.5
+  },
+  {
+    "title": "Men in Black 3",
+    "year": "2012",
+    "rating": null
+  },
+  {
+    "title": "Men in Black II",
+    "year": "2002",
+    "rating": 3
+  },
+  {
+    "title": "The Menu",
+    "year": "2022",
+    "rating": 4
+  },
+  {
+    "title": "mid90s",
+    "year": "2018",
+    "rating": 3.5
+  },
+  {
+    "title": "Midsommar",
+    "year": "2019",
+    "rating": 3.5
+  },
+  {
+    "title": "A Minecraft Movie",
+    "year": "2025",
+    "rating": 3
+  },
+  {
+    "title": "Minions",
+    "year": "2015",
+    "rating": 1
+  },
+  {
+    "title": "Misery",
+    "year": "1990",
+    "rating": 4
+  },
+  {
+    "title": "Mission: Impossible – Dead Reckoning",
+    "year": "2023",
+    "rating": 3.5
+  },
+  {
+    "title": "Mission: Impossible – Fallout",
+    "year": "2018",
+    "rating": 4
+  },
+  {
+    "title": "Mission: Impossible – Ghost Protocol",
+    "year": "2011",
+    "rating": 3.5
+  },
+  {
+    "title": "Mission: Impossible – Rogue Nation",
+    "year": "2015",
+    "rating": 3.5
+  },
+  {
+    "title": "Mission: Impossible – The Final Reckoning",
+    "year": "2025",
+    "rating": 3.5
+  },
+  {
+    "title": "The Mitchells vs. the Machines",
+    "year": "2021",
+    "rating": 3
+  },
+  {
+    "title": "Moana",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "Molly's Game",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "Moneyball",
+    "year": "2011",
+    "rating": 4
+  },
+  {
+    "title": "Monsters University",
+    "year": "2013",
+    "rating": 3
+  },
+  {
+    "title": "Monsters, Inc.",
+    "year": "2001",
+    "rating": 4
+  },
+  {
+    "title": "Monty Python and the Holy Grail",
+    "year": "1975",
+    "rating": 2.5
+  },
+  {
+    "title": "Moonlight",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "Morbius",
+    "year": "2022",
+    "rating": 1
+  },
+  {
+    "title": "Mountainhead",
+    "year": "2025",
+    "rating": 2.5
+  },
+  {
+    "title": "The Muppets",
+    "year": "2011",
+    "rating": null
+  },
+  {
+    "title": "Murder Mystery",
+    "year": "2019",
+    "rating": 2.5
+  },
+  {
+    "title": "My Neighbor Totoro",
+    "year": "1988",
+    "rating": 4
+  },
+  {
+    "title": "Mystic River",
+    "year": "2003",
+    "rating": 3.5
+  },
+  {
+    "title": "Napoleon Dynamite",
+    "year": "2004",
+    "rating": 4.5
+  },
+  {
+    "title": "National Lampoon's Christmas Vacation",
+    "year": "1989",
+    "rating": 3.5
+  },
+  {
+    "title": "National Treasure",
+    "year": "2004",
+    "rating": 3.5
+  },
+  {
+    "title": "Nerve",
+    "year": "2016",
+    "rating": 2.5
+  },
+  {
+    "title": "The Nice Guys",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "Night at the Museum",
+    "year": "2006",
+    "rating": 3.5
+  },
+  {
+    "title": "Nightcrawler",
+    "year": "2014",
+    "rating": 4.5
+  },
+  {
+    "title": "Nirvanna the Band the Show the Movie",
+    "year": "2025",
+    "rating": 4
+  },
+  {
+    "title": "No Country for Old Men",
+    "year": "2007",
+    "rating": 4.5
+  },
+  {
+    "title": "Nope",
+    "year": "2022",
+    "rating": 4
+  },
+  {
+    "title": "Nosferatu",
+    "year": "2024",
+    "rating": 4
+  },
+  {
+    "title": "The Notebook",
+    "year": "2004",
+    "rating": 4
+  },
+  {
+    "title": "Notting Hill",
+    "year": "1999",
+    "rating": 3
+  },
+  {
+    "title": "Now You See Me",
+    "year": "2013",
+    "rating": 4
+  },
+  {
+    "title": "Now You See Me 2",
+    "year": "2016",
+    "rating": 3
+  },
+  {
+    "title": "O Brother, Where Art Thou?",
+    "year": "2000",
+    "rating": 4.5
+  },
+  {
+    "title": "Obi-Wan Kenobi",
+    "year": "2022",
+    "rating": null
+  },
+  {
+    "title": "Obsession",
+    "year": "2025",
+    "rating": 4
+  },
+  {
+    "title": "Ocean's Eleven",
+    "year": "2001",
+    "rating": 3.5
+  },
+  {
+    "title": "The Odyssey",
+    "year": "2026",
+    "rating": 4.5
+  },
+  {
+    "title": "Office Space",
+    "year": "1999",
+    "rating": 4
+  },
+  {
+    "title": "Once Upon a Time... in Hollywood",
+    "year": "2019",
+    "rating": 4
+  },
+  {
+    "title": "One Battle After Another",
+    "year": "2025",
+    "rating": 3.5
+  },
+  {
+    "title": "One Hundred and One Dalmatians",
+    "year": "1961",
+    "rating": null
+  },
+  {
+    "title": "Onward",
+    "year": "2020",
+    "rating": 3
+  },
+  {
+    "title": "Oppenheimer",
+    "year": "2023",
+    "rating": 4.5
+  },
+  {
+    "title": "The Other Guys",
+    "year": "2010",
+    "rating": 3.5
+  },
+  {
+    "title": "Over the Garden Wall",
+    "year": "2014",
+    "rating": null
+  },
+  {
+    "title": "Over the Hedge",
+    "year": "2006",
+    "rating": null
+  },
+  {
+    "title": "Palm Springs",
+    "year": "2020",
+    "rating": 3.5
+  },
+  {
+    "title": "Pan's Labyrinth",
+    "year": "2006",
+    "rating": 4
+  },
+  {
+    "title": "Parasite",
+    "year": "2019",
+    "rating": 4
+  },
+  {
+    "title": "The Parent Trap",
+    "year": "1998",
+    "rating": null
+  },
+  {
+    "title": "Paris, Texas",
+    "year": "1984",
+    "rating": 4.5
+  },
+  {
+    "title": "Pearl",
+    "year": "2022",
+    "rating": 3.5
+  },
+  {
+    "title": "Percy Jackson & the Olympians: The Lightning Thief",
+    "year": "2010",
+    "rating": 3
+  },
+  {
+    "title": "The Perks of Being a Wallflower",
+    "year": "2012",
+    "rating": 3.5
+  },
+  {
+    "title": "Pineapple Express",
+    "year": "2008",
+    "rating": 3.5
+  },
+  {
+    "title": "Pirates of the Caribbean: At World's End",
+    "year": "2007",
+    "rating": null
+  },
+  {
+    "title": "Pirates of the Caribbean: Dead Man's Chest",
+    "year": "2006",
+    "rating": null
+  },
+  {
+    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "year": "2003",
+    "rating": null
+  },
+  {
+    "title": "Pitch Perfect",
+    "year": "2012",
+    "rating": 4.5
+  },
+  {
+    "title": "Pitch Perfect 2",
+    "year": "2015",
+    "rating": 3
+  },
+  {
+    "title": "The Place Beyond the Pines",
+    "year": "2012",
+    "rating": 2.5
+  },
+  {
+    "title": "The Polar Express",
+    "year": "2004",
+    "rating": null
+  },
+  {
+    "title": "Poor Things",
+    "year": "2023",
+    "rating": 3.5
+  },
+  {
+    "title": "Popstar: Never Stop Never Stopping",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "The Power of the Dog",
+    "year": "2021",
+    "rating": 3
+  },
+  {
+    "title": "The Prestige",
+    "year": "2006",
+    "rating": 3.5
+  },
+  {
+    "title": "Primetime",
+    "year": "2026",
+    "rating": 3.5
+  },
+  {
+    "title": "The Princess Bride",
+    "year": "1987",
+    "rating": 4
+  },
+  {
+    "title": "Prisoners",
+    "year": "2013",
+    "rating": 4.5
+  },
+  {
+    "title": "Project Hail Mary",
+    "year": "2026",
+    "rating": 4
+  },
+  {
+    "title": "Project X",
+    "year": "2012",
+    "rating": 3.5
+  },
+  {
+    "title": "Pulp Fiction",
+    "year": "1994",
+    "rating": 4.5
+  },
+  {
+    "title": "The Pursuit of Happyness",
+    "year": "2006",
+    "rating": 4
+  },
+  {
+    "title": "Quantum of Solace",
+    "year": "2008",
+    "rating": 3
+  },
+  {
+    "title": "Raiders of the Lost Ark",
+    "year": "1981",
+    "rating": 4
+  },
+  {
+    "title": "Rango",
+    "year": "2011",
+    "rating": null
+  },
+  {
+    "title": "Ratatouille",
+    "year": "2007",
+    "rating": null
+  },
+  {
+    "title": "Ready Player One",
+    "year": "2018",
+    "rating": 3
+  },
+  {
+    "title": "A Real Pain",
+    "year": "2024",
+    "rating": 3.5
+  },
+  {
+    "title": "Red Eye",
+    "year": "2005",
+    "rating": 3
+  },
+  {
+    "title": "Requiem for a Dream",
+    "year": "2000",
+    "rating": 4
+  },
+  {
+    "title": "Reservoir Dogs",
+    "year": "1992",
+    "rating": 4
+  },
+  {
+    "title": "Return of the Jedi",
+    "year": "1983",
+    "rating": 4
+  },
+  {
+    "title": "Rio",
+    "year": "2011",
+    "rating": null
+  },
+  {
+    "title": "Rise of the Guardians",
+    "year": "2012",
+    "rating": null
+  },
+  {
+    "title": "Robots",
+    "year": "2005",
+    "rating": null
+  },
+  {
+    "title": "Rocketman",
+    "year": "2019",
+    "rating": 3
+  },
+  {
+    "title": "Rocky",
+    "year": "1976",
+    "rating": 3.5
+  },
+  {
+    "title": "Rogue One: A Star Wars Story",
+    "year": "2016",
+    "rating": 2.5
+  },
+  {
+    "title": "Romeo + Juliet",
+    "year": "1996",
+    "rating": 3.5
+  },
+  {
+    "title": "The Running Man",
+    "year": "2025",
+    "rating": 2.5
+  },
+  {
+    "title": "Saltburn",
+    "year": "2023",
+    "rating": 3.5
+  },
+  {
+    "title": "Sausage Party",
+    "year": "2016",
+    "rating": 2.5
+  },
+  {
+    "title": "Saw",
+    "year": "2004",
+    "rating": 4
+  },
+  {
+    "title": "Scarface",
+    "year": "1983",
+    "rating": 3.5
+  },
+  {
+    "title": "Scary Movie",
+    "year": "2000",
+    "rating": 3
+  },
+  {
+    "title": "School of Rock",
+    "year": "2003",
+    "rating": 4
+  },
+  {
+    "title": "Scooby-Doo",
+    "year": "2002",
+    "rating": null
+  },
+  {
+    "title": "Scooby-Doo 2: Monsters Unleashed",
+    "year": "2004",
+    "rating": null
+  },
+  {
+    "title": "Scott Pilgrim vs. the World",
+    "year": "2010",
+    "rating": 4.5
+  },
+  {
+    "title": "Scream",
+    "year": "1996",
+    "rating": 4.5
+  },
+  {
+    "title": "Scream",
+    "year": "2022",
+    "rating": 3
+  },
+  {
+    "title": "Se7en",
+    "year": "1995",
+    "rating": 4
+  },
+  {
+    "title": "Searching",
+    "year": "2018",
+    "rating": 3.5
+  },
+  {
+    "title": "Send Help",
+    "year": "2026",
+    "rating": 2.5
+  },
+  {
+    "title": "Sentimental Value",
+    "year": "2025",
+    "rating": 4
+  },
+  {
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "year": "2021",
+    "rating": 3
+  },
+  {
+    "title": "Shark Tale",
+    "year": "2004",
+    "rating": null
+  },
+  {
+    "title": "Shaun of the Dead",
+    "year": "2004",
+    "rating": 4
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "year": "1994",
+    "rating": 4
+  },
+  {
+    "title": "Shazam!",
+    "year": "2019",
+    "rating": 3.5
+  },
+  {
+    "title": "Sherlock Holmes",
+    "year": "2009",
+    "rating": null
+  },
+  {
+    "title": "The Shining",
+    "year": "1980",
+    "rating": 5
+  },
+  {
+    "title": "Shrek",
+    "year": "2001",
+    "rating": 4.5
+  },
+  {
+    "title": "Shrek 2",
+    "year": "2004",
+    "rating": null
+  },
+  {
+    "title": "Shrek Forever After",
+    "year": "2010",
+    "rating": null
+  },
+  {
+    "title": "Shrek the Third",
+    "year": "2007",
+    "rating": null
+  },
+  {
+    "title": "Shutter Island",
+    "year": "2010",
+    "rating": 3.5
+  },
+  {
+    "title": "Sicario",
+    "year": "2015",
+    "rating": 4
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "year": "1991",
+    "rating": 5
+  },
+  {
+    "title": "Silver Linings Playbook",
+    "year": "2012",
+    "rating": 3.5
+  },
+  {
+    "title": "A Simple Favor",
+    "year": "2018",
+    "rating": 2.5
+  },
+  {
+    "title": "The Simpsons Movie",
+    "year": "2007",
+    "rating": 3.5
+  },
+  {
+    "title": "Sing",
+    "year": "2016",
+    "rating": 2.5
+  },
+  {
+    "title": "Sing Sing",
+    "year": "2023",
+    "rating": 4
+  },
+  {
+    "title": "Sing Street",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "Sinister",
+    "year": "2012",
+    "rating": 4
+  },
+  {
+    "title": "Sinners",
+    "year": "2025",
+    "rating": 4.5
+  },
+  {
+    "title": "The Sitter",
+    "year": "2011",
+    "rating": 2
+  },
+  {
+    "title": "Skyfall",
+    "year": "2012",
+    "rating": 4.5
+  },
+  {
+    "title": "Snowpiercer",
+    "year": "2013",
+    "rating": 4
+  },
+  {
+    "title": "The Social Network",
+    "year": "2010",
+    "rating": 5
+  },
+  {
+    "title": "Solo: A Star Wars Story",
+    "year": "2018",
+    "rating": 2
+  },
+  {
+    "title": "Sorry to Bother You",
+    "year": "2018",
+    "rating": 3.5
+  },
+  {
+    "title": "Soul",
+    "year": "2020",
+    "rating": 3
+  },
+  {
+    "title": "Sound of Metal",
+    "year": "2019",
+    "rating": 4
+  },
+  {
+    "title": "Space Jam",
+    "year": "1996",
+    "rating": 3
+  },
+  {
+    "title": "Speak No Evil",
+    "year": "2024",
+    "rating": 2.5
+  },
+  {
+    "title": "Spectre",
+    "year": "2015",
+    "rating": 2.5
+  },
+  {
+    "title": "Spider-Man",
+    "year": "2002",
+    "rating": 4.5
+  },
+  {
+    "title": "Spider-Man 3",
+    "year": "2007",
+    "rating": 3
+  },
+  {
+    "title": "Spider-Man: Across the Spider-Verse",
+    "year": "2023",
+    "rating": 4
+  },
+  {
+    "title": "Spider-Man: Far From Home",
+    "year": "2019",
+    "rating": 3
+  },
+  {
+    "title": "Spider-Man: Homecoming",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "Spider-Man: Into the Spider-Verse",
+    "year": "2018",
+    "rating": 5
+  },
+  {
+    "title": "Spider-Man: No Way Home",
+    "year": "2021",
+    "rating": 3.5
+  },
+  {
+    "title": "Spirited Away",
+    "year": "2001",
+    "rating": 3.5
+  },
+  {
+    "title": "The SpongeBob SquarePants Movie",
+    "year": "2004",
+    "rating": 4
+  },
+  {
+    "title": "Spree",
+    "year": "2020",
+    "rating": 2.5
+  },
+  {
+    "title": "Spring Breakers",
+    "year": "2012",
+    "rating": 3.5
+  },
+  {
+    "title": "Spy Kids",
+    "year": "2001",
+    "rating": null
+  },
+  {
+    "title": "Squid Game",
+    "year": "2021",
+    "rating": null
+  },
+  {
+    "title": "Stand by Me",
+    "year": "1986",
+    "rating": 4
+  },
+  {
+    "title": "Star Trek",
+    "year": "2009",
+    "rating": 3
+  },
+  {
+    "title": "Star Wars",
+    "year": "1977",
+    "rating": 4
+  },
+  {
+    "title": "Star Wars: Episode I – The Phantom Menace",
+    "year": "1999",
+    "rating": 1.5
+  },
+  {
+    "title": "Star Wars: Episode II – Attack of the Clones",
+    "year": "2002",
+    "rating": 1
+  },
+  {
+    "title": "Star Wars: Episode III – Revenge of the Sith",
+    "year": "2005",
+    "rating": 2.5
+  },
+  {
+    "title": "Star Wars: The Force Awakens",
+    "year": "2015",
+    "rating": 3.5
+  },
+  {
+    "title": "Star Wars: The Last Jedi",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "Star Wars: The Rise of Skywalker",
+    "year": "2019",
+    "rating": 1
+  },
+  {
+    "title": "Step Brothers",
+    "year": "2008",
+    "rating": 4.5
+  },
+  {
+    "title": "Steve Jobs",
+    "year": "2015",
+    "rating": 3
+  },
+  {
+    "title": "Stuart Little",
+    "year": "1999",
+    "rating": null
+  },
+  {
+    "title": "The Substance",
+    "year": "2024",
+    "rating": 4
+  },
+  {
+    "title": "Suicide Squad",
+    "year": "2016",
+    "rating": 2
+  },
+  {
+    "title": "The Suicide Squad",
+    "year": "2021",
+    "rating": 3
+  },
+  {
+    "title": "The Super Mario Bros. Movie",
+    "year": "2023",
+    "rating": 2.5
+  },
+  {
+    "title": "Superbad",
+    "year": "2007",
+    "rating": 5
+  },
+  {
+    "title": "Supergirl",
+    "year": "2026",
+    "rating": 3
+  },
+  {
+    "title": "Superman",
+    "year": "2025",
+    "rating": 3.5
+  },
+  {
+    "title": "Surf's Up",
+    "year": "2007",
+    "rating": null
+  },
+  {
+    "title": "Swiss Army Man",
+    "year": "2016",
+    "rating": 3
+  },
+  {
+    "title": "Talk to Me",
+    "year": "2022",
+    "rating": 3.5
+  },
+  {
+    "title": "Tangled",
+    "year": "2010",
+    "rating": null
+  },
+  {
+    "title": "Taxi Driver",
+    "year": "1976",
+    "rating": 4.5
+  },
+  {
+    "title": "Tenet",
+    "year": "2020",
+    "rating": 3
+  },
+  {
+    "title": "The Terminator",
+    "year": "1984",
+    "rating": 4
+  },
+  {
+    "title": "Terminator 2: Judgment Day",
+    "year": "1991",
+    "rating": 4
+  },
+  {
+    "title": "The Texas Chain Saw Massacre",
+    "year": "1974",
+    "rating": 3.5
+  },
+  {
+    "title": "Texas Chainsaw Massacre",
+    "year": "2022",
+    "rating": 2
+  },
+  {
+    "title": "They Will Kill You",
+    "year": "2026",
+    "rating": 3
+  },
+  {
+    "title": "This Is the End",
+    "year": "2013",
+    "rating": 4
+  },
+  {
+    "title": "Thor",
+    "year": "2011",
+    "rating": 2.5
+  },
+  {
+    "title": "Thor: Love and Thunder",
+    "year": "2022",
+    "rating": 1
+  },
+  {
+    "title": "Thor: Ragnarok",
+    "year": "2017",
+    "rating": 4
+  },
+  {
+    "title": "Thor: The Dark World",
+    "year": "2013",
+    "rating": 1.5
+  },
+  {
+    "title": "Three Billboards Outside Ebbing, Missouri",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "Thunderbolts*",
+    "year": "2025",
+    "rating": 3.5
+  },
+  {
+    "title": "To Die For",
+    "year": "1995",
+    "rating": 3
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "year": "1962",
+    "rating": 4
+  },
+  {
+    "title": "Top Gun: Maverick",
+    "year": "2022",
+    "rating": 4
+  },
+  {
+    "title": "The Town",
+    "year": "2010",
+    "rating": 3.5
+  },
+  {
+    "title": "Toy Story",
+    "year": "1995",
+    "rating": 4
+  },
+  {
+    "title": "Toy Story 2",
+    "year": "1999",
+    "rating": 3.5
+  },
+  {
+    "title": "Toy Story 3",
+    "year": "2010",
+    "rating": 4.5
+  },
+  {
+    "title": "Toy Story 4",
+    "year": "2019",
+    "rating": 3
+  },
+  {
+    "title": "Training Day",
+    "year": "2001",
+    "rating": 4
+  },
+  {
+    "title": "Transformers",
+    "year": "2007",
+    "rating": null
+  },
+  {
+    "title": "TRON: Ares",
+    "year": "2025",
+    "rating": 2.5
+  },
+  {
+    "title": "TRON: Legacy",
+    "year": "2010",
+    "rating": 2
+  },
+  {
+    "title": "Tropic Thunder",
+    "year": "2008",
+    "rating": 4
+  },
+  {
+    "title": "The Truman Show",
+    "year": "1998",
+    "rating": 4.5
+  },
+  {
+    "title": "Twilight",
+    "year": "2008",
+    "rating": 2.5
+  },
+  {
+    "title": "The Twilight Saga: Breaking Dawn – Part 1",
+    "year": "2011",
+    "rating": 1.5
+  },
+  {
+    "title": "The Twilight Saga: Eclipse",
+    "year": "2010",
+    "rating": 2
+  },
+  {
+    "title": "The Twilight Saga: New Moon",
+    "year": "2009",
+    "rating": 2
+  },
+  {
+    "title": "Twin Peaks: Fire Walk with Me",
+    "year": "1992",
+    "rating": 4
+  },
+  {
+    "title": "Twisters",
+    "year": "2024",
+    "rating": 3.5
+  },
+  {
+    "title": "Unbreakable",
+    "year": "2000",
+    "rating": 4
+  },
+  {
+    "title": "Uncut Gems",
+    "year": "2019",
+    "rating": 4
+  },
+  {
+    "title": "Up",
+    "year": "2009",
+    "rating": 5
+  },
+  {
+    "title": "Us",
+    "year": "2019",
+    "rating": 4
+  },
+  {
+    "title": "The Usual Suspects",
+    "year": "1995",
+    "rating": 4.5
+  },
+  {
+    "title": "V for Vendetta",
+    "year": "2005",
+    "rating": 3.5
+  },
+  {
+    "title": "The VelociPastor",
+    "year": "2017",
+    "rating": 3
+  },
+  {
+    "title": "Venom",
+    "year": "2018",
+    "rating": 3
+  },
+  {
+    "title": "Vice",
+    "year": "2018",
+    "rating": 3.5
+  },
+  {
+    "title": "Vivarium",
+    "year": "2019",
+    "rating": 2
+  },
+  {
+    "title": "Wake Up Dead Man",
+    "year": "2025",
+    "rating": 4
+  },
+  {
+    "title": "WALL·E",
+    "year": "2008",
+    "rating": 4
+  },
+  {
+    "title": "WandaVision",
+    "year": "2021",
+    "rating": null
+  },
+  {
+    "title": "War Dogs",
+    "year": "2016",
+    "rating": 3.5
+  },
+  {
+    "title": "Whiplash",
+    "year": "2014",
+    "rating": 3.5
+  },
+  {
+    "title": "Wicked",
+    "year": "2024",
+    "rating": 3.5
+  },
+  {
+    "title": "Wicked: For Good",
+    "year": "2025",
+    "rating": 3.5
+  },
+  {
+    "title": "Willy Wonka & the Chocolate Factory",
+    "year": "1971",
+    "rating": 3.5
+  },
+  {
+    "title": "Wind River",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "The Witch",
+    "year": "2015",
+    "rating": 2
+  },
+  {
+    "title": "The Wizard of Oz",
+    "year": "1939",
+    "rating": 3.5
+  },
+  {
+    "title": "The Wolf of Wall Street",
+    "year": "2013",
+    "rating": 4
+  },
+  {
+    "title": "The Wolverine",
+    "year": "2013",
+    "rating": 1.5
+  },
+  {
+    "title": "Wonder Woman",
+    "year": "2017",
+    "rating": 3.5
+  },
+  {
+    "title": "Wreck-It Ralph",
+    "year": "2012",
+    "rating": 3.5
+  },
+  {
+    "title": "X",
+    "year": "2022",
+    "rating": 3
+  },
+  {
+    "title": "X-Men",
+    "year": "2000",
+    "rating": 3.5
+  },
+  {
+    "title": "X-Men Origins: Wolverine",
+    "year": "2009",
+    "rating": 2
+  },
+  {
+    "title": "X-Men: Apocalypse",
+    "year": "2016",
+    "rating": 2
+  },
+  {
+    "title": "X-Men: Days of Future Past",
+    "year": "2014",
+    "rating": 4
+  },
+  {
+    "title": "X-Men: First Class",
+    "year": "2011",
+    "rating": 3.5
+  },
+  {
+    "title": "X-Men: The Last Stand",
+    "year": "2006",
+    "rating": 2
+  },
+  {
+    "title": "X2",
+    "year": "2003",
+    "rating": 4
+  },
+  {
+    "title": "Yes Man",
+    "year": "2008",
+    "rating": 3
+  },
+  {
+    "title": "Yes, God, Yes",
+    "year": "2019",
+    "rating": 2
+  },
+  {
+    "title": "Zodiac",
+    "year": "2007",
+    "rating": 4
+  },
+  {
+    "title": "Zombieland",
+    "year": "2009",
+    "rating": 3.5
+  },
+  {
+    "title": "Zombieland: Double Tap",
+    "year": "2019",
+    "rating": 3
+  },
+  {
+    "title": "Zoolander",
+    "year": "2001",
+    "rating": 4
+  },
+  {
+    "title": "Zootopia",
+    "year": "2016",
+    "rating": 3.5
+  }
+]
