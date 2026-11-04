@@ -2,7 +2,7 @@ name: Update movies from Letterboxd
 
 on:
   schedule:
-    - cron: "17 */3 * * *" # every 3 hours
+    - cron: "17 14 * * 0" # weekly, Sunday 14:17 UTC (morning US Eastern)
   workflow_dispatch:
 
 permissions:
