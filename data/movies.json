@@ -1,5 +1,31 @@
 [
   {
+    "id": "letterboxd-review-1575529636",
+    "source": "letterboxd",
+    "title": "La Bola Negra",
+    "by": "2026",
+    "watched": "2026-11-06",
+    "rewatch": false,
+    "rating": 5,
+    "poster": "https://a.ltrbxd.com/resized/film-poster/1/3/0/2/0/3/0/1302030-la-bola-negra-0-600-0-900-crop.jpg?v=d8dd544a16",
+    "review": [
+      "Good news: best movie of the year. Bad news: probably won’t see a better movie for the rest of the year. Saw this on 35mm and it was so cool"
+    ]
+  },
+  {
+    "id": "letterboxd-review-1571432883",
+    "source": "letterboxd",
+    "title": "Carrie",
+    "by": "1976",
+    "watched": "2026-11-03",
+    "rewatch": false,
+    "rating": 3.5,
+    "poster": "https://a.ltrbxd.com/resized/sm/upload/2c/5d/69/bc/uc3OvgmbnYaS5Y0BOjSmC1EmSz1-0-600-0-900-crop.jpg?v=52ac29973c",
+    "review": [
+      "Lots of unique things going on which I liked. It did somehow feel too slow and too short though? Maybe watching the new Carrie tv show before this has skewed my opinion but it is what it is"
+    ]
+  },
+  {
     "id": "letterboxd-review-1568486588",
     "source": "letterboxd",
     "title": "The Only Living Pickpocket in New York",
