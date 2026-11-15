@@ -1,5 +1,18 @@
 [
   {
+    "id": "letterboxd-review-1584728551",
+    "source": "letterboxd",
+    "title": "Scanners",
+    "by": "1981",
+    "watched": "2026-11-13",
+    "rewatch": false,
+    "rating": 3,
+    "poster": "https://a.ltrbxd.com/resized/film-poster/4/7/0/6/2/47062-scanners-0-600-0-900-crop.jpg?v=41f5e788db",
+    "review": [
+      "This was okay, cool concept, but not really as fleshed out as I would’ve liked. The ending made it worth it tho"
+    ]
+  },
+  {
     "id": "letterboxd-review-1575529636",
     "source": "letterboxd",
     "title": "La Bola Negra",
