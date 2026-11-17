@@ -79,6 +79,13 @@
         margin: 0 0 14px;
       }
 
+      /* Keep the floated photo from spilling into the footer */
+      .about-intro > div::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
       .about-copy-intro {
         margin-top: 18px;
       }
@@ -152,10 +159,6 @@
         margin: 4px 40px 24px 0;
       }
 
-      .about-photo-tall {
-        width: 320px;
-      }
-
       .about-photo-wide {
         width: 400px;
         aspect-ratio: 5 / 4;
@@ -167,10 +170,6 @@
 
       .about-photo-secondary img {
         object-position: center 28%;
-      }
-
-      .about-photo-tertiary img {
-        object-position: center 12%;
       }
 
       .about-photo:hover {
@@ -225,23 +224,23 @@
               <img src="images/about/london-2023.webp" alt="London, 2023" width="1206" height="1265" decoding="async" />
               <p class="photo-hover-note">London, 2023</p>
             </div>
-            <h1 class="about-title">Most of my work is about reducing friction people don’t realize they’re dealing with.</h1>
+            <h1 class="about-title">I’m glad you’re here</h1>
             <p class="about-kicker" style="margin-top: 30px">About</p>
             <div class="about-copy about-copy-intro">
               <p>
                 I’m a Consultant at Walker, based in St. Pete, Florida, focused on turning complex systems into tools people can actually use.
               </p>
               <p>
-                In my current role, I work directly with clients to design and launch survey programs, build dashboards, and work with large datasets in Qualtrics. A lot of my work sits between UX and implementation. I’m not just designing interfaces, I’m configuring systems, cleaning data, and figuring out what actually works once something goes live.
+                In my current role, I work with clients to design survey programs, build dashboards, and connect tools like Salesforce and HubSpot to Qualtrics. Putting customer feedback right alongside existing sales and account data gives teams a much clearer view of where the experience is breaking down and what to fix first. My work sits right between UX and implementation, meaning I’m not just designing interfaces, I’m configuring systems, cleaning data, and making sure everything actually holds up once it goes live.
               </p>
               <p>
-                I’ve worked on projects ranging from a few hundred responses to datasets with over a million, with dashboards used by hundreds of stakeholders. That scale has pushed me to think less about ideal experiences and more about clarity, performance, and real-world use.
+                I’ve worked on projects ranging from a few hundred responses to datasets with over a million, supporting dashboards used by hundreds of stakeholders. Operating at that scale, combined with the consulting side of the job, has shaped how I work. I spend a lot of time uncovering what clients actually need versus what they ask for upfront, translating technical details into plain language, and focusing on clarity, performance, and real-world use so teams feel confident using what we build long after launch.
               </p>
               <p>
                 Before Walker, I was a UX design intern at Wisq and GravityDrive, and a user experience researcher with Open Lab at Newcastle University. These days I’m also building Pocket Gallery, an iOS app that puts a new piece of art on your Home Screen each day.
               </p>
               <p>
-                I studied UX Design at Purdue University, where I built a foundation in research, interaction design, and prototyping. More importantly, it shaped how I approach problems. Start with what people are trying to do, simplify where things get messy, and build something that feels obvious once it’s in front of you.
+                I majored in Computer Graphics Technology at Purdue University with a specialization in UX Design, where I built a foundation in research, interaction design, and prototyping. More importantly, it shaped how I approach problems. Start with what people are trying to do, simplify where things get messy, and build something that feels obvious once it’s in front of you.
               </p>
             </div>
             <div class="about-photo about-photo-left about-photo-wide about-photo-secondary">
@@ -251,32 +250,10 @@
             <p class="about-kicker" style="margin-top: 34px">Outside of work</p>
             <div class="about-copy" style="margin-top: 18px">
               <p>
-                I figured this page should actually be about me, so this is the part where you get a better sense of who I am outside of work.
-              </p>
-              <p>
                 I spend a lot of my time working out, playing Pokemon Go more than I probably should, watching Purdue basketball, the Broncos, and the Pacers, and I play pickup basketball and golf with friends whenever I can.
               </p>
               <p>
                 I go to the movie theater a lot, so if you want to talk movies lmk. I'm also pretty into cooking, so I'm always trying new recipes. And for no real reason other than it feels important to mention, my favorite candy is Buncha Crunch. If you've never had it, you should try it.
-              </p>
-            </div>
-            <div class="about-photo about-photo-right about-photo-tall about-photo-tertiary">
-              <img src="images/about/chicago-2026.webp" alt="Chicago, 2026" width="1206" height="1574" decoding="async" loading="lazy" />
-              <p class="photo-hover-note">Chicago, 2026</p>
-            </div>
-            <p class="about-kicker" style="margin-top: 34px; clear: left">How I think about design</p>
-            <div class="about-copy" style="margin-top: 18px">
-              <p>
-                I treat design as a way to reduce decisions, not add more.
-              </p>
-              <p>
-                Before I think about screens, I try to understand the system. What someone is actually trying to do, what information they’re relying on, and where things start to break down. Most problems aren’t visual, they’re structural.
-              </p>
-              <p>
-                From there, the goal is simple. Make the next step obvious. Cut anything that slows someone down. Use the interface to guide, not just display.
-              </p>
-              <p>
-                I’m less interested in making something look good than making it feel clear and easy to use. When something works, people don’t have to think about it. They just move through it.
               </p>
             </div>
           </div>

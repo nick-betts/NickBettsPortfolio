@@ -4,3 +4,14 @@
 # IMLeagues was replaced by Pocket Gallery
 /imleagues       /  301!
 /imleagues.html  /  301!
+
+# Currently was renamed to Current Role
+/currently       /current-role  301!
+/currently.html  /current-role  301!
+
+# Sports and Gallery are archived in _archive/ (see _archive/README.md)
+/sports          /  302
+/sports.html     /  302
+/gallery         /  302
+/gallery.html    /  302
+/_archive/*      /404.html  404!

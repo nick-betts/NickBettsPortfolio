@@ -171,14 +171,15 @@ button:focus-visible {
   letter-spacing: -0.02em;
 }
 
+/* Same type as the Home link so the whole bar reads as one set */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 22px;
-  color: var(--muted);
-  font-size: 0.76rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  gap: 28px;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 .brand,
@@ -226,16 +227,19 @@ button:focus-visible {
 }
 
 .orientation {
-  margin: 12px 0 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  margin: 28px 0 8px;
+  color: var(--text);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.6;
 }
 
-/* DM Mono's heaviest loaded weight is 500, so brighter text does the rest */
 .orientation strong {
-  color: var(--text);
-  font-weight: 500;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--accent);
 }
 
 .work-list {
@@ -373,6 +377,42 @@ button:focus-visible {
   color: var(--text);
 }
 
+.side-intro {
+  max-width: 680px;
+  margin: 0 0 32px;
+  font-size: 0.96rem;
+  line-height: 1.9;
+}
+
+.side-list {
+  border-top: 1px solid var(--row-border);
+}
+
+.side-row {
+  grid-template-columns: 72px minmax(0, 1fr) 220px 120px;
+}
+
+.side-category,
+.side-status {
+  color: var(--muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.side-category {
+  justify-self: end;
+}
+
+.side-status {
+  justify-self: end;
+  color: var(--accent);
+}
+
+.side-row.is-upcoming:hover {
+  background: none;
+}
+
 .more-row:hover,
 .more-row:focus-visible {
   background: var(--row-hover);
@@ -421,11 +461,20 @@ button:focus-visible {
   letter-spacing: -0.03em;
 }
 
+/* Columns match each photo's shape (3:2 landscape, 3:4 portrait) so both
+   sit at the same height without cropping */
+.current-images {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  max-width: 1040px;
+  margin-bottom: 24px;
+}
+
 .current-image {
   width: 100%;
-  max-width: 680px;
+  height: 100%;
   display: block;
-  margin-bottom: 24px;
   border: 1px solid var(--row-border);
   object-fit: cover;
 }
@@ -729,9 +778,18 @@ button:focus-visible {
 }
 
 /* Tall phone screenshots get a tall frame so the whole screen shows */
+/* The screenshot includes its own phone frame with transparent corners */
 .hover-thumb-frame:has(.thumb-portrait) {
-  width: 110px;
-  aspect-ratio: 1206 / 2622;
+  width: 120px;
+  aspect-ratio: 360 / 730;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+}
+
+.hover-thumb-frame .thumb-portrait {
+  object-fit: contain;
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.5));
 }
 
 .hover-thumb-copy {
@@ -781,14 +839,34 @@ button:focus-visible {
   white-space: nowrap;
 }
 
+/* Same hover as the top nav links: accent color and an underline that draws in */
 .footer a {
+  position: relative;
   color: var(--muted);
   transition: color var(--transition);
 }
 
+.footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+
 .footer a:hover,
 .footer a:focus-visible {
-  color: var(--text);
+  color: var(--accent);
+}
+
+.footer a:hover::after,
+.footer a:focus-visible::after {
+  transform: scaleX(1);
 }
 
 .case-page {
@@ -936,6 +1014,26 @@ button:focus-visible {
     grid-row: 1;
   }
 
+  .side-row {
+    grid-template-columns: 56px minmax(0, 1fr) auto;
+    row-gap: 6px;
+  }
+
+  .side-row .project-index {
+    grid-row: 1 / span 2;
+  }
+
+  .side-category {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+  }
+
+  .side-status {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
   .case-hero,
   .case-grid {
     grid-template-columns: 1fr;
@@ -1050,6 +1148,10 @@ button:focus-visible {
 
   .log-writeup {
     grid-column: 1 / -1;
+  }
+
+  .current-images {
+    grid-template-columns: 1fr;
   }
 
   .gallery-grid {
